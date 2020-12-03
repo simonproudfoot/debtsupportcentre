@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} — {{ settings:site_name }}</title>
+    <meta name="description" content="{{ intro | strip_tags | entities }}">
+    <script type="application/ld+json">
+            {
+              "@context": "https://schema.org/",
+              "@type": blogPost,
+              "name": "{{ title }}",
+              "author": {
+                "@type": "Person",
+                "name": "{{ author:name }}"
+              },
+              "datePublished": "{{ date format="Y-m-d" }}",
+              "description": "{{ intro | strip_tags | entities }}",
+            }
+        </script>
+    <!-- remove these styles later -->
+    <link rel="stylesheet" href="http://mh-graphics.com/DSC/rebrand2/CSS/stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ mix src='css/app.css' }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <script src="{{ mix src='/js/site.js' }}"></script>
+</head>
+<style> 
+    [v-cloak] { 
+        display: none; 
+    } 
+</style> 
+<body>
+    <div id="app">
+        {{ partial:apply }}
+        {{ partial:nav }}
+        <main class="py-12 lg:py-20">
+            {{ template_content }}
+        </main>
+        {{ partial:footer }}
+        {{ partial:extras }}
+    </div>
+</body>
+</html>

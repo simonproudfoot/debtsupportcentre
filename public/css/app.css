@@ -1,0 +1,101 @@
+.formOverlay {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.formOverlay__nav {
+  font-size: 0.8rem;
+  color: #707070;
+  padding: 10px;
+  box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
+}
+
+.formOverlay__nav .click:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.formOverlay__inner {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: calc(100vh - 126px);
+}
+
+.formOverlay__inner__gif {
+  height: 80px;
+  width: 80px;
+}
+
+@media (min-width: 768px) {
+  .formOverlay__inner__gif {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+.formOverlay__inner .qTitle {
+  color: #122c49;
+  font-weight: bolder;
+}
+
+@media (max-width: 767px) {
+  .formOverlay__inner .qTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .formOverlay__inner .qTitle {
+    font-size: 2rem;
+  }
+}
+
+.formOverlay .navBottom {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #f5f5f5;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn--form {
+  background-color: #a7afbe;
+  border-radius: 50px;
+  width: 189px;
+  transition-duration: 400ms;
+}
+
+.btn--form.selected {
+  background-color: #b53683;
+  color: #fff;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.vm-progress-bar * {
+  border-radius: 0 !important;
+  transition-duration: 1s;
+}
+
