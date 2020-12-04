@@ -73,12 +73,17 @@ body {
     background-color: $lightgrey;
     border-radius: 50px;
     width: 189px;
+    font-size: 0.9rem;
     transition-duration: 400ms;
     &.selected {
         background-color: $secondary;
         color: #fff;
     }
 }
+
+.btn--text, a{
+    color: $primary;
+  }
 
 // Transitons and animations
 .fade-enter-active,

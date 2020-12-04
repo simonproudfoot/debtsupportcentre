@@ -73,15 +73,21 @@ body {
 }
 
 .btn--form {
-  background-color: #a7afbe;
+  background-color: #EDEFF2;
   border-radius: 50px;
   width: 189px;
+  font-size: 0.9rem;
   transition-duration: 400ms;
 }
 
 .btn--form.selected {
   background-color: #b53683;
   color: #fff;
+}
+
+.btn--text,
+a {
+  color: #009991;
 }
 
 .fade-enter-active,

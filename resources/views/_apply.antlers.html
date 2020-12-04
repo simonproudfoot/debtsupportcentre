@@ -1,61 +1,39 @@
 <transition name="fade">
-<div v-if="overlay == 'true'" v-cloak class="formOverlay" style="background-image: url('images/hero_borders.svg');"
-    style="display: none">
-    <vm-progress :percentage="percentageDone" stroke-width="7" track-color="#d9d9d9" :show-text="false"
-        stroke-linecap="square" stroke-color="#B53683"></vm-progress>
-    <nav class="formOverlay__nav">
-        <div class="row">
-            <div class="col-4">
-                <span class="click" v-if="step > 1" @click="step--">
-                    < Back</span>
+    <div v-if="overlay == 'true'" v-cloak class="formOverlay" style="background-image: url('images/hero_borders.svg');" style="display: none">
+        <vm-progress :percentage="percentageDone" stroke-width="7" track-color="#d9d9d9" :show-text="false" stroke-linecap="square" stroke-color="#B53683"></vm-progress>
+        <nav class="formOverlay__nav">
+            <div class="row">
+                <div class="col-4">
+                    <span class="click" v-if="step > 0" @click="step--">< Back</span>
+                </div>
+                <div class="col-4 text-center">
+                    <b>@{{step}} of @{{stepsTotal}}</b>
+                </div>
+                <div class="col-4 text-right">
+                    <span class="click" @click="overlay = 'false'">close x</span>
+                </div>
             </div>
-            <div class="col-4 text-center">
-                <b>@{{step}} of @{{stepsTotal}}</b>
-            </div>
-            <div class="col-4 text-right">
-                <span class="click" @click="overlay = 'false'">close x</span>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="formOverlay__inner">
-            <div v-for="(q, key, index) in questions" v-bind:key="key">
-                <div class="pt-4 text-center" class="formOverlay__inner">
-                    <div v-if="step == index">
-                        <span class="qTitle d-block">@{{q.question}}</span>
-                         <img v-bind:src="'images/'+q1Image" alt="" class="formOverlay__inner__gif"> 
-                        <div v-for="a in q.options">
-                            <button class="btn--form btn mt-3 mb-2" @click="q.answer = a"
-                                v-bind:class="q.answer == a ? 'selected': null">@{{a}}</button>
+        </nav>
+        <div class="container">
+            <div class="formOverlay__inner pt-5">
+                <div v-for="(q, key, index) in questions" v-bind:key="key">
+                    <div class="text-center" class="formOverlay__inner">
+                        <div v-if="step == index">
+                            <span class="qTitle d-block mb-3">@{{q.question}}</span>
+                            <img v-if="step == 1" v-bind:src="'images/'+q1Image" class="formOverlay__inner__gif mb-3">
+                            <img v-else="" src="">
+                            <div v-for="a in q.options">
+                                <button class="btn--form btn mb-3" @click="q.answer = a"  v-bind:class="q.answer == a ? 'selected': null">@{{a}}</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="pt-4 text-center">
-                <span class="qTitle d-block">@{{questions.question_1.question}}</span>
-                <img v-bind:src="'images/'+q1Image" alt="" class="formOverlay__inner__gif">
-                <div v-for="a in questions.question_1.options">
-                    <button class="btn--form btn mt-3 mb-2 " @click="questions.question_1.answer = a"
-                        v-bind:class="questions.question_1.answer == a ? 'selected': null">@{{a}}</button>
-                </div>
-            </div> -->
-        </div>
-        <div class="bottomNav text-center" v-if="questions.question_1.answer && step == 1">
-            <button class="btn btn--text" @click="step++">Next ></button>
-        </div>
-        <!-- <div v-if="step == 2">
-            <div class="formOverlay__inner pt-4 text-center">
-                <span class="qTitle d-block">@{{questions.question_2.question}}</span>
-                <img v-bind:src="'images/'+q1Image" alt="" class="formOverlay__inner__gif">
-                <div v-for="a in yn">
-                    <button class="btn--form btn mt-3 mb-2 " @click="questions.question_2.answer = a"
-                        v-bind:class="questions.question_2.answer == a ? 'selected': null">@{{a}}</button>
+            <div v-for="(q, key, index) in questions" v-bind:key="key" class="bottomNav text-center">
+                <div v-if="step == index && q.answer">
+                    <button class="btn btn--text" @click="step++">Next ></button>
                 </div>
             </div>
         </div>
-        <div class="bottomNav text-center" v-if="questions.question_2.answer && step == 2">
-            <button class="btn btn--text" @click="step++">Next ></button>
-        </div> -->
     </div>
-</div>
 </transition>

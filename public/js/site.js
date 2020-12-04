@@ -12595,8 +12595,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_multiple_progress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-multiple-progress */ "./node_modules/vue-multiple-progress/lib/progress.js");
 /* harmony import */ var vue_multiple_progress__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_multiple_progress__WEBPACK_IMPORTED_MODULE_1__);
-// This is all you.
-//require('./prism.js')
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('vm-progress', vue_multiple_progress__WEBPACK_IMPORTED_MODULE_1___default.a);
@@ -12609,11 +12607,7 @@ window.onload = function () {
       return {
         overlay: 'false',
         step: 0,
-        stepsTotal: 9,
         ready: false,
-        //   yn: ['Yes', 'No'],
-        //optionsSituation: ['I am coping well', 'I struggle to keep up with payments', 'I urgently require help', 'I have defaults and CCJ recorded against me'],
-        // optionsEmployment: 
         validationRules: {
           required: function required(value) {
             return !!value || "Required.";
@@ -12659,13 +12653,16 @@ window.onload = function () {
       };
     },
     computed: {
+      stepsTotal: function stepsTotal() {
+        return Object.keys(this.questions).length;
+      },
       percentageDone: function percentageDone() {
         return 100 * this.step / this.stepsTotal;
       },
       q1Image: function q1Image() {
-        if (this.questions.question_1.answer == 'No') {
+        if (this.questions.question_2.answer == 'No') {
           return 'q2_no.gif';
-        } else if (this.questions.question_1.answer == 'Yes') {
+        } else if (this.questions.question_2.answer == 'Yes') {
           return 'q2_yes.gif';
         } else {
           return 'q2_start.png';

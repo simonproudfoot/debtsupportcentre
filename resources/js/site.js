@@ -1,5 +1,3 @@
-// This is all you.
-//require('./prism.js')
 import Vue from 'vue'
 import Progress from 'vue-multiple-progress'
 Vue.component('vm-progress', Progress)
@@ -11,12 +9,7 @@ window.onload = function () {
             return {
                 overlay: 'false',
                 step: 0,
-                stepsTotal: 9,
                 ready: false,
-             //   yn: ['Yes', 'No'],
-                //optionsSituation: ['I am coping well', 'I struggle to keep up with payments', 'I urgently require help', 'I have defaults and CCJ recorded against me'],
-               // optionsEmployment: 
-       
                 validationRules: {
                     required: (value) => !!value || "Required.",
                     counter: (value) => !!value.length <= 11 || "Min 11 numbers",
@@ -33,7 +26,7 @@ window.onload = function () {
                 questions: {
                     question_1: {
                         question: "What describes your current situation?",
-                        options : ['I am coping well', 'I struggle to keep up with payments', 'I urgently require help', 'I have defaults and CCJ recorded against me'],
+                        options: ['I am coping well', 'I struggle to keep up with payments', 'I urgently require help', 'I have defaults and CCJ recorded against me'],
                         answer: ''
                     },
                     question_2: {
@@ -55,13 +48,16 @@ window.onload = function () {
             }
         },
         computed: {
+            stepsTotal(){
+                return Object.keys(this.questions).length
+            },
             percentageDone() {
                 return (100 * this.step) / this.stepsTotal
             },
             q1Image() {
-                if (this.questions.question_1.answer == 'No') {
+                if (this.questions.question_2.answer == 'No') {
                     return 'q2_no.gif'
-                } else if (this.questions.question_1.answer == 'Yes') {
+                } else if (this.questions.question_2.answer == 'Yes') {
                     return 'q2_yes.gif'
                 } else {
                     return 'q2_start.png'
@@ -83,7 +79,7 @@ window.onload = function () {
             qCount() {
                 var k = 0
                 return k + 1;
-              },
+            },
         },
         watch: {
             // Set cookies
