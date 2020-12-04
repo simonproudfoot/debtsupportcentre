@@ -14081,6 +14081,24 @@ window.onload = function () {
       };
     },
     computed: {
+      emailInvalid: function emailInvalid() {
+        var val = this.questions.question_8.email;
+        var re = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+
+        if (!re.test(val) && val.length) {
+          console.log('email valid');
+          return true;
+        }
+      },
+      phoneValidate: function phoneValidate() {
+        var val = this.questions.question_8.phone;
+        var re = new RegExp(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
+
+        if (!re.test(val) && val.length) {
+          console.log('email valid');
+          return true;
+        }
+      },
       stepsTotal: function stepsTotal() {
         return Object.keys(this.questions).length;
       },
@@ -14107,9 +14125,6 @@ window.onload = function () {
       }
     },
     methods: {
-      emailValidate: function emailValidate(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || false;
-      },
       qCount: function qCount() {
         var k = 0;
         return k + 1;
@@ -14129,18 +14144,23 @@ window.onload = function () {
       questions: {
         deep: true,
         handler: function handler(val) {
-          localStorage.setItem('questions', JSON.stringify(val)); // Vue.nextTick(() => {
-
-          if (this.emailValidate(val.question_8.email)) {
-            setTimeout(function () {
-              document.getElementById('emailWarning').style.display = 'none';
-            }, 600);
-          } else {
-            setTimeout(function () {
-              document.getElementById('emailWarning').style.display = 'block';
-            }, 600);
-          } //   })
-
+          localStorage.setItem('questions', JSON.stringify(val)); // if (this.emailValidate(val.question_8.email)) {
+          //     setTimeout(() => {
+          //         document.getElementById('emailWarning').style.display = 'none'
+          //     }, 600);
+          // } else {
+          //     setTimeout(() => {
+          //         document.getElementById('emailWarning').style.display = 'block'
+          //     }, 600);
+          // }
+          //     setTimeout(() => {
+          //         document.getElementById('phoneWarning').style.display = 'none'
+          //     }, 600);
+          // } else {
+          //     setTimeout(() => {
+          //         document.getElementById('phoneWarning').style.display = 'block'
+          //     }, 600);
+          // }
         }
       }
     }
