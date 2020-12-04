@@ -1,6 +1,7 @@
 @import "mediaQ.scss";
 @import "colours.scss";
 .formOverlay {
+    color: $dark;
     background: #fff;
     position: fixed;
     top: 0;
@@ -27,17 +28,14 @@
     }
     &__inner {
         max-width: 600px;
-
         margin: 0 auto;
         min-height: calc(100vh - 126px);
         @include respond-above(sm) {
             // padding: 10rem 0 !important;
         }
-
         &__gif {
             height: 80px;
             width: 80px;
-
             @include respond-above(sm) {
                 height: 200px;
                 width: 200px;
@@ -62,12 +60,10 @@
         background-color: #f5f5f5;
     }
 }
-
 // Main
 body {
     font-family: "Montserrat", sans-serif;
 }
-
 // Buttons
 .btn--form {
     background-color: $lightgrey;
@@ -80,11 +76,10 @@ body {
         color: #fff;
     }
 }
-
-.btn--text, a{
+.btn--text,
+a {
     color: $primary;
-  }
-
+}
 // Transitons and animations
 .fade-enter-active,
 .fade-leave-active {
@@ -94,8 +89,47 @@ body {
     opacity: 0;
 }
 
+// imputs
+.textInput {
+    
+    .slot-container, .input-container, input{
+        width: 100% !important;
+    }
+    svg{
+        fill: $secondary;
+        vertical-align: text-bottom;
+    }
+    .accessibility__icon{
+        background-color: $secondary !important;
+    }
+    .input__container{
+        height: 40px;
+        font-size: inherit;
+    }
+    input{
+        color: $dark !important;
+    }
+    .label__placeholder {
+        color: $grey;
+    }
+    .label__active.label__active--canscale {
+        color: $secondary !important;
+    }
+
+    .input__container--focus {
+        .label__placeholder {
+            color: $secondary;
+        }
+    }
+}
+
 // Bits n Bobs
 .vm-progress-bar * {
     border-radius: 0 !important;
     transition-duration: 1s;
+}
+
+
+body{
+    font-size: 0.9rem;
 }

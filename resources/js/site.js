@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import Progress from 'vue-multiple-progress'
+import floatinglabel from 'vue-simple-floating-labels'
+
 Vue.component('vm-progress', Progress)
 Vue.use(Progress)
+
 window.onload = function () {
     var app = new Vue({
         el: '#app',
@@ -43,7 +46,33 @@ window.onload = function () {
                         question: "What is you residential status?",
                         options: ['Homeowner', 'Shared ownership', 'Private tenant', 'Council tenant', 'Living with parents', 'Other'],
                         answer: ''
+                    },
+                    question_5: {
+                        question: "What is you the total amount of debt you owe?",
+                        options: ['Less than £5,000', '£5,000 - £10,000', '£10,000 - £20,000', 'More than £20,000'],
+                        answer: ''
+                    },
+                    question_6: {
+                        question: "How many debts do you have?",
+                        options: ['1-3','4-5', '6-7', '8 or more'],
+                        answer: ''
+                    },
+                    question_7: {
+                        question: "What would be your ideal monthly repayment be towards your debt?",
+                        options: ['Up to £100', '£100 - £150', '£150 - £200', 'More than £200'],
+                        answer: ''
+                    },
+                    question_8: {
+                        question: "userDetails",
+                        fullName: '',
+                        phone: '',
+                        email: ''
                     }
+                },
+                userDetails: {
+                    fullName: '',
+                    phone: '',
+                    email: ''
                 }
             }
         },
@@ -80,6 +109,9 @@ window.onload = function () {
                 var k = 0
                 return k + 1;
             },
+        },
+        components: {
+            floatinglabel
         },
         watch: {
             // Set cookies

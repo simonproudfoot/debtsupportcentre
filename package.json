@@ -26,6 +26,7 @@
         "sass": "^1.29.0",
         "vue": "^2.6.12",
         "vue-cookies": "^1.7.4",
-        "vue-multiple-progress": "^1.6.0"
+        "vue-multiple-progress": "^1.6.0",
+        "vue-simple-floating-labels": "^1.0.4"
     }
 }
