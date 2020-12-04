@@ -14077,11 +14077,6 @@ window.onload = function () {
             phone: '',
             email: ''
           }
-        },
-        userDetails: {
-          fullName: '',
-          phone: '',
-          email: ''
         }
       };
     },
@@ -14112,8 +14107,8 @@ window.onload = function () {
       }
     },
     methods: {
-      emailValidate: function emailValidate() {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.questions.aboutYou.email) || false;
+      emailValidate: function emailValidate(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || false;
       },
       qCount: function qCount() {
         var k = 0;
@@ -14134,7 +14129,18 @@ window.onload = function () {
       questions: {
         deep: true,
         handler: function handler(val) {
-          localStorage.setItem('questions', JSON.stringify(val));
+          localStorage.setItem('questions', JSON.stringify(val)); // Vue.nextTick(() => {
+
+          if (this.emailValidate(val.question_8.email)) {
+            setTimeout(function () {
+              document.getElementById('emailWarning').style.display = 'none';
+            }, 600);
+          } else {
+            setTimeout(function () {
+              document.getElementById('emailWarning').style.display = 'block';
+            }, 600);
+          } //   })
+
         }
       }
     }

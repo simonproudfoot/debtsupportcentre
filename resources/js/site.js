@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import Progress from 'vue-multiple-progress'
 import floatinglabel from 'vue-simple-floating-labels'
-
 Vue.component('vm-progress', Progress)
 Vue.use(Progress)
-
 window.onload = function () {
     var app = new Vue({
         el: '#app',
@@ -54,7 +52,7 @@ window.onload = function () {
                     },
                     question_6: {
                         question: "How many debts do you have?",
-                        options: ['1-3','4-5', '6-7', '8 or more'],
+                        options: ['1-3', '4-5', '6-7', '8 or more'],
                         answer: ''
                     },
                     question_7: {
@@ -69,15 +67,10 @@ window.onload = function () {
                         email: ''
                     }
                 },
-                userDetails: {
-                    fullName: '',
-                    phone: '',
-                    email: ''
-                }
             }
         },
         computed: {
-            stepsTotal(){
+            stepsTotal() {
                 return Object.keys(this.questions).length
             },
             percentageDone() {
@@ -102,8 +95,8 @@ window.onload = function () {
             }
         },
         methods: {
-            emailValidate() {
-                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.questions.aboutYou.email) || false
+            emailValidate(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || false
             },
             qCount() {
                 var k = 0
@@ -125,6 +118,18 @@ window.onload = function () {
                 deep: true,
                 handler(val) {
                     localStorage.setItem('questions', JSON.stringify(val));
+                    // Vue.nextTick(() => {
+                    if (this.emailValidate(val.question_8.email)) {
+
+                        setTimeout(() => {
+                            document.getElementById('emailWarning').style.display = 'none'
+                        }, 600);
+                    } else {
+                        setTimeout(() => {
+                            document.getElementById('emailWarning').style.display = 'block'
+                        }, 600);
+                    }
+                    //   })
                 }
             },
         }
