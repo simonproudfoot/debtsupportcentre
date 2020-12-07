@@ -112,6 +112,19 @@ a {
   opacity: 0;
 }
 
+.slide-up-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-up-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-up-enter,
+.slide-up-leave-to {
+  opacity: 0;
+}
+
 .textInput .slot-container,
 .textInput .input-container,
 .textInput input {

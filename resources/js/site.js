@@ -29,37 +29,44 @@ window.onload = function () {
                     question_1: {
                         question: "What describes your current situation?",
                         options: ['I am coping well', 'I struggle to keep up with payments', 'I urgently require help', 'I have defaults and CCJ recorded against me'],
-                        answer: ''
+                        answer: '',
+                        icon: 'q1.png',
                     },
                     question_2: {
                         question: "Is debt causing you stress and anxiety or affecting your mental health?",
                         options: ['Yes', 'No'],
-                        answer: ''
+                        answer: '',
+                        icon: 'q2.png',
                     },
                     question_3: {
                         question: "What is you current employment status?",
                         options: ['Employed', 'Self employed', 'Benefits only', 'Retired', 'Unemployed', 'Other'],
-                        answer: ''
+                        answer: '',
+                        icon: 'q3.png',
                     },
                     question_4: {
                         question: "What is you residential status?",
                         options: ['Homeowner', 'Shared ownership', 'Private tenant', 'Council tenant', 'Living with parents', 'Other'],
-                        answer: ''
+                        answer: '',
+                        icon: 'q4.png',
                     },
                     question_5: {
                         question: "What is you the total amount of debt you owe?",
                         options: ['Less than £5,000', '£5,000 - £10,000', '£10,000 - £20,000', 'More than £20,000'],
-                        answer: ''
+                        answer: '',
+                        icon: 'q5.png',
                     },
                     question_6: {
                         question: "How many debts do you have?",
                         options: ['1-3', '4-5', '6-7', '8 or more'],
-                        answer: ''
+                        answer: '',
+                        icon: 'q6.png',
                     },
                     question_7: {
                         question: "What would be your ideal monthly repayment be towards your debt?",
                         options: ['Up to £100', '£100 - £150', '£150 - £200', 'More than £200'],
-                        answer: ''
+                        answer: '',
+                        icon: 'q7.png',
                     },
                     question_8: {
                         question: "userDetails",
@@ -120,11 +127,14 @@ window.onload = function () {
         },
         methods: {
             nextStep(){
-                this.waiting = true
-                setTimeout(() => {
-                    this.step++
-                    this.waiting = false
-                }, 1500);
+                // come back to this
+                // Form will pause until animation finished
+                // this.waiting = true
+                // setTimeout(() => {
+                //     this.step++
+                //     this.waiting = false
+                // }, 1500);
+                this.step++
             },
             qCount() {
                 var k = 0

@@ -97,6 +97,20 @@ a {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
 }
+
+
+
+.slide-up-enter-active {
+    transition: all .3s ease;
+}
+.slide-up-leave-active {
+    transition: all .3s ease;
+}
+.slide-up-enter,
+.slide-up-leave-to {
+    opacity: 0;
+}
+
 // imputs
 .textInput {
     .slot-container, .input-container, input{
