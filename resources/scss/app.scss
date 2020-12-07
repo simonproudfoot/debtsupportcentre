@@ -100,16 +100,31 @@ a {
 
 
 
-.slide-up-enter-active {
-    transition: all .3s ease;
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity 0.5s;
 }
-.slide-up-leave-active {
-    transition: all .3s ease;
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  opacity: 0;
 }
-.slide-up-enter,
-.slide-up-leave-to {
-    opacity: 0;
+
+.slide-enter-active {
+  transition: all 0.3s ease;
 }
+
+.slide-leave-active {
+
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
 
 // imputs
 .textInput {

@@ -112,16 +112,28 @@ a {
   opacity: 0;
 }
 
-.slide-up-enter-active {
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active {
   transition: all 0.3s ease;
 }
 
-.slide-up-leave-active {
-  transition: all 0.3s ease;
+.slide-leave-active {
+  transition-delay: 1s;
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
-.slide-up-enter,
-.slide-up-leave-to {
+.slide-enter,
+.slide-leave-to {
+  transform: translateY(10px);
   opacity: 0;
 }
 
