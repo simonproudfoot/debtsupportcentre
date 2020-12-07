@@ -14013,6 +14013,7 @@ window.onload = function () {
     data: function data() {
       return {
         overlay: 'false',
+        waiting: false,
         step: 0,
         ready: false,
         validationRules: {
@@ -14081,6 +14082,9 @@ window.onload = function () {
       };
     },
     computed: {
+      stepsDisplay: function stepsDisplay() {
+        return parseInt(this.step) + 1;
+      },
       emailInvalid: function emailInvalid() {
         var val = this.questions.question_8.email;
         var re = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
@@ -14117,7 +14121,12 @@ window.onload = function () {
     },
     mounted: function mounted() {
       // Check for stored data
-      if (localStorage.getItem('overlay')) this.overlay = localStorage.getItem('overlay');
+      if (window.location.search.substring(1) == 'apply') {
+        this.overlay = true;
+      } else {
+        if (localStorage.getItem('overlay')) this.overlay = localStorage.getItem('overlay');
+      }
+
       if (localStorage.getItem('step')) this.step = localStorage.getItem('step');
 
       if (localStorage.getItem('questions')) {
@@ -14125,6 +14134,15 @@ window.onload = function () {
       }
     },
     methods: {
+      nextStep: function nextStep() {
+        var _this = this;
+
+        this.waiting = true;
+        setTimeout(function () {
+          _this.step++;
+          _this.waiting = false;
+        }, 1500);
+      },
       qCount: function qCount() {
         var k = 0;
         return k + 1;

@@ -9,6 +9,7 @@ window.onload = function () {
         data() {
             return {
                 overlay: 'false',
+                waiting: false,
                 step: 0,
                 ready: false,
                 validationRules: {
@@ -70,6 +71,9 @@ window.onload = function () {
             }
         },
         computed: {
+            stepsDisplay() {
+                return parseInt(this.step) + 1
+            },
             emailInvalid() {
                 var val = this.questions.question_8.email
                 var re = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
@@ -104,13 +108,24 @@ window.onload = function () {
         },
         mounted() {
             // Check for stored data
-            if (localStorage.getItem('overlay')) this.overlay = localStorage.getItem('overlay');
+            if (window.location.search.substring(1) == 'apply') {
+                this.overlay = true
+            } else {
+                if (localStorage.getItem('overlay')) this.overlay = localStorage.getItem('overlay');
+            }
             if (localStorage.getItem('step')) this.step = localStorage.getItem('step');
             if (localStorage.getItem('questions')) {
                 Object.assign(this.questions, JSON.parse(localStorage.getItem('questions')));
             }
         },
         methods: {
+            nextStep(){
+                this.waiting = true
+                setTimeout(() => {
+                    this.step++
+                    this.waiting = false
+                }, 1500);
+            },
             qCount() {
                 var k = 0
                 return k + 1;

@@ -29,7 +29,7 @@
 .formOverlay__inner {
   max-width: 600px;
   margin: 0 auto;
-  min-height: calc(100vh - 126px);
+  min-height: calc(100vh - 200px);
 }
 
 .formOverlay__inner__gif {
@@ -69,6 +69,10 @@
   background-color: #f5f5f5;
 }
 
+.formOverlay .backBtn:hover {
+  color: #b53683;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -84,6 +88,13 @@ body {
 .btn--form.selected {
   background-color: #b53683;
   color: #fff;
+}
+
+.btnDisable {
+  opacity: 0.5;
+  transition-duration: 0.5s;
+  transform: scale(0.9);
+  pointer-events: none !important;
 }
 
 .btn--text,
@@ -144,5 +155,23 @@ a {
 
 body {
   font-size: 0.9rem;
+}
+
+.pageBreak {
+  margin: 3em 0;
+  height: 2px;
+  background-color: #b53683;
+  display: block !important;
+  width: 100%;
+  position: relative;
+}
+
+.pageBreak svg {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 30px;
 }
 

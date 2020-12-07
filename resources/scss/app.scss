@@ -29,7 +29,7 @@
     &__inner {
         max-width: 600px;
         margin: 0 auto;
-        min-height: calc(100vh - 126px);
+        min-height: calc(100vh - 200px);
         @include respond-above(sm) {
             // padding: 10rem 0 !important;
         }
@@ -59,6 +59,9 @@
         line-height: 60px;
         background-color: #f5f5f5;
     }
+    .backBtn:hover{
+        color: $secondary;
+    }
 }
 // Main
 body {
@@ -76,6 +79,12 @@ body {
         color: #fff;
     }
 }
+.btnDisable{
+    opacity: 0.5;
+    transition-duration: 0.5s;
+    transform: scale(0.9);
+    pointer-events: none !important;
+}
 .btn--text,
 a {
     color: $primary;
@@ -88,10 +97,8 @@ a {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
 }
-
 // imputs
 .textInput {
-    
     .slot-container, .input-container, input{
         width: 100% !important;
     }
@@ -115,21 +122,33 @@ a {
     .label__active.label__active--canscale {
         color: $secondary !important;
     }
-
     .input__container--focus {
         .label__placeholder {
             color: $secondary;
         }
     }
 }
-
 // Bits n Bobs
 .vm-progress-bar * {
     border-radius: 0 !important;
     transition-duration: 1s;
 }
-
-
 body{
     font-size: 0.9rem;
+}
+.pageBreak{
+    margin: 3em 0;
+    height: 2px;
+    background-color: $secondary;
+    display: block !important;
+    width: 100%;
+    position: relative;
+    svg{
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 30px;
+    }
 }
