@@ -14092,12 +14092,19 @@ window.onload = function () {
       stepsDisplay: function stepsDisplay() {
         return parseInt(this.step) + 1;
       },
+      validateSubmit: function validateSubmit() {
+        if (!this.emailInvalid && this.questions.question_8.email && !this.phoneValidate && this.questions.question_8.phone && this.questions.question_8.fullName) {
+          return true;
+        } else {
+          return false;
+        }
+      },
       emailInvalid: function emailInvalid() {
         var val = this.questions.question_8.email;
         var re = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 
         if (!re.test(val) && val.length) {
-          console.log('email valid');
+          console.log('email invalid');
           return true;
         }
       },
@@ -14106,7 +14113,7 @@ window.onload = function () {
         var re = new RegExp(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
 
         if (!re.test(val) && val.length) {
-          console.log('email valid');
+          console.log('phone invalid');
           return true;
         }
       },
@@ -14170,23 +14177,7 @@ window.onload = function () {
       questions: {
         deep: true,
         handler: function handler(val) {
-          localStorage.setItem('questions', JSON.stringify(val)); // if (this.emailValidate(val.question_8.email)) {
-          //     setTimeout(() => {
-          //         document.getElementById('emailWarning').style.display = 'none'
-          //     }, 600);
-          // } else {
-          //     setTimeout(() => {
-          //         document.getElementById('emailWarning').style.display = 'block'
-          //     }, 600);
-          // }
-          //     setTimeout(() => {
-          //         document.getElementById('phoneWarning').style.display = 'none'
-          //     }, 600);
-          // } else {
-          //     setTimeout(() => {
-          //         document.getElementById('phoneWarning').style.display = 'block'
-          //     }, 600);
-          // }
+          localStorage.setItem('questions', JSON.stringify(val));
         }
       }
     }

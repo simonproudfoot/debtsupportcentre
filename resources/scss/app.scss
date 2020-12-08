@@ -9,11 +9,10 @@
     height: 100%;
     width: 100%;
     z-index: 100;
-    background-position: bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
+   
     overflow-y: auto;
     overflow-x: hidden;
+
     &__nav {
         font-size: 0.8rem;
         color: #707070;
@@ -79,10 +78,15 @@ body {
         color: #fff;
     }
 }
+
+.background-on{
+    background-image: url('/images/hero_borders.svg');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .btnDisable{
     opacity: 0.5;
-    transition-duration: 0.5s;
-    transform: scale(0.9);
     pointer-events: none !important;
 }
 .btn--text,

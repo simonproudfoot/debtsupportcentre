@@ -1,6 +1,5 @@
 <transition name="fade">
-    <div v-if="overlay == 'true'" v-cloak class="formOverlay" style="background-image: url('images/hero_borders.svg');"
-        style="display: none">
+    <div v-if="overlay == 'true'" v-cloak class="formOverlay" :class="stepsDisplay !=8 ? 'background-on' : null">
         <vm-progress :percentage="percentageDone" stroke-width="7" track-color="#d9d9d9" :show-text="false"
             stroke-linecap="square" stroke-color="#B53683"></vm-progress>
         <nav class="formOverlay__nav">
@@ -21,21 +20,20 @@
             <div class="formOverlay__inner pt-5">
                 <div v-for="(q, key, index) in questions" v-bind:key="key">
                     <div class="text-center" class="formOverlay__inner">
-                       
                             <div v-if="step == index && q.question">
                                 <span v-if="q.question !== 'userDetails'"
                                     class="qTitle d-block mb-3">@{{q.question}}</span>
                                 <!-- <img v-if="step == 1" v-bind:src="'images/'+q1Image" class="formOverlay__inner__gif mb-3">
                                     <img v-else="" src=""> -->
                                 <img v-if="index !==7" v-bind:src="'images/'+q.icon"
-                                    class="formOverlay__inner__gif mb-3">
+                                    class="formOverlay__inner__gif ">
                                 <div v-for="a in q.options">
                                     <button class="btn--form btn mb-3" @click="q.answer = a, nextStep()"
                                         v-bind:class="[q.answer == a ? 'selected': null, waiting && q.answer !== a ? 'btnDisable' : null]"
                                         :style="index == 0 ? 'width: 241px' : null">@{{a}}</button>
                                 </div>
                                 <!-- FINAL SECTION-->
-                                <div v-if="q.question == 'userDetails'" class="text-left">
+                                <div v-if="q.question == 'userDetails'" class="text-left mb-5 pb-5">
                                     <span class="qTitle d-block mb-3">Great news, here is how we can help.</span>
                                     <p>Based on <strong>@{{questions.question_5.answer}}</strong> debt from
                                         <strong>@{{questions.question_6.answer}} creditors</strong> that you owe, we
@@ -140,13 +138,12 @@
                                         </div>
                                     </div>
                                     <div class="mt-3 pt-3 b-block">
-                                        <button class="primary-btn mt-6 mx-auto d-block">Get my quote</button>
+                                  
+                                        <button class="primary-btn mt-6 mx-auto d-block" :class="!validateSubmit ? 'btnDisable' : null">Get my quote</button>
                                     </div>
-                               
                                 </div>
                                 <!-- FINAL SECTION END -->
                             </div>
-                       
                     </div>
                 </div>
             </div>
