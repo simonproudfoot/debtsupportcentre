@@ -3,6 +3,9 @@ import Progress from 'vue-multiple-progress'
 import floatinglabel from 'vue-simple-floating-labels'
 Vue.component('vm-progress', Progress)
 Vue.use(Progress)
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
 window.onload = function () {
     var app = new Vue({
         el: '#app',
@@ -75,7 +78,6 @@ window.onload = function () {
                         email: '',
                         confirmThirdparty: false,
                         confirmTerms: false,
-
                     }
                 },
             }
@@ -136,17 +138,21 @@ window.onload = function () {
             }
         },
         methods: {
-            submitData() {
+            async submitData() {
                 var btn = this.$refs['submitButton'][0]
                 btn.innerText = ''
                 btn.classList.add("onclick");
-                setTimeout(() => {
-                    this.resestFields()
-                    alert('To success page!')
-                }, 1500);
-            
+                try {
+                    var postData = await this.axios.post('api/send-debt-help', this.questions)
+                } catch (err) {
+                    console.log(err)
+                } finally {
+                    console.log(postData)
+                    // this.resetFields()
+                    // alert('To success page!')
+                }
             },
-            resestFields() {
+            resetFields() {
                 this.questions.question_1.answer = ''
                 this.questions.question_2.answer = ''
                 this.questions.question_3.answer = ''

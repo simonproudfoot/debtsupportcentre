@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
+
+//Route::get('send-debt-help', 'form_submits@submit');
+
+Route::post('send-debt-help', 'form_submits@debt_help_submit');
+

@@ -95,35 +95,44 @@ body {
     }
 }
 .submitButton {
-    outline:none;
+    outline: none;
     height: 40px;
     text-align: center;
     width: 130px;
-    border-radius:40px;
+    border-radius: 40px;
     background: #fff;
     border: 2px solid $primary;
-    color:$primary;
-    letter-spacing:1px;
-    text-shadow:0;
-    font:{
-      size:12px;
-      weight:bold;
+    color: $primary;
+    letter-spacing: 1px;
+    text-shadow: 0;
+
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1;
+    padding: 16px 60px;
+    display: inline-block;
+
+    font: {
+        size: 12px;
+        weight: bold;
     }
     cursor: pointer;
     transition: all 0.25s ease;
     &:hover {
-      color:white;
-      background: $primary;
+        color: white;
+        background: $primary;
     }
     &:active {
-      //letter-spacing: 2px;
-      letter-spacing: 2px ;
+        //letter-spacing: 2px;
+        letter-spacing: 2px;
     }
     &:after {
-      content:"SUBMIT";
+        content: "SUBMIT";
     }
-  }
-  .onclick {
+}
+.onclick {
     width: 40px !important;
     width: 40px !important;
     border-left: 1px $lightgrey solid !important;
@@ -134,15 +143,15 @@ body {
     box-shadow: none;
     height: 40px !important;
     animation: rotating 2s 0.25s linear infinite;
-  
+
     &:after {
-      content:"";
+        content: "";
     }
     &:hover {
-      color:$primary;
-      background: white;
+        color: $primary;
+        background: white;
     }
-  }
+}
 //   .validate {
 //     font-size:13px;
 //     color: white;
@@ -152,8 +161,6 @@ body {
 //       content:"\f00c";
 //     }
 //   }
-  
-  
 
 @keyframes rotating {
     from {
