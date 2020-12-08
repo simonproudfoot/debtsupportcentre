@@ -87,6 +87,97 @@ body {
   color: #fff;
 }
 
+.btn--submit {
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn--submit:hover {
+  color: white;
+  background: #009991;
+}
+
+.btn--submit:active {
+  letter-spacing: 2px;
+}
+
+.btn--submit:after {
+  content: "Get my quote";
+}
+
+.submitButton {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #009991;
+  color: #009991;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.submitButton:hover {
+  color: white;
+  background: #009991;
+}
+
+.submitButton:active {
+  letter-spacing: 2px;
+}
+
+.submitButton:after {
+  content: "SUBMIT";
+}
+
+.onclick {
+  width: 40px !important;
+  width: 40px !important;
+  border-left: 1px #EDEFF2 solid !important;
+  border-top: 1px #EDEFF2 solid !important;
+  border-right: 1px #009991 solid !important;
+  border-bottom: 1px #009991 solid !important;
+  font-size: 0 !important;
+  box-shadow: none;
+  height: 40px !important;
+  -webkit-animation: rotating 2s 0.25s linear infinite;
+          animation: rotating 2s 0.25s linear infinite;
+}
+
+.onclick:after {
+  content: "";
+}
+
+.onclick:hover {
+  color: #009991;
+  background: white;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .background-on {
   background-image: url("/images/hero_borders.svg");
   background-position: bottom;

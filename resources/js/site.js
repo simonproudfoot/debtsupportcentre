@@ -72,7 +72,10 @@ window.onload = function () {
                         question: "userDetails",
                         fullName: '',
                         phone: '',
-                        email: ''
+                        email: '',
+                        confirmThirdparty: false,
+                        confirmTerms: false,
+
                     }
                 },
             }
@@ -81,12 +84,12 @@ window.onload = function () {
             stepsDisplay() {
                 return parseInt(this.step) + 1
             },
-            validateSubmit(){
-               if(!this.emailInvalid && this.questions.question_8.email && !this.phoneValidate && this.questions.question_8.phone && this.questions.question_8.fullName){
-                   return true
-               }else{
-                   return false
-               }
+            validateSubmit() {
+                if (!this.emailInvalid && this.questions.question_8.email && !this.phoneValidate && this.questions.question_8.phone && this.questions.question_8.fullName && this.questions.question_8.confirmThirdparty && this.questions.question_8.confirmTerms) {
+                    return true
+                } else {
+                    return false
+                }
             },
             emailInvalid() {
                 var val = this.questions.question_8.email
@@ -133,7 +136,33 @@ window.onload = function () {
             }
         },
         methods: {
-            nextStep(){
+            submitData() {
+                var btn = this.$refs['submitButton'][0]
+                btn.innerText = ''
+                btn.classList.add("onclick");
+                setTimeout(() => {
+                    this.resestFields()
+                    alert('To success page!')
+                }, 1500);
+            
+            },
+            resestFields() {
+                this.questions.question_1.answer = ''
+                this.questions.question_2.answer = ''
+                this.questions.question_3.answer = ''
+                this.questions.question_4.answer = ''
+                this.questions.question_5.answer = ''
+                this.questions.question_6.answer = ''
+                this.questions.question_7.answer = ''
+                this.questions.question_8.email = ''
+                this.questions.question_8.fullName = ''
+                this.questions.question_8.phone = ''
+                this.questions.question_8.confirmThirdparty = ''
+                this.questions.question_8.confirmTerms = ''
+                this.overlay = 'false'
+                this.step = 0
+            },
+            nextStep() {
                 // come back to this
                 // Form will pause until animation finished
                 // this.waiting = true

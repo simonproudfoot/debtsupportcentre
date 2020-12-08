@@ -14083,7 +14083,9 @@ window.onload = function () {
             question: "userDetails",
             fullName: '',
             phone: '',
-            email: ''
+            email: '',
+            confirmThirdparty: false,
+            confirmTerms: false
           }
         }
       };
@@ -14093,7 +14095,7 @@ window.onload = function () {
         return parseInt(this.step) + 1;
       },
       validateSubmit: function validateSubmit() {
-        if (!this.emailInvalid && this.questions.question_8.email && !this.phoneValidate && this.questions.question_8.phone && this.questions.question_8.fullName) {
+        if (!this.emailInvalid && this.questions.question_8.email && !this.phoneValidate && this.questions.question_8.phone && this.questions.question_8.fullName && this.questions.question_8.confirmThirdparty && this.questions.question_8.confirmTerms) {
           return true;
         } else {
           return false;
@@ -14148,6 +14150,34 @@ window.onload = function () {
       }
     },
     methods: {
+      submitData: function submitData() {
+        var _this = this;
+
+        var btn = this.$refs['submitButton'][0];
+        btn.innerText = '';
+        btn.classList.add("onclick");
+        setTimeout(function () {
+          _this.resestFields();
+
+          alert('To success page!');
+        }, 1500);
+      },
+      resestFields: function resestFields() {
+        this.questions.question_1.answer = '';
+        this.questions.question_2.answer = '';
+        this.questions.question_3.answer = '';
+        this.questions.question_4.answer = '';
+        this.questions.question_5.answer = '';
+        this.questions.question_6.answer = '';
+        this.questions.question_7.answer = '';
+        this.questions.question_8.email = '';
+        this.questions.question_8.fullName = '';
+        this.questions.question_8.phone = '';
+        this.questions.question_8.confirmThirdparty = '';
+        this.questions.question_8.confirmTerms = '';
+        this.overlay = 'false';
+        this.step = 0;
+      },
       nextStep: function nextStep() {
         // come back to this
         // Form will pause until animation finished

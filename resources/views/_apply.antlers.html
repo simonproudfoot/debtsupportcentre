@@ -121,7 +121,7 @@
                                     </div>
                                     <div class="form-group pt-2">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck1" v-model="q.confirmThirdparty">
                                             <label class="form-check-label" for="gridCheck1">
                                                 I confirm my details may be passed on for consideration to companies
                                                 within the group
@@ -130,7 +130,7 @@
                                     </div>
                                     <div class="form-group ">
                                         <div class="form-check pb-6">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck2">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck2" v-model="q.confirmTerms">
                                             <label class="form-check-label" for="gridCheck2">
                                                 I have read and am happy to proceed with the terms and conditions and
                                                 privacy policy
@@ -138,8 +138,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-3 pt-3 b-block">
-                                  
-                                        <button class="primary-btn mt-6 mx-auto d-block" :class="!validateSubmit ? 'btnDisable' : null">Get my quote</button>
+                                        <button ref="submitButton" class="submitButton mt-6 mx-auto d-block" :class="!validateSubmit ? 'btnDisable' : null" @click="submitData"></button>
                                     </div>
                                 </div>
                                 <!-- FINAL SECTION END -->
