@@ -9,7 +9,6 @@
     height: 100%;
     width: 100%;
     z-index: 100;
-
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -94,82 +93,71 @@ body {
         content: "Get my quote";
     }
 }
+
+
+
+
 .submitButton {
-    outline: none;
-    height: 40px;
-    text-align: center;
-    width: 130px;
-    border-radius: 40px;
-    background: #fff;
-    border: 2px solid $primary;
-    color: $primary;
-    letter-spacing: 1px;
-    text-shadow: 0;
-
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #fff;
-    line-height: 1;
-    padding: 16px 60px;
-    display: inline-block;
-
-    font: {
-        size: 12px;
-        weight: bold;
-    }
-    cursor: pointer;
-    transition: all 0.25s ease;
-    &:hover {
-        color: white;
-        background: $primary;
-    }
-    &:active {
-        //letter-spacing: 2px;
-        letter-spacing: 2px;
-    }
-    &:after {
-        content: "SUBMIT";
-    }
+  outline:none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius:5px;
+  background: linear-gradient(0deg, rgba(0,77,73,1) 0%, rgba(0,153,145,1) 100%);
+  box-shadow: 0 2px 5px -1px #29253B;
+  border: none;
+  color:#fff;
+  text-shadow:0;
+  font-size:.9rem;
+  font-weight:bold;
+  cursor: pointer;
+  transition: all 0.25s ease
 }
-.onclick {
-    width: 40px !important;
-    width: 40px !important;
-    border-left: 1px $lightgrey solid !important;
-    border-top: 1px $lightgrey solid !important;
-    border-right: 1px $primary solid !important;
-    border-bottom: 1px $primary solid !important;
-    font-size: 0 !important;
+.submitButton:hover {
+    background: linear-gradient(0deg, rgba(0,77,73,1) 0%, rgba(0,77,73,1) 100%);
+  
     box-shadow: none;
-    height: 40px !important;
-    animation: rotating 2s 0.25s linear infinite;
-
-    &:after {
-        content: "";
-    }
-    &:hover {
-        color: $primary;
-        background: white;
-    }
 }
-//   .validate {
-//     font-size:13px;
-//     color: white;
-//     background: $primary;
-//     &:after {
-//       font-family:'FontAwesome';
-//       content:"\f00c";
-//     }
-//   }
+.submitButton:after {
+    content:"Get results";
+}
+.onclic {
+  width: 40px;
+  background: #fff;
+  border: 3px solid;
+  border-radius:40px;
+  border-color:#e7e7e7;
+  border-width:3px;
+  font-size:0;
+  box-shadow: none;
+  border-left-color:rgb(0,77,73);
+  animation: rotating 2s 0.25s linear infinite;
+}
+.onclic:after {
+    content:"";
+}
+.onclic:hover {
+    background: white;
+}
+.validate {
+  font-size:.9rem;
+  color: white;
+  background: linear-gradient(0deg, rgba(0,77,73,1) 0%, rgba(0,153,145,1) 100%)
+}
+.validate:after {
+    font-family:'FontAwesome';
+    content:"\f00c";
+}
 
 @keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
 
 .background-on {
     background-image: url("/images/hero_borders.svg");
@@ -220,6 +208,9 @@ a {
 
 // imputs
 .textInput {
+    .input-container{
+       // position: relative;
+    }
     .slot-container,
     .input-container,
     input {
@@ -241,6 +232,7 @@ a {
     }
     .label__placeholder {
         color: $grey;
+       // top: -17px !important;
     }
     .label__active.label__active--canscale {
         color: $secondary !important;
@@ -274,4 +266,9 @@ body {
         top: 0;
         width: 30px;
     }
+}
+
+
+input {
+    box-shadow: none !important;
 }

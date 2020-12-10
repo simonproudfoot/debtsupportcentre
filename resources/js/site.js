@@ -5,6 +5,8 @@ Vue.component('vm-progress', Progress)
 Vue.use(Progress)
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import browserDetect from "vue-browser-detect-plugin";
+Vue.use(browserDetect);
 Vue.use(VueAxios, axios)
 window.onload = function () {
     var app = new Vue({
@@ -78,11 +80,23 @@ window.onload = function () {
                         email: '',
                         confirmThirdparty: false,
                         confirmTerms: false,
+                        userIP: ''
+                    },
+                    question_9: {
+                        question: "submit",
+                        commsEmail: true,
+                        commsSMS: true
                     }
                 },
             }
         },
         computed: {
+            oldBrowser(){
+                console.log(this.$browserDetect.meta.version +'-'+ this.$browserDetect.meta.name )
+                if(this.$browserDetect.meta.name == 'Edge' && this.$browserDetect.meta.version <= 18 ){
+                  return true
+                }
+            },
             stepsDisplay() {
                 return parseInt(this.step) + 1
             },
@@ -126,6 +140,12 @@ window.onload = function () {
             }
         },
         mounted() {
+        
+            // get user IP
+            fetch('https://api.ipify.org?format=json')
+                .then(x => x.json()).then(({ ip }) => {
+                    this.questions.question_8.userIP = ip;
+                });
             // Check for stored data
             if (window.location.search.substring(1) == 'apply') {
                 this.overlay = true
@@ -139,17 +159,24 @@ window.onload = function () {
         },
         methods: {
             async submitData() {
-                var btn = this.$refs['submitButton'][0]
-                btn.innerText = ''
-                btn.classList.add("onclick");
+                var btn = this.$refs.submitButton
+                const errorMsg = "Sending failed! Please check you connection and try again."
+                btn.classList.add("onclic");
                 try {
                     var postData = await this.axios.post('api/send-debt-help', this.questions)
                 } catch (err) {
                     console.log(err)
+                    alert(errorMsg)
                 } finally {
-                    console.log(postData)
-                    // this.resetFields()
-                    // alert('To success page!')
+                    console.log(postData.data)
+                    if (postData.data == 200) {
+                        btn.classList.remove("onclic");
+                        this.resetFields()
+                        alert('To success page!')
+                    } else {
+                        alert(errorMsg)
+                    }
+
                 }
             },
             resetFields() {
