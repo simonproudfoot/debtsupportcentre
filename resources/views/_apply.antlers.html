@@ -17,8 +17,6 @@
             </div>
         </nav>
         <div class="container">
-            here
-            <h1>@{{!oldBrowser}}</h1>
             <div class="formOverlay__inner pt-5">
                 <div v-for="(q, key, index) in questions" v-bind:key="key">
                     <div class="text-center" class="formOverlay__inner">
@@ -190,14 +188,13 @@
                     </div>
                 </div>
             </div>
-            <div v-for="(q, key, index) in questions" v-bind:key="key" class="bottomNav text-center"
-                v-if="stepsDisplay < 8">
+            <div v-for="(q, key, index) in questions" v-bind:key="key" class="bottomNav text-center" v-if="stepsDisplay < 8">
                 <button v-if="step == index && q.answer" class="btn btn--text" @click="step++">Next ></button>
             </div>
-            <div class="bottomNav text-center mb-5" v-if="stepsDisplay == 8 && validateSubmit">
-                <button class="btn btn--text" @click="step++"> Next ></button>
+            <div class="bottomNav text-center mb-5" v-if="stepsDisplay == 8">
+                <button class="btn btn--text" @click="step++" :class="!validateSubmit ? 'btnDisable' : null"> Next ></button>
             </div>
-            <div class="bottomNav text-center" v-if="stepsDisplay == 9">
+            <div class="bottomNav text-center mb-5" v-if="stepsDisplay == 9">
                 <button ref="submitButton" class="submitButton" @click="submitData"></button>
             </div>
         </div>

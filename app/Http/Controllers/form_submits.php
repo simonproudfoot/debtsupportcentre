@@ -4,7 +4,35 @@ use Illuminate\Http\Request;
 class form_submits extends Controller
 {
     public function debt_help_submit(Request $request){
-        //return $request['question_1']['answer'];
+        // set total debt
+        $totalDebt = 0;
+        $debtString = $request['question_5']['answer'];
+        if($debtString == "Less than £5,000"){
+            $totalDebt = 5000;
+        }elseif($debtString == "£5,000 - £10,000"){
+            $totalDebt = 10000;
+        }
+        elseif($debtString == "£10,000 - £20,000"){
+            $totalDebt = 20000;
+        }
+        elseif($debtString == "More than £20,000"){
+            $totalDebt = 25000;
+        }
+        // set how many debts
+        $creditors = 0;
+        $creditorsString = $request['question_6']['answer'];
+        if($creditorsString == "1-3"){
+            $creditors = 3;
+        }
+        elseif($creditorsString == "4-5"){
+            $creditors = 5;
+        }
+        elseif($creditorsString == "6-7"){
+            $creditors = 7;
+        }
+        elseif($creditorsString == "8 or more"){
+            $creditors = 8;
+        }
         $package = array(
             'Lead_ref' => urlencode('DSC')
             , 'LeadSourceID' => urlencode('280') //required
@@ -12,16 +40,15 @@ class form_submits extends Controller
             , 'Name' => urlencode(stripslashes($request['question_8']['fullName'])) //required
             , 'Mob' => urlencode($request['question_8']['phone']) //required               
             , 'Email' => urlencode($request['question_8']['email'])//Optional   
-            // , 'DebtValue' => urlencode('5000') //Optional (Requires integer)
-            //    , 'Creditors' => urlencode($request['question_5']['answer']) //Optional   
+            , 'DebtValue' => urlencode($totalDebt) //Optional (Requires integer)
+            , 'Creditors' => urlencode($creditors) //Optional   
             , 'Employment' => urlencode($request['question_3']['answer']) //Optional   
             , 'ResidentialStatus' => urlencode($request['question_4']['answer']) //Optional            
-            , 'DI' => urlencode($request['question_5']['answer']) //Optional (amou range)
-            , 'a_url' => urlencode($_SERVER['SERVER_NAME'])
+            , 'DI' => urlencode($request['question_7']['answer']) //Optional 
             , 'opt_in' => urlencode(1)
             , 'tc_a' => urlencode(1)
-            , 'mk_text' => urlencode(1)
-            , 'mk_email' => urlencode(1)
+            , 'mk_text' => urlencode(($request['question_9']['commsSMS'] == true) ? 1 : 0)
+            , 'mk_email' => urlencode(($request['question_9']['commsEmail'] == true) ? 1 : 0)            
             , 'client_ip' => urlencode($request['question_8']['userIP'])
         );
         $api_url = 'http://dfh-api.co.uk/api2/SubmitApplication/DSC/index.php';
@@ -32,6 +59,7 @@ class form_submits extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS, $package);
         $response_string = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        return $httpcode;
+       // return $httpcode;
+       return  $response_string;
     }
 }

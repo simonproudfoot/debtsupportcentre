@@ -33,6 +33,6 @@
         "vue-simple-floating-labels": "^1.0.4"
     },
     "browserslist": [
-        "last 20 versions"
+        "last 8 versions"
     ]
 }

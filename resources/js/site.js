@@ -140,7 +140,6 @@ window.onload = function () {
             }
         },
         mounted() {
-        
             // get user IP
             fetch('https://api.ipify.org?format=json')
                 .then(x => x.json()).then(({ ip }) => {
@@ -168,14 +167,14 @@ window.onload = function () {
                     console.log(err)
                     alert(errorMsg)
                 } finally {
-                    console.log(postData.data)
-                    if (postData.data == 200) {
-                        btn.classList.remove("onclic");
-                        this.resetFields()
-                        alert('To success page!')
-                    } else {
-                        alert(errorMsg)
-                    }
+                    alert('Response: '+postData.data.OurRef)
+                    // if (postData.data == 200) {
+                     btn.classList.remove("onclic");
+                    //     this.resetFields()
+                    //     alert('To success page!')
+                    // } else {
+                    //     alert(errorMsg)
+                    // }
 
                 }
             },
