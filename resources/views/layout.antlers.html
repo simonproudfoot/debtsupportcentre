@@ -11,27 +11,41 @@
               "@context": "https://schema.org/",
               "@type": blogPost,
               "name": "{{ title }}",
-              "author": {
-                "@type": "Person",
-                "name": "{{ author:name }}"
-              },
               "datePublished": "{{ date format="Y-m-d" }}",
               "description": "{{ intro | strip_tags | entities }}",
             }
-        </script>
-    <!-- remove these styles later -->
-    <link rel="stylesheet" href="http://mh-graphics.com/DSC/rebrand2/CSS/stylesheet.css">
+    </script>
+    <!-- <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WBGPFMR');
+    </script> -->
+   
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"> -->
+    <!-- connect to domain of font files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- optionally increase loading priority -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700">
+    <!-- async CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ mix src='css/app.css' }}">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-    <script src="{{ mix src='/js/site.js' }}"></script>
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700">
+    <!-- no-JS fallback -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700">
+    </noscript>
+ 
 </head>
-<style> 
-    [v-cloak] { 
-        display: none; 
-    } 
-</style> 
+<style>
+    [v-cloak] {
+        display: none;
+    }
+</style>
 <body>
     <div id="app">
         {{ partial:apply }}
@@ -44,3 +58,5 @@
     </div>
 </body>
 </html>
+<script src="{{ mix src='/js/site.js' }}" async></script>
+<link rel="stylesheet" href="{{ mix src='css/app.css' }}">

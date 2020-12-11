@@ -1,0 +1,148 @@
+title: home
+sections:
+  main:
+    display: home
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: textarea
+        field:
+          type: textarea
+          listable: true
+          display: 'Heading text'
+      -
+        handle: why_people_choose_us
+        field:
+          type: section
+          listable: hidden
+          display: 'Why people choose us'
+      -
+        handle: why_people_choose_us_columns
+        field:
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    type: text
+                    width: 50
+                    listable: hidden
+                    display: Title
+                -
+                  handle: subtitle
+                  field:
+                    input_type: text
+                    type: text
+                    listable: hidden
+                    display: subtitle
+                    width: 50
+                -
+                  handle: text
+                  field:
+                    always_show_set_button: false
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - orderedlist
+                      - quote
+                      - anchor
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    reading_time: false
+                    fullscreen: true
+                    allow_source: true
+                    type: bard
+                    listable: hidden
+                    display: text
+          type: replicator
+          listable: hidden
+          display: '"Why people choose us" columns'
+      -
+        handle: possible_debt_solutions
+        field:
+          type: section
+          listable: hidden
+          display: 'Possible debt solutions'
+      -
+        handle: heading
+        field:
+          input_type: text
+          type: text
+          listable: hidden
+          display: Heading
+      -
+        handle: column_a
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          type: bard
+          width: 50
+          listable: hidden
+          display: 'Column A'
+      -
+        handle: column_b
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - removeformat
+            - quote
+            - anchor
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          type: bard
+          width: 50
+          listable: hidden
+          display: 'Column B'
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required

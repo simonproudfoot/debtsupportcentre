@@ -1,0 +1,160 @@
+<article class="max-w-6xl mx-auto px-3">
+    <!-- Hero -->
+    <section class="hero pt-md-5">
+        <div class="container-fluid pb-3">
+            <div class="row pt-5">
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="iva-hero.svg" alt="Man using computer." class="img-fluid">
+                </div>
+                <div class="col-md-6 col-xl-4 pt-3 text-center text-md-left">
+                    <div>
+                        <h1 class="py-3">Debt Keeping You Awake at Night?</h1>
+                        <p>Find a solution which is right for you. <br>Ready to get started?</p>
+                        <button @click="overlay = 'true'" class="primary-btn mt-3 mb-2">Get debt help <i
+                                class="fa fa-chevron-right arrow" aria-hidden="true"></i></button>
+                        <p class="pb-5 pb-md-2">Free no-obligation consultation</p>
+                        <div class="feefo-banner d-none d-md-block pb-5">
+                            <a href="https://www.feefo.com/reviews/nds" target="_blank"><img alt="Feefo logo" border="0"
+                                    src="https://api.feefo.com/api/logo?merchantidentifier=nds"
+                                    title="See what our customers say about us" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="images/hero_borders.svg" class="img-fluid d-md-none" alt="Graphic lines" style="margin-top:-4rem" />
+    </section>
+</article>
+<!-- Logos: Desktop only -->
+<div class="top-logos text-center py-3 d-none d-md-block" style="background:#363636">
+    <div class="container">
+        <div class="col-sm-12 m-auto">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <img src="images/logo_mas.svg" class="img-fluid" alt="Money Advice Service Logo">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="images/logo_insolvencypractitioner.svg" class="img-fluid"
+                        alt="The Insolvency Service logo">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="images/logo_fbp_white.png" class="img-fluid" alt="Family Business Place logo">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="images/logo_icaew2.png" class="img-fluid" alt="ICAEW logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<article>
+    <!-- CONTENT START -->
+        {{ partial:sections/why-choose-us }}
+    <!--Hidden on MD size -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide text-center d-md-none py-5" data-interval="2000"
+        data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <p>The Money Advice Service</p>
+                <div class="row">
+                    <div class="col-6 m-auto">
+                        <img src="images/mas-logo.png" class="img-fluid" alt="Money Advice Service logo" />
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <p>Fully regulated</p>
+                <div class="row">
+                    <div class="col-6 m-auto">
+                        <img src="images/logo_icaew.png" class="img-fluid" alt="ICAEW logo" />
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <p>Samaritan-trained advisors</p>
+                <div class="row">
+                    <div class="col-6 m-auto">
+                        <img src="images/logo_samaritans.png" class="img-fluid" alt="Samaritans logo" />
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <p>Insolvency Service registered</p>
+                <div class="row">
+                    <div class="col-6 m-auto">
+                        <img src="images/logo_insolvencyservice.png" class="img-fluid"
+                            alt="The Insolvency Service logo" />
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <p>Family-run business</p>
+                <div class="row">
+                    <div class="col-6 m-auto">
+                        <img src="images/logo_fbp-2.png" class="img-fluid" alt="Family Business Place logo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Debt solutions -->
+    <section class="debtsolutions pt-md-5">
+        <img src="images/debt-solutions_top.svg" class="img-fluid d-md-none" alt="Graphic lines" />
+        <div class="container pb-5 pb-md-0">
+            <div class="row">
+                <div class="col-10 offset-1 pt-5 pb-3 text-md-center" style="margin-top:-4rem">
+                    <h2>Possible debt solutions</h2>
+                </div>
+                <div class="col-10 col-md-6 m-auto text-md-center pt-3 pb-5">
+                    <p><strong>IVA</strong><br>
+                        Allowing you to write off up to 83.3% of your debts, you can consolidate many of these while
+                        making payments starting from just £70 per month.</p>
+                    <a href="application.php" class="btn primary-btn mt-3" style="min-width:240px">Get debt help</a>
+                </div>
+                <div class="col-10 col-md-6 m-auto text-md-center pt-3 pb-5">
+                    <p><strong>Other solutions</strong><br>
+                        Although we specialise in IVAs and can’t assist you in setting up alternatives, our knowledge of
+                        debt is vast. Here’s other options which could be suitable:</p>
+                    <a href="debt-solutions.php" class="btn secondary-btn mt-3" style="min-width:240px">Explore
+                        options</a>
+                </div>
+            </div>
+        </div>
+        <img src="images/debt-solutions_bottom.svg" class="img-fluid d-md-none" alt="Graphic lines"
+            style="margin-top:-4rem" />
+    </section>
+    <!-- Example of how an IVA could work -->
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-md-center pb-3">Example of how you could benefit from an IVA:</h2>
+            </div>
+        </div>
+    </div>
+    <!-- Include IVA table file -->
+
+    {{ partial:sections/iva-table }}
+    <!-- 3 steps -->
+    <section class="pt-3">
+        <img src="images/debt-solutions_top.svg" class="img-fluid d-md-none" alt="Graphic lines" />
+        <div class="container pb-3 pt-md-5" style="margin-top: -2rem">
+            <h2 class="text-center pb-3">How we can help you</h2>
+            <!-- Include 3 steps file -->
+
+            {{ partial:sections/three-steps }}
+        </div>
+    </section>
+    <!-- Debt types -->
+    <section class="pt-3">
+        <div class="container pt-2 text-center">
+            <h2 class="text-center py-3">Debts we can help with</h2>
+            <!-- Include debt types file -->
+
+
+            {{ partial:sections/debt-types }}
+
+            <div class="text-center">
+                <a href="application.php" class="primary-btn mt-3">Get debt advice</a>
+            </div>
+        </div>
+    </section>

@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "axios": "^0.21.0",
+        "bootstrap": "^4.5.3",
         "sass": "^1.29.0",
         "vue": "^2.6.12",
         "vue-axios": "^3.2.0",
@@ -33,6 +34,6 @@
         "vue-simple-floating-labels": "^1.0.4"
     },
     "browserslist": [
-        "last 8 versions"
+        "last 10 versions"
     ]
 }

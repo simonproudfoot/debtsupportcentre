@@ -13,6 +13,7 @@ window.onload = function () {
         el: '#app',
         data() {
             return {
+                showMenu: false,
                 overlay: 'false',
                 waiting: false,
                 step: 0,

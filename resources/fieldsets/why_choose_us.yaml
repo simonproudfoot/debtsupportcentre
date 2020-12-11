@@ -1,0 +1,8 @@
+title: 'why choose us'
+fields:
+  -
+    handle: section
+    field:
+      type: section
+      listable: hidden
+      display: Section

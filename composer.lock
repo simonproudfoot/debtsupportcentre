@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "664c7de6344c07ce0c86aae5373d580c",
+    "content-hash": "63bac818b2f04eee555393de0ce9e17c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1020,6 +1020,50 @@
                 "laravel"
             ],
             "time": "2020-04-28T08:47:37+00:00"
+        },
+        {
+            "name": "gioppy/statamic-metatags",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gioppy/statamic-metatags.git",
+                "reference": "9d381c293455a49c2da7007df93be88083b0449c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gioppy/statamic-metatags/zipball/9d381c293455a49c2da7007df93be88083b0449c",
+                "reference": "9d381c293455a49c2da7007df93be88083b0449c",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "3.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Meta tags",
+                    "description": "An addon for Statamic 3 to manage and customize any meta tag."
+                },
+                "laravel": {
+                    "providers": [
+                        "Gioppy\\StatamicMetatags\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gioppy\\StatamicMetatags\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Giovanni Buffa",
+                    "email": "tech@giovannibuffa.it"
+                }
+            ],
+            "description": "An addon for Statamic 3 to manage and customize any meta tag.",
+            "time": "2020-10-21T07:19:57+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -8189,5 +8233,6 @@
     "platform": {
         "php": "^7.2.5"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
