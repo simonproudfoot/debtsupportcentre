@@ -8,8 +8,9 @@
                 </div>
                 <div class="col-md-6 col-xl-4 pt-3 text-center text-md-left">
                     <div>
+                       
                         <h1 class="py-3">Debt Keeping You Awake at Night?</h1>
-                        <p>Find a solution which is right for you. <br>Ready to get started?</p>
+                        <p>{{textarea}}</p>
                         <button @click="overlay = 'true'" class="primary-btn mt-3 mb-2">Get debt help <i
                                 class="fa fa-chevron-right arrow" aria-hidden="true"></i></button>
                         <p class="pb-5 pb-md-2">Free no-obligation consultation</p>
@@ -106,25 +107,17 @@
         <div class="container pb-5 pb-md-0">
             <div class="row">
                 <div class="col-10 offset-1 pt-5 pb-3 text-md-center" style="margin-top:-4rem">
-                    <h2>Possible debt solutions</h2>
+                    <h2>{{solutions_heading}}</h2>
                 </div>
                 <div class="col-10 col-md-6 m-auto text-md-center pt-3 pb-5">
-                    <p><strong>IVA</strong><br>
-                        Allowing you to write off up to 83.3% of your debts, you can consolidate many of these while
-                        making payments starting from just £70 per month.</p>
-                    <a href="application.php" class="btn primary-btn mt-3" style="min-width:240px">Get debt help</a>
+                    {{column_a}}
                 </div>
                 <div class="col-10 col-md-6 m-auto text-md-center pt-3 pb-5">
-                    <p><strong>Other solutions</strong><br>
-                        Although we specialise in IVAs and can’t assist you in setting up alternatives, our knowledge of
-                        debt is vast. Here’s other options which could be suitable:</p>
-                    <a href="debt-solutions.php" class="btn secondary-btn mt-3" style="min-width:240px">Explore
-                        options</a>
+                    {{column_b}}
                 </div>
             </div>
         </div>
-        <img src="images/debt-solutions_bottom.svg" class="img-fluid d-md-none" alt="Graphic lines"
-            style="margin-top:-4rem" />
+        <img src="images/debt-solutions_bottom.svg" class="img-fluid d-md-none" alt="Graphic lines" style="margin-top:-4rem" />
     </section>
     <!-- Example of how an IVA could work -->
     <div class="container pt-5">

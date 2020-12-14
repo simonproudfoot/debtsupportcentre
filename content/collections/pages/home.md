@@ -1,7 +1,7 @@
 ---
 title: home
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1607939998
+updated_at: 1607944381
 blueprint: home
 template: index
 table:
@@ -192,5 +192,6 @@ help_box_3:
       -
         type: text
         text: 'Regain control of your finances with a financial plan.'
+details: 'Contractual repayments reduced by 78.14%. Total debt written off £18,841 over a period of five years.'
 id: 9253c33a-b3f9-4392-86e2-c4e60349f870
 ---

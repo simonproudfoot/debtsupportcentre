@@ -2,8 +2,11 @@ title: pages
 template: default
 layout: layout
 revisions: false
-route: /
+route: '/{slug}'
 sort_dir: asc
 date_behavior:
   past: public
   future: private
+structure:
+  root: true
+  tree: {  }

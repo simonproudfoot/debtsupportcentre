@@ -244,6 +244,15 @@ sections:
           width: 50
           listable: hidden
       -
+        handle: details
+        field:
+          input_type: text
+          antlers: false
+          display: details
+          type: text
+          icon: text
+          listable: hidden
+      -
         handle: how_we_can_help_you
         field:
           display: 'How we can help you'
