@@ -23,54 +23,89 @@ sections:
           listable: hidden
           display: 'Why people choose us'
       -
-        handle: why_people_choose_us_columns
+        handle: heading
         field:
-          sets:
-            new_set:
-              display: 'New Set'
-              fields:
-                -
-                  handle: title
-                  field:
-                    input_type: text
-                    type: text
-                    width: 50
-                    listable: hidden
-                    display: Title
-                -
-                  handle: subtitle
-                  field:
-                    input_type: text
-                    type: text
-                    listable: hidden
-                    display: subtitle
-                    width: 50
-                -
-                  handle: text
-                  field:
-                    always_show_set_button: false
-                    buttons:
-                      - h2
-                      - h3
-                      - bold
-                      - italic
-                      - orderedlist
-                      - quote
-                      - anchor
-                    save_html: false
-                    toolbar_mode: fixed
-                    link_noopener: false
-                    link_noreferrer: false
-                    target_blank: false
-                    reading_time: false
-                    fullscreen: true
-                    allow_source: true
-                    type: bard
-                    listable: hidden
-                    display: text
-          type: replicator
+          input_type: text
+          type: text
           listable: hidden
-          display: '"Why people choose us" columns'
+          display: Heading
+      -
+        handle: why_column_a
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - removeformat
+            - quote
+            - anchor
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'Why column A'
+          type: bard
+          icon: bard
+          width: 33
+          listable: hidden
+      -
+        handle: why_column_b
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - removeformat
+            - quote
+            - anchor
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'Why column B'
+          type: bard
+          icon: bard
+          width: 33
+          listable: hidden
+      -
+        handle: why_column_c
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'Why column C'
+          type: bard
+          icon: bard
+          width: 33
+          listable: hidden
       -
         handle: possible_debt_solutions
         field:
@@ -78,12 +113,14 @@ sections:
           listable: hidden
           display: 'Possible debt solutions'
       -
-        handle: heading
+        handle: solutions_heading
         field:
           input_type: text
+          antlers: false
+          display: 'solutions heading'
           type: text
+          icon: text
           listable: hidden
-          display: Heading
       -
         handle: column_a
         field:
@@ -135,6 +172,150 @@ sections:
           width: 50
           listable: hidden
           display: 'Column B'
+      -
+        handle: example_of_how_you_could_benefit_from_an_iva
+        field:
+          display: 'Example of how you could benefit from an IVA'
+          type: section
+          icon: section
+          listable: hidden
+      -
+        handle: table
+        field:
+          display: Table
+          type: table
+          icon: table
+          listable: hidden
+      -
+        handle: written_off
+        field:
+          display: 'Written off'
+          type: table
+          icon: table
+          listable: hidden
+      -
+        handle: example_box_left
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - removeformat
+            - quote
+            - anchor
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'Example box left'
+          type: bard
+          icon: bard
+          width: 50
+          listable: hidden
+      -
+        handle: example_box_right
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - removeformat
+            - quote
+            - anchor
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'Example box right'
+          type: bard
+          icon: bard
+          width: 50
+          listable: hidden
+      -
+        handle: how_we_can_help_you
+        field:
+          display: 'How we can help you'
+          type: section
+          icon: section
+          listable: hidden
+      -
+        handle: help_box_1
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'Help box 1'
+          type: bard
+          icon: bard
+          width: 33
+          listable: hidden
+      -
+        handle: help_box_2
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'Help box 2'
+          type: bard
+          icon: bard
+          width: 33
+          listable: hidden
+      -
+        handle: help_box_3
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'Help box 3'
+          type: bard
+          icon: bard
+          width: 33
+          listable: hidden
   sidebar:
     display: Sidebar
     fields:

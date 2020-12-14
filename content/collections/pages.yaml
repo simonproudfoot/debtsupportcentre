@@ -1,5 +1,9 @@
 title: pages
+template: default
+layout: layout
 revisions: false
+route: /
+sort_dir: asc
 date_behavior:
   past: public
   future: private
