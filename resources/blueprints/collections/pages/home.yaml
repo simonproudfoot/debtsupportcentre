@@ -325,6 +325,58 @@ sections:
           icon: bard
           width: 33
           listable: hidden
+      -
+        handle: select_blocks
+        field:
+          always_show_set_button: false
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: select_block
+                  field:
+                    placeholder: 'select block'
+                    options:
+                      why_choose_us: 'why choose us'
+                      possible_debt_solutions: 'Possible debt solutions'
+                      how_you_could_benefit: 'how you could benefit'
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    display: 'Select block'
+                    type: select
+                    icon: select
+                    instructions: 'Select block'
+                    listable: hidden
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'select blocks'
+          type: bard
+          icon: bard
+          instructions: 'Pick and edit which blocks you like. Edit the content for each at Globals -> Reusable blocks'
+          listable: hidden
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
   sidebar:
     display: Sidebar
     fields:
@@ -336,3 +388,12 @@ sections:
           localizable: true
           validate:
             - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

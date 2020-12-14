@@ -1,8 +1,6 @@
 title: Settings
 data:
-  site_name: 'Starter''s Creek'
-  personality: casual
-  show_signup: true
+  site_name: 'Debt advice solutions'
   social:
     -
       name: Twitter

@@ -4,12 +4,10 @@
             <div class="row">
                 <div class="col-md-8 m-auto">
                     <div class="footer-menu text-center">
-                        <a href="privacy.php">Privacy Policy</a> |
-                        <a href="terms.php">Terms</a> |
-                        <a href="complaints.php">Complaints</a> |
-                        <a href="cookies.php">Cookies</a> |
-                        <a href="our-fees.php">Our Fees</a>
-                        <p class="pt-3">© 2020 Debt Support Centre.</p>
+                        {{ nav:footer }}
+                        <a href="{{ url }}">{{ title }}</a>
+                        {{ /nav:footer }}
+                        <p class="pt-3">© {{ now format="Y" }} Debt Support Centre.</p>
                     </div>
                     <div class="top-logos text-center py-3">
                         <div class="col-sm-12 m-auto">

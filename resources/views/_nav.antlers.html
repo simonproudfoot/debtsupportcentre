@@ -26,13 +26,14 @@
         </div>
     </div>
     <transition name="slide">
-        <section v-cloak  class="navbar-collapse vw-100 py-3 position-absolute" v-if="showMenu">
+        <section v-cloak class="navbar-collapse vw-100 py-3 position-absolute" v-if="showMenu">
             <div class="container">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="application.php">Apply</a>
-                    <a class="nav-item nav-link" href="debt-solutions.php">Debt solutions</a>
-                    <a class="nav-item nav-link" href="about.php">About</a>
-                    <a class="nav-item nav-link" href="contact.php">Contact</a>
+                    <ul>
+                        {{ nav:main }}
+                        <a class="nav-item nav-link" href="{{ url }}">{{ title }}</a>
+                        {{ /nav:main }}
+                    </ul>
                 </div>
             </div>
         </section>

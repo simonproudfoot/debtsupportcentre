@@ -1,43 +1,40 @@
 <div class="top container text-center">
     <div class="row justify-content-center">
         <div class="col-md-8 m-auto">
-                <h1>Alternative Debt Solutions</h2>
-                <p class="py-3">Although we specialise in IVAs and can't assist you in setting up alternatives, one of the below debt solutions may be suitable.</p>
-            </div>
+            <h1>Alternative Debt Solutions</h2>
+                <p class="py-3">Although we specialise in IVAs and can't assist you in setting up alternatives, one of
+                    the below debt solutions may be suitable.</p>
+        </div>
         <div class="col-md-6 pb-4">
             <div class="card h-100">
                 <div class="card-body">
-                    {{box_1}}
-                    <p class="lead font-weight-bold" style="color:#B53683">IVA</p>
-                    <p>An IVA is our most popular debt solution and is an agreement between you and your creditors. Allowing you to write off up to 83.3% of your debts, you can consolidate many of these while making payments starting from just £70 per month.</p>
-                    <a href="considering-an-iva.php">Read more</a>
+                    <p class="lead font-weight-bold" style="color:#B53683">{{title_1}}</p>
+                    <p>{{box_1}}</p>
+
                 </div>
             </div>
         </div>
         <div class="col-md-6 pb-4">
             <div class="card h-100">
                 <div class="card-body">
-                    <p class="lead font-weight-bold" style="color:#B53683">Debt Management Plans</p>
-                    <p>A Debt Management Plan is an informal agreement designed to move all your payments into one new affordable monthly amount. A popular solution, it helps take away the potential strain of dealing with debts direct as this is handled by a trained professional.</p>
-                    <a href="considering-debt-management.php">Read more</a>
+                    <p class="lead font-weight-bold" style="color:#B53683">{{title_2}}</p>
+                    <p>{{box_2}}</p>
                 </div>
             </div>
         </div>
         <div class="col-md-6 pb-4">
             <div class="card h-100">
                 <div class="card-body">
-                    <p class="lead font-weight-bold" style="color:#B53683">Bankruptcy</p>
-                    <p>For people with extreme levels of debt and repayment problems, it could be the only option. However, Bankruptcy is publicly advertised, which can be distressing. We would only recommend this solution after we have explored all other options.</p>
-                    <a href="is-bankruptcy-right-for-you.php">Read more</a>
+                    <p class="lead font-weight-bold" style="color:#B53683">{{title_3}}</p>
+                    <p>{{box_3}}</p>
                 </div>
             </div>
         </div>
         <div class="col-md-6 pb-4">
             <div class="card h-100">
                 <div class="card-body">
-                    <p class="lead font-weight-bold" style="color:#B53683">Other</p>
-                    <p>Although we specialise in IVAs and can’t assist you in setting up alternatives, our knowledge of debt is vast. Get in touch and we will discuss how we can help you.</p>
-                    <a href="looking-for-debt-help.php">Read more</a>
+                    <p class="lead font-weight-bold" style="color:#B53683">{{title_4}}</p>
+                    <p>{{box_4}}</p>
                 </div>
             </div>
         </div>
@@ -49,7 +46,9 @@
         <div class="row">
             <div class="col-10 col-md-6 m-auto">
                 <p class="lead font-weight-bold">Together, let's find the right debt solution for you!</p>
-                <a href="application.php" class="primary-btn mt-3 mb-2">Apply now</a>  
+                <button class="primary-btn mt-3 mb-2" @click="overlay = 'true'">Apply now</button>
+
+
             </div>
         </div>
     </div>

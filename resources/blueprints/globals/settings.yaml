@@ -12,24 +12,6 @@ sections:
           listable: hidden
           input_type: text
       -
-        handle: personality
-        field:
-          options:
-            casual: Casual
-            formal: Formal
-          inline: true
-          type: radio
-          instructions: 'Subtly alter the personality of the site.'
-          listable: hidden
-          display: Personality
-      -
-        handle: show_signup
-        field:
-          type: toggle
-          instructions: 'Show the newsletter signup form on the blog.show pages.'
-          listable: hidden
-          display: 'Show Signup'
-      -
         handle: social
         field:
           fields:
@@ -93,3 +75,4 @@ sections:
           type: bard
           icon: bard
           listable: hidden
+  

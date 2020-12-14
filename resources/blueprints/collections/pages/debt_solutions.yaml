@@ -44,6 +44,15 @@ sections:
           icon: bard
           listable: hidden
       -
+        handle: title_1
+        field:
+          input_type: text
+          antlers: false
+          display: 'title 1'
+          type: text
+          icon: text
+          listable: hidden
+      -
         handle: box_1
         field:
           always_show_set_button: false
@@ -75,7 +84,15 @@ sections:
           display: 'box 1'
           type: bard
           icon: bard
-          width: 50
+          listable: hidden
+      -
+        handle: title_2
+        field:
+          input_type: text
+          antlers: false
+          display: 'Title 2'
+          type: text
+          icon: text
           listable: hidden
       -
         handle: box_2
@@ -109,7 +126,15 @@ sections:
           display: 'box 2'
           type: bard
           icon: bard
-          width: 50
+          listable: hidden
+      -
+        handle: title_3
+        field:
+          input_type: text
+          antlers: false
+          display: 'Title 3'
+          type: text
+          icon: text
           listable: hidden
       -
         handle: box_3
@@ -142,7 +167,15 @@ sections:
           display: 'box 3'
           type: bard
           icon: bard
-          width: 50
+          listable: hidden
+      -
+        handle: title_4
+        field:
+          input_type: text
+          antlers: false
+          display: 'Title 4'
+          type: text
+          icon: text
           listable: hidden
       -
         handle: box_4
@@ -176,7 +209,6 @@ sections:
           display: 'box 4'
           type: bard
           icon: bard
-          width: 50
           listable: hidden
   sidebar:
     display: Sidebar
@@ -189,3 +221,12 @@ sections:
           localizable: true
           validate:
             - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

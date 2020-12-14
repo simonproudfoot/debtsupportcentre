@@ -11,7 +11,15 @@ sections:
           validate:
             - required
       -
-        handle: page_content
+        handle: header_content
+        field:
+          antlers: false
+          display: 'Header content'
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: page_builder
         field:
           always_show_set_button: false
           buttons:
@@ -41,10 +49,34 @@ sections:
           reading_time: false
           fullscreen: true
           allow_source: true
-          display: 'page content'
+          display: 'page builder'
           type: bard
           icon: bard
           listable: hidden
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: select_blocks
+                  field:
+                    options:
+                      why_choose_us: 'why choose us'
+                      possible_debt_solutions: 'Possible debt solutions'
+                      ' how_you_could_benefit': 'how you could benefit'
+                      debts_we_can_help_with: 'Debts we can help with'
+                      how_we_can_help_you: 'How we can help you'
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    display: 'Select blocks'
+                    type: select
+                    icon: select
+                    instructions: 'Edit reusable block content in Globals'
+                    listable: hidden
   sidebar:
     display: Sidebar
     fields:
@@ -56,3 +88,12 @@ sections:
           localizable: true
           validate:
             - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
