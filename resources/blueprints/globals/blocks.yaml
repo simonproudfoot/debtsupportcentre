@@ -311,28 +311,3 @@ sections:
           icon: bard
           width: 33
           listable: hidden
-      -
-        handle: cta
-        field:
-          display: CTA
-          type: section
-          icon: section
-          listable: hidden
-      -
-        handle: cta_text_on_button
-        field:
-          antlers: false
-          display: 'Text on button'
-          type: textarea
-          icon: textarea
-          instructions: 'Example: "Apply now"'
-          listable: hidden
-      -
-        handle: cta_text
-        field:
-          antlers: false
-          display: Text
-          type: textarea
-          icon: textarea
-          instructions: 'Text above button'
-          listable: hidden

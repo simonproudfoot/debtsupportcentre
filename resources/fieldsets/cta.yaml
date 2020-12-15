@@ -1,0 +1,39 @@
+title: cta
+fields:
+  -
+    handle: page_cta
+    field:
+      display: 'Page CTA'
+      type: section
+      icon: section
+      instructions: 'Set the content here, then add it as a block and drag to where you want it'
+      listable: hidden
+  -
+    handle: cta_pre_header
+    field:
+      input_type: text
+      antlers: false
+      display: 'pre header'
+      type: text
+      icon: text
+      listable: hidden
+      width: 50
+  -
+    handle: cta_button_text
+    field:
+      input_type: text
+      antlers: false
+      display: 'Button text'
+      type: text
+      icon: text
+      instructions: 'Example: "Apply now"'
+      listable: hidden
+      width: 50
+  -
+    handle: cta_text
+    field:
+      antlers: false
+      display: 'cta text'
+      type: textarea
+      icon: textarea
+      listable: hidden

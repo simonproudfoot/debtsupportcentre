@@ -6,10 +6,9 @@
             </div>
             <div class="col-md-6 col-xl-4 pt-3 text-center text-md-left">
                 <div class="">
-                    <h1 class="py-3">Debt Keeping You Awake at Night?</h1>
-                <p>{{header_content}}</p>
-                    <a href="application.php" class="primary-btn mt-3 mb-2">Get debt help <i
-                            class="fa fa-chevron-right arrow" aria-hidden="true"></i></a>
+                    <h1 class="py-3">{{hero_title}}</h1>
+                    <p>{{header_content}}</p>
+                    <button @click="overlay = 'true'" class="primary-btn mt-3 mb-2">Get debt help <i class="fa fa-chevron-right arrow" aria-hidden="true"></i></button>
                     <p class="pb-5 pb-md-2">Free no-obligation consultation</p>
                     <div class="feefo-banner d-none d-md-block pb-5">
                         <a href="https://www.feefo.com/reviews/nds" target="_blank"><img alt="Feefo logo"
@@ -25,12 +24,13 @@
 <div class="top-logos text-center py-3 d-none d-md-block" style="background:#363636">
     <div class="container">
         <div class="col-sm-12 m-auto">
-        	<div class="row">
-            	<div class="col-6 col-md-3">
-                	<img src="images/logo_mas.svg" class="img-fluid" alt="Money Advice Service Logo">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <img src="images/logo_mas.svg" class="img-fluid" alt="Money Advice Service Logo">
                 </div>
                 <div class="col-6 col-md-3">
-                	<img src="images/logo_insolvencypractitioner.svg" class="img-fluid" alt="The Insolvency Service logo">
+                    <img src="images/logo_insolvencypractitioner.svg" class="img-fluid"
+                        alt="The Insolvency Service logo">
                 </div>
                 <div class="col-6 col-md-3">
                     <img src="images/logo_fbp_white.png" class="img-fluid" alt="Family Business Place logo">
@@ -39,29 +39,56 @@
                     <img src="images/logo_icaew2.png" class="img-fluid" alt="ICAEW logo">
                 </div>
             </div>
-    	</div>
-	</div>
+        </div>
+    </div>
 </div>
 {{ page_builder }}
+{{ if type == "text" }}
+    {{ partial:blocks/text }}
+{{/if}}
+{{if text_card}}
+<section>
+    <div class="container">
+        <div class="row">
+            {{ text_card }}
+                {{ partial:blocks/cards}}
+            {{ /text_card }}
+        </div>
+    </div>
+</section>
+{{/if}}
 {{if select_blocks == 'why_choose_us'}}
-{{ partial:blocks/why-choose-us }}
+    {{ partial:blocks/why-choose-us }}
 {{/if}}
 {{if select_blocks == 'possible_debt_solutions'}}
-{{ partial:blocks/possible_debt_solutions }}
+    {{ partial:blocks/possible_debt_solutions }}
 {{/if}}
 {{if select_blocks == 'how_you_could_benefit'}}
-{{ partial:blocks/how_you_could_benefit }}
+    {{ partial:blocks/how_you_could_benefit }}
 {{/if}}
 {{if select_blocks == 'debts_we_can_help_with'}}
-{{ partial:blocks/debts_we_can_help_with }}
+    {{ partial:blocks/debts_we_can_help_with }}
 {{/if}}
 {{if select_blocks == 'how_we_can_help_you'}}
-{{ partial:blocks/how_we_can_help_you }}
+    {{ partial:blocks/how_we_can_help_you }}
 {{/if}}
-{{if select_blocks == 'cta'}}
-{{ partial:blocks/cta }}
+{{if select_blocks == 'text_blocks'}}
+    {{ partial:blocks/text_blocks }}
 {{/if}}
+{{ if type == "new_cta" }}
+<section class="vision" style="margin-bottom:-5rem">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-10 col-md-6 m-auto">
+                {{cta_pre_header}}
+                <p class="lead font-weight-bold">{{cta_text}}</p>
+                <button @click="overlay = 'true'" class="primary-btn mt-3 mb-2">{{cta_button_text}}</button>
+            </div>
+        </div>
+    </div>
+</section>
+{{ /if }} 
 {{if select_blocks == 'carousel'}}
-{{ partial:blocks/carousel }}
+    {{ partial:blocks/carousel }}
 {{/if}}
 {{ /page_builder }}

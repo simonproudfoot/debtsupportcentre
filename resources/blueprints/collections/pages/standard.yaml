@@ -11,6 +11,15 @@ sections:
           validate:
             - required
       -
+        handle: hero_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Hero title'
+          type: text
+          icon: text
+          listable: hidden
+      -
         handle: header_content
         field:
           antlers: false
@@ -21,7 +30,7 @@ sections:
       -
         handle: page_builder
         field:
-          always_show_set_button: false
+          always_show_set_button: true
           buttons:
             - h2
             - h3
@@ -38,6 +47,7 @@ sections:
             - h5
             - h6
             - underline
+            - table
           save_html: false
           toolbar_mode: fixed
           link_noopener: false
@@ -51,8 +61,8 @@ sections:
           icon: bard
           listable: hidden
           sets:
-            new_set:
-              display: 'New Set'
+            new_block:
+              display: 'New block'
               fields:
                 -
                   handle: select_blocks
@@ -65,6 +75,7 @@ sections:
                       how_we_can_help_you: 'How we can help you'
                       carousel: carousel
                       cta: cta
+                      text_blocks: 'text blocks'
                     multiple: false
                     clearable: false
                     searchable: true
@@ -75,6 +86,35 @@ sections:
                     type: select
                     icon: select
                     instructions: 'Edit reusable block content in Globals'
+                    listable: hidden
+            new_cta:
+              display: 'new CTA'
+              fields:
+                -
+                  import: cta
+            new_text_card_list:
+              display: 'New text card list'
+              fields:
+                -
+                  handle: text_card
+                  field:
+                    collapse: false
+                    sets:
+                      new_set:
+                        display: 'New Set'
+                        fields:
+                          -
+                            handle: text_content
+                            field:
+                              antlers: false
+                              display: text_content
+                              type: textarea
+                              icon: textarea
+                              listable: hidden
+                    display: 'text card'
+                    type: replicator
+                    icon: replicator
+                    instructions: 'Add to a grid of cards'
                     listable: hidden
   sidebar:
     display: Sidebar
