@@ -28,6 +28,14 @@ sections:
           icon: textarea
           listable: hidden
       -
+        handle: page_template
+        field:
+          hide_partials: true
+          display: 'page template'
+          type: template
+          icon: template
+          listable: hidden
+      -
         handle: page_builder
         field:
           always_show_set_button: true
@@ -104,12 +112,28 @@ sections:
                         display: 'New Set'
                         fields:
                           -
+                            handle: card_title
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: card_title
+                              type: text
+                              icon: text
+                              listable: hidden
+                          -
                             handle: text_content
                             field:
                               antlers: false
                               display: text_content
                               type: textarea
                               icon: textarea
+                              listable: hidden
+                          -
+                            handle: card_link
+                            field:
+                              display: 'card link'
+                              type: link
+                              icon: link
                               listable: hidden
                     display: 'text card'
                     type: replicator

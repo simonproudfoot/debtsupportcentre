@@ -1,8 +1,15 @@
-
-    <div class="col-md-6 pb-4">
-        <div class="card h-100">
-            <div class="card-body">
-                {{text_content}}
-            </div>
+<div class="col-md-6 pb-4">
+    <div class="card h-100 text-center">
+        <div class="card-body">
+            {{if card_title}}
+                <p class="lead font-weight-bold" style="color:#B53683">{{card_title}}</p>
+            {{/if}}
+            {{if text_content}}
+                <p>{{text_content}}</p>
+            {{/if}}
+            {{if card_link}}
+                <a href="{{card_link}}">Read more</a>
+            {{/if}}
         </div>
     </div>
+</div>
