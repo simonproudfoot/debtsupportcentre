@@ -6,10 +6,12 @@ header_content: |
 page_builder:
   -
     type: paragraph
-    content:
-      -
-        type: text
-        text: 'Some text here'
+  -
+    type: set
+    attrs:
+      values:
+        type: new_set
+        select_blocks: carousel
   -
     type: set
     attrs:
@@ -44,8 +46,10 @@ page_builder:
     type: paragraph
   -
     type: paragraph
+  -
+    type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1607967640
+updated_at: 1608025731
 blueprint: standard
 template: home
 id: 15bc524c-dbb8-4d50-aafd-9f5b317c3599

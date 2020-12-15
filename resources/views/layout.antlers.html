@@ -41,6 +41,7 @@
     </noscript>
  
 </head>
+<!-- hide unloaded vue components on page load -->
 <style>
     [v-cloak] {
         display: none;
@@ -58,5 +59,13 @@
     </div>
 </body>
 </html>
+<!-- Load style and script at the end -->
 <script src="{{ mix src='/js/site.js' }}" async></script>
 <link rel="stylesheet" href="{{ mix src='css/app.css' }}">
+
+<!-- only load carousel if needed -->
+{{ page_builder }}
+    {{if select_blocks == 'carousel'}}
+        <script type="text/javascript" src="https://api.feefo.com/api/javascript/nds" async></script>
+    {{/if}}
+{{ /page_builder }}

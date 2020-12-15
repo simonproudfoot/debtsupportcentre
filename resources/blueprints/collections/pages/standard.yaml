@@ -33,14 +33,11 @@ sections:
             - quote
             - anchor
             - image
-            - table
             - h1
             - h4
             - h5
             - h6
             - underline
-            - strikethrough
-            - code
           save_html: false
           toolbar_mode: fixed
           link_noopener: false
@@ -66,6 +63,8 @@ sections:
                       ' how_you_could_benefit': 'how you could benefit'
                       debts_we_can_help_with: 'Debts we can help with'
                       how_we_can_help_you: 'How we can help you'
+                      carousel: carousel
+                      cta: cta
                     multiple: false
                     clearable: false
                     searchable: true
