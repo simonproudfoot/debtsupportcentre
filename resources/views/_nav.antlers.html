@@ -1,39 +1,35 @@
 <nav class="container topnav">
     <div class="row">
         <div class="col-3">
-            {{# <button class="menu collapsed" @click="showMenu = !showMenu">
+            <button @click="showMenu = !showMenu" ref="menuButton" class="menu" data-toggle="collapse"
+                data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
                 <svg width="50" height="50" viewBox="0 0 100 100">
                     <path class="line line1"
-                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058">
-                    </path>
-                    <path class="line line2" d="M 20,50 H 80"></path>
-                    <path class="line line3"
-                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942">
-                    </path>
-                </svg>
-            </button> #}}
-
-            <button @click="showMenu = !showMenu" ref="menuButton" class="menu" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
-                <svg width="50" height="50" viewBox="0 0 100 100">
-                    <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
                     <path class="line line2" d="M 20,50 H 80" />
-                    <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    <path class="line line3"
+                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
                 </svg>
             </button>
-
-            
         </div>
         <div class="col-6 text-center">
             <a href="/">
                 <img src="images/logo.svg" width="90" height="auto" alt="Debt Support Centre logo" class="img-fluid">
             </a>
         </div>
+        {{ if !{site_data:lineClosed} }}
+        <div class="col-3 text-right" id="lines-open">
+            <a href="tel:01612001139"><img src="images/phone-solid-2.svg" class="img-fluid pb-2" style="height:52px"
+                    alt="" aria-hidden="true" /></a>
+        </div>
+        {{ else }}
         <div class="col-3 text-right" id="lines-closed">
-            <!-- Button trigger call popup -->
-            <button type="button" class="btn closed-lines" data-toggle="modal" data-target="#exampleModalCenter">
-                <img src="images/phone-solid-2.svg" class="img-fluid" style="height:46px" alt="" aria-hidden="true">
+            <button type="button" class="btn closed-lines" @click="phoneModal =!phoneModal"
+                data-target="#exampleModalCenter">
+                <img src="images/phone-solid-2.svg" class="img-fluid" style="height:46px" alt="" aria-hidden="true" />
             </button>
         </div>
+        {{/if}}
     </div>
     <transition name="slide">
         <section v-cloak class="navbar-collapse vw-100 py-3 position-absolute" v-if="showMenu">
@@ -47,5 +43,37 @@
                 </div>
             </div>
         </section>
+    </transition>
+    <!-- Call popup -->
+    <transition name="slide">
+        <div class="vModal" v-if="phoneModal" v-cloak>
+            <div class="modal-dialog pt-5" role="document">
+                <div class="modal-content text-center">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            @click="phoneModal = false">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body pb-5">
+                        <p>Sorry, we are currently closed.</p>
+                        <p>If you wish to speak to an advisor please call us on <a href="tel:01612001139">0161 200
+                                1139</a>
+                            during our opening hours, or make an <a
+                                href="https://debtsupportcentre.co.uk/application/">application</a> and we will get in
+                            touch
+                            for a no-obligation chat about your finances.</p>
+                        <hr />
+                        <p class="font-weight-bold pt-2">Opening hours:</p>
+                        <p>Monday: 8am-8pm</p>
+                        <p>Tuesday: 8am-8pm</p>
+                        <p>Wednesday: 8am-8pm</p>
+                        <p>Thursday: 8am-8pm</p>
+                        <p>Friday: 8am-4pm</p>
+                        <p>Saturday: 9am-3pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </transition>
 </nav>

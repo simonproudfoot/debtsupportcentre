@@ -40,11 +40,15 @@ h3 {font-size: 1.75rem; font-weight: 400}
 }
 .topnav {padding:10px}
 .navbar-toggler {padding: .3rem}
-.modal, .modal-open {
+.vModal, .vModal-open {
     padding-right: 0px !important;
-    overflow: auto !important
+    overflow: auto !important;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    transition-duration: 0.4s;
 }
-
 /*Lists*/
 ul {padding-inline-start: 20px}
 li {padding-bottom:1rem}

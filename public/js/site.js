@@ -18885,6 +18885,7 @@ window.onload = function () {
       return {
         showMenu: false,
         overlay: 'false',
+        phoneModal: false,
         waiting: false,
         step: 0,
         ready: false,
