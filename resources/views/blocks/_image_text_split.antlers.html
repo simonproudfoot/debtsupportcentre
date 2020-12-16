@@ -1,0 +1,22 @@
+<section class="pt-5">
+    <div class="container pt-2 text-center">
+        <h2 class="text-center py-3">{{text_split_title}}</h2>
+        <div class="row">
+            <div class="col-md-4 pt-md-5 text-md-left {{ if image_on_left }} order-2 {{ else }} order-1 offset-md-2{{/if}}">
+                <p><strong>Struggling to pay bills? Creditors chasing you for money you don’t have? Relax, help is available.</strong></p>
+                <ul class="checklist">
+                    <li>120+ debt advisors are here to help you.</li>
+                    <li>On average, we write off £13,500 per customer.</li>
+                    <li>We've helped 15,000+ people in the UK towards financial freedom.</li>
+                    <li>Free, confidential expert advice, no strings attached.</li>
+                </ul>
+            </div>
+            <div class="col-md-6 d-none d-md-block {{ if image_on_left }} order-1 {{ else }} order-2 {{/if}}">
+                {{image}}
+                    <img src="{{ url }}" alt="{{ alt }}" class="img-fluid">
+                {{/image}}
+            </div>
+        </div>
+    </div>
+</section>
+

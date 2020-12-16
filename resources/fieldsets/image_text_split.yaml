@@ -1,0 +1,64 @@
+title: 'image text split'
+fields:
+  -
+    handle: image_on_left
+    field:
+      display: 'image on left'
+      type: toggle
+      icon: toggle
+      listable: hidden
+  -
+    handle: text_split_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'Text split title'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: image
+    field:
+      mode: grid
+      restrict: false
+      allow_uploads: true
+      display: image
+      type: assets
+      icon: assets
+      width: 50
+      listable: hidden
+  -
+    handle: block_text_content
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+        - h1
+        - h4
+        - h5
+        - h6
+        - underline
+        - code
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Block text content'
+      type: bard
+      icon: bard
+      width: 50
+      listable: hidden

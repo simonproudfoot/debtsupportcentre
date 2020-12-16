@@ -22,7 +22,64 @@ header_content:
         text: 'Ready to get started?'
 page_builder:
   -
-    type: paragraph
+    type: set
+    attrs:
+      values:
+        type: image_text_split
+        image_on_left: true
+        image:
+          - home_hero.png
+        block_text_content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Struggling to pay bills? Creditors chasing you for money you don’t have? Relax, help is available.'
+          -
+            type: bullet_list
+            content:
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: '120+ debt advisors are here to help you.'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'On average, we write off £13,500 per customer'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'We''ve helped 15,000+ people in the UK towards financial freedom.'
+              -
+                type: list_item
+                content:
+                  -
+                    type: paragraph
+                    content:
+                      -
+                        type: text
+                        text: 'Free, confidential expert advice, no strings attached'
+                  -
+                    type: paragraph
   -
     type: set
     attrs:
@@ -61,8 +118,10 @@ page_builder:
     type: paragraph
   -
     type: paragraph
+  -
+    type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608114129
+updated_at: 1608135617
 blueprint: standard
 template: home
 pre_header: about

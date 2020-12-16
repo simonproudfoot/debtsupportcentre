@@ -147,6 +147,11 @@ sections:
                     icon: replicator
                     instructions: 'Add to a grid of cards'
                     listable: hidden
+            image_text_split:
+              display: 'Image text split'
+              fields:
+                -
+                  import: image_text_split
   sidebar:
     display: Sidebar
     fields:
