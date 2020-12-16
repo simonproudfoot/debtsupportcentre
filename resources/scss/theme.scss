@@ -74,6 +74,15 @@ h3 {
 }
 .topnav {
     padding: 10px;
+
+}
+.navWrap{
+    box-shadow: 0 2px 5px -1px rgba(18, 44, 73, .3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
 }
 .navbar-toggler {
     padding: 0.3rem;

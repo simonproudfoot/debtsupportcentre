@@ -1,5 +1,5 @@
 ---
-title: home
+title: Home
 header_content:
   -
     type: heading
@@ -80,6 +80,7 @@ page_builder:
                         text: 'Free, confidential expert advice, no strings attached'
                   -
                     type: paragraph
+        text_split_title: null
   -
     type: set
     attrs:
@@ -121,7 +122,7 @@ page_builder:
   -
     type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608135617
+updated_at: 1608138184
 blueprint: standard
 template: home
 pre_header: about

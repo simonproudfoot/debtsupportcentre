@@ -183,3 +183,11 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: 'Page template'
+          type: template
+          icon: template
+          listable: hidden

@@ -1,7 +1,21 @@
 ---
-title: 'debt solutions'
+title: 'Debt solutions'
 hero_title: 'Alternative Debt Solutions'
-header_content: 'Although we specialise in IVAs and can''t assist you in setting up alternatives, one of the below debt solutions may be suitable.'
+header_content:
+  -
+    type: heading
+    attrs:
+      level: 1
+    content:
+      -
+        type: text
+        text: 'Debt solutions'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'Although we specialise in IVAs and can''t assist you in setting up alternatives, one of the below debt solutions may be suitable.'
 page_builder:
   -
     type: paragraph
@@ -41,7 +55,7 @@ page_builder:
   -
     type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608043233
+updated_at: 1608139428
 blueprint: standard
 page_template: default
 id: 8aa5b3d1-80a8-42f9-adc3-7e836bf613f0
