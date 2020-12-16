@@ -1,45 +1,27 @@
 title: blocks
 data:
   heading: 'Why people choose us'
+  why_column_a_title: 0+
+  why_column_a_subtitle: 'years’ experience'
   why_column_a:
-    -
-      type: heading
-      attrs:
-        level: 3
-      content:
-        -
-          type: text
-          text: 'years’ experience'
     -
       type: paragraph
       content:
         -
           type: text
           text: 'Part of a group of companies which have been operating since 2006, we have the experience and the skills necessary to help you deal with your debts.'
+  why_column_b_title: 120+
+  why_column_b_subtitle: 'Individuals are here to help'
   why_column_b:
-    -
-      type: heading
-      attrs:
-        level: 3
-      content:
-        -
-          type: text
-          text: 'Individuals are here to help'
     -
       type: paragraph
       content:
         -
           type: text
           text: 'Get in touch for a no-obligation chat about your finances. Whatever your situation, we will help you find the best solution possible.'
+  why_column_c_title: '£13,500'
+  why_column_c_subtitle: 'Average debt write-off'
   why_column_c:
-    -
-      type: heading
-      attrs:
-        level: 3
-      content:
-        -
-          type: text
-          text: 'Average debt write-off'
     -
       type: paragraph
       content:
@@ -110,48 +92,18 @@ data:
       cells:
         - 'Amount written off'
         - '£18,841'
+  example_box_left_title: £876
+  example_box_left_subtitle: 'Before plan'
   example_box_left:
-    -
-      type: heading
-      attrs:
-        level: 3
-      content:
-        -
-          type: text
-          text: £876
-    -
-      type: paragraph
-      content:
-        -
-          type: text
-          marks:
-            -
-              type: bold
-          text: 'Before plan'
     -
       type: paragraph
       content:
         -
           type: text
           text: 'Total contractual repayments'
+  example_box_right_title: £160
+  example_box_right_subtitle: 'After plan'
   example_box_right:
-    -
-      type: heading
-      attrs:
-        level: 3
-      content:
-        -
-          type: text
-          text: £160
-    -
-      type: paragraph
-      content:
-        -
-          type: text
-          marks:
-            -
-              type: bold
-          text: 'After plan'
     -
       type: paragraph
       content:

@@ -44,14 +44,18 @@
             <div class="col-6 col-md-3 text-center">
                 <div class="card h-100">
                     <div class="card-body">
-                        {{blocks:example_box_left}}
+                        <display v-pre>{{blocks:example_box_left_title}}</display>
+                        <p class="head">{{blocks:example_box_left_subtitle}}</p>
+                        <p>{{blocks:example_box_left}}</p>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-3 text-center">
                 <div class="card h-100">
                     <div class="card-body">
-                        {{blocks:example_box_right}}
+                        <display v-pre>{{blocks:example_box_right_title}}</display>
+                        <p class="head" style="color:#009991">{{blocks:example_box_right_subtitle}}</p>
+                        <p>{{blocks:example_box_right}}</p>
                     </div>
                 </div>
             </div>
@@ -60,7 +64,7 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="application.php" class="primary-btn mt-3">Get debt help</a>
+            <button @click="overlay= 'true'" class="primary-btn mt-3">Get debt help</button>
         </div>
     </div>
 </section>

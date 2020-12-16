@@ -16,6 +16,26 @@ sections:
           listable: hidden
           display: Heading
       -
+        handle: why_column_a_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'why column A title'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: why_column_a_subtitle
+        field:
+          input_type: text
+          antlers: false
+          display: 'why column A subtitle'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
         handle: why_column_a
         field:
           always_show_set_button: false
@@ -38,7 +58,26 @@ sections:
           display: 'Why column A'
           type: bard
           icon: bard
-          width: 33
+          listable: hidden
+      -
+        handle: why_column_b_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'why column B title'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: why_column_b_subtitle
+        field:
+          input_type: text
+          antlers: false
+          display: 'why column B subtitle'
+          type: text
+          icon: text
+          width: 50
           listable: hidden
       -
         handle: why_column_b
@@ -63,7 +102,26 @@ sections:
           display: 'Why column B'
           type: bard
           icon: bard
-          width: 33
+          listable: hidden
+      -
+        handle: why_column_c_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'why column C title'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: why_column_c_subtitle
+        field:
+          input_type: text
+          antlers: false
+          display: 'why column C subtitle'
+          type: text
+          icon: text
+          width: 50
           listable: hidden
       -
         handle: why_column_c
@@ -90,7 +148,6 @@ sections:
           display: 'Why column C'
           type: bard
           icon: bard
-          width: 33
           listable: hidden
       -
         handle: possible_debt_solutions
@@ -180,6 +237,26 @@ sections:
           icon: table
           listable: hidden
       -
+        handle: example_box_left_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'example box left title'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: example_box_left_subtitle
+        field:
+          input_type: text
+          antlers: false
+          display: 'example box left subtitle'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
         handle: example_box_left
         field:
           always_show_set_button: false
@@ -202,6 +279,25 @@ sections:
           display: 'Example box left'
           type: bard
           icon: bard
+          listable: hidden
+      -
+        handle: example_box_right_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'example box right title'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: example_box_right_subtitle
+        field:
+          input_type: text
+          antlers: false
+          display: 'example box right subtitle'
+          type: text
+          icon: text
           width: 50
           listable: hidden
       -
@@ -227,7 +323,6 @@ sections:
           display: 'Example box right'
           type: bard
           icon: bard
-          width: 50
           listable: hidden
       -
         handle: details

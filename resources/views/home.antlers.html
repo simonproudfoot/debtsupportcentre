@@ -1,19 +1,22 @@
 <section class="hero pt-md-5">
     <div class="container-fluid pb-3">
-        <div class="row pt-5">
-            <div class="col-md-6 d-none d-md-block">
-                <img src="images/hero.svg" alt="Man using computer." class="img-fluid">
+        <div class="row pt-5 pb-5 align-items-center justify-content-md-center">
+            <div class="col-md-5 d-none d-md-block">
+                {{ header_image }}
+                    <img src="{{ url }}" alt="{{ alt }}" class="img-fluid">
+                {{ /header_image }}
             </div>
             <div class="col-md-6 col-xl-4 pt-3 text-center text-md-left">
                 <div class="">
-                    <h1 class="py-3">{{hero_title}}</h1>
-                    <p>{{header_content}}</p>
-                    <button @click="overlay = 'true'" class="primary-btn mt-3 mb-2">Get debt help <i class="fa fa-chevron-right arrow" aria-hidden="true"></i></button>
+                    {{header_content}}
+                    <button @click="overlay = 'true'" class="primary-btn mt-3 mb-2">Get debt help <i
+                            class="fa fa-chevron-right arrow" aria-hidden="true"></i></button>
                     <p class="pb-5 pb-md-2">Free no-obligation consultation</p>
                     <div class="feefo-banner d-none d-md-block pb-5">
-                        <a href="https://www.feefo.com/reviews/nds" target="_blank"><img alt="Feefo logo"
+                        <a href="https://www.feefo.com/reviews/nds" target="_blank">
+                            <img alt="Feefo logo"
                                 src="https://api.feefo.com/api/logo?merchantidentifier=nds"
-                                title="See what our customers say about us" border="0"></a>
+                                title="See what our customers say about us" border="0" style="max-width: 300px"></a>
                     </div>
                 </div>
             </div>
@@ -44,36 +47,36 @@
 </div>
 {{ page_builder }}
 {{ if type == "text" }}
-    {{ partial:blocks/text }}
+{{ partial:blocks/text }}
 {{/if}}
 {{if text_card}}
 <section>
     <div class="container">
         <div class="row">
             {{ text_card }}
-                {{ partial:blocks/cards}}
+            {{ partial:blocks/cards}}
             {{ /text_card }}
         </div>
     </div>
 </section>
 {{/if}}
 {{if select_blocks == 'why_choose_us'}}
-    {{ partial:blocks/why-choose-us }}
+{{ partial:blocks/why-choose-us }}
 {{/if}}
 {{if select_blocks == 'possible_debt_solutions'}}
-    {{ partial:blocks/possible_debt_solutions }}
+{{ partial:blocks/possible_debt_solutions }}
 {{/if}}
 {{if select_blocks == 'how_you_could_benefit'}}
-    {{ partial:blocks/how_you_could_benefit }}
+{{ partial:blocks/how_you_could_benefit }}
 {{/if}}
 {{if select_blocks == 'debts_we_can_help_with'}}
-    {{ partial:blocks/debts_we_can_help_with }}
+{{ partial:blocks/debts_we_can_help_with }}
 {{/if}}
 {{if select_blocks == 'how_we_can_help_you'}}
-    {{ partial:blocks/how_we_can_help_you }}
+{{ partial:blocks/how_we_can_help_you }}
 {{/if}}
 {{if select_blocks == 'text_blocks'}}
-    {{ partial:blocks/text_blocks }}
+{{ partial:blocks/text_blocks }}
 {{/if}}
 {{ if type == "new_cta" }}
 <section class="vision" style="margin-bottom:-5rem">
@@ -87,8 +90,8 @@
         </div>
     </div>
 </section>
-{{ /if }} 
+{{ /if }}
 {{if select_blocks == 'carousel'}}
-    {{ partial:blocks/carousel }}
+{{ partial:blocks/carousel }}
 {{/if}}
 {{ /page_builder }}

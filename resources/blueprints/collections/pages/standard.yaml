@@ -11,29 +11,36 @@ sections:
           validate:
             - required
       -
-        handle: hero_title
-        field:
-          input_type: text
-          antlers: false
-          display: 'Hero title'
-          type: text
-          icon: text
-          listable: hidden
-      -
         handle: header_content
         field:
-          antlers: false
-          display: 'Header content'
-          type: textarea
-          icon: textarea
-          listable: hidden
-      -
-        handle: page_template
-        field:
-          hide_partials: true
-          display: 'page template'
-          type: template
-          icon: template
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - h1
+            - h4
+            - h5
+            - h6
+            - underline
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          display: 'header content'
+          type: bard
+          icon: bard
           listable: hidden
       -
         handle: page_builder
@@ -151,6 +158,17 @@ sections:
           localizable: true
           validate:
             - required
+      -
+        handle: header_image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          display: 'Header image'
+          type: assets
+          icon: assets
+          instructions: 'Only visible on homepage (for now)'
+          listable: hidden
       -
         handle: parent
         field:

@@ -1,0 +1,101 @@
+<section class="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <h1 class="pt-2 pb-3 circle">Contact us</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+<div class="row">
+<div class="col-md-5 offset-md-1 pb-4">
+    <div class="card">
+        <div class="card-body">
+            <p style="color:#B53683; margin-left: 15px"><b>Send us an email</b></p>
+
+            {{ form:contact }}
+
+    // First let's check if this is after a submission, and if so, was it successful.
+    // If it was, just show the success message. After all, we don't want them submitting again once they've gotten in touch!
+    {{ if success }}
+        <div class="bg-green-300 text-white p-2">
+            {{ success }}
+        </div>
+    {{ else }}
+        // If we weren't successful, show any errors. If a fresh page load, there's no errors, so do nothing.
+        {{ if errors }}
+            <div class="bg-red-300 text-white p-2">
+                {{ errors }}
+                    {{ value }}<br>
+                {{ /errors }}
+            </div>
+        {{ /if }}
+
+        // Loop through and render the form inputs
+        {{ fields }}
+            <div class="p-2">
+                <label>{{ display }}</label>
+                <div class="p-1">{{ field }}</div>
+                {{ if error }}
+                    <p class="text-gray-500">{{ error }}</p>
+                {{ /if }}
+            </div>
+        {{ /fields }}
+
+        // This is just a submit button.
+        <button type="submit">Submit</button>
+    {{ /if }}
+
+
+
+{{ form:contact }}
+          
+                <div class="form-label-group">
+                    <input type="text" id="name" class="form-control" placeholder="Your name" required="" autofocus=""
+                        autocomplete="on" pattern="[A-Za-z' -]+"
+                        style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAbhJREFUWAntVr1OhEAQZsECSKBQC/9aba+z9iU08SWuvPcwNrY2V+hL+AoabbRE6bSAxEAM4DfkuFuWXU5y/MSETTbMznzzs7Mzy2raOMYMIAOWZR3puj5njPmYWcfTJ1/kk5LPQBxGUfQEepsYPY5P0zQnRpqmN3B62qPjwpWdJMkess0+wDkouD1/fU1x3p5hGJe2be/TJBo4T4ZtGrBoQxaA57pupR6IJwti0wC2RAOo0FkQBF8in3jIxAw1M+dl4J3z63U09MsQMSWU8jJitSKZiN90ra/MD0NVAojj+EwVSp1MpbOOjwyyTAC9O44zEeuAijAMw0dg8xus0IH+fUH/5ZtlWblmFGfoUev10YaVI1js4hnfb0y2mEQTr/VROQIwpmiVa5kntOgUKbziZa0eARzc8sZlNGHgtLU/Jn8Tpii+XZlTnkcYBJC2GMSyC96Q3hPemYqG81fIjlXyJnz+Kn5poEjYPAAcyUUDPQ31dcfjlwFgVz/IAC9T0jwW//RG9wB0S3ZVbVgCdblAQMM+SHQE8NDlDutsk+/iUUp3/E4duANZ/ijN7Q75LO9gY6PJf5aBX7tnEYIBb5bnAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                    <label for="name">Your name</label>
+                </div>
+                <div class="form-label-group">
+                    <input type="tel" id="nametel" class="form-control" placeholder="Your phone number" required=""
+                        autofocus="" autocomplete="on" pattern="[0,7-9]{1}[0-9]{10}">
+                    <label for="nametel">Your phone number</label>
+                </div>
+                <div class="form-label-group">
+                    <input type="email" id="emailvalid" class="form-control" placeholder="Your email address"
+                        required="" autofocus="" autocomplete="on" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <label for="emailvalid">Your email address</label>
+                </div>
+                <div class="form-label-group" style="width:100%">
+                    <input type="text" id="message" class="form-control" placeholder="Your message" required=""
+                        autofocus="">
+                    <label for="message">Your message</label>
+                </div>
+                <div class="text-center text-md-right">
+                    <a href="" class="btn secondary-btn on-white mt-3">Send message</a>
+                </div>
+        
+
+            {{ /form:contact }}
+        </div>
+    </div>
+</div>
+<div class="col-md-3 pt-4 text-center text-md-left">
+    <p><span style="color:#B53683"><b>Opening hours</b></span><br>
+        Mon-Thurs 8am-8pm <br>
+        Friday 8am-8pm <br>
+        Saturday 9am-3pm</p>
+
+    <p><span style="color:#B53683"><b>Call us</b></span><br>
+        0161 549 0737</p>
+
+    <p><span style="color:#B53683"><b>Address</b></span><br>
+        Bridgewater House, <br>
+        58-60 Whitworth Street, <br>
+        Manchester, <br>
+        M1 6LT</p>
+</div>
+</div>
+
+</div>
