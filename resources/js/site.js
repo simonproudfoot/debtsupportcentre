@@ -158,6 +158,7 @@ window.onload = function () {
             }
         },
         methods: {
+            
             async submitData() {
                 var btn = this.$refs.submitButton
                 const errorMsg = "Sending failed! Please check you connection and try again."
@@ -214,6 +215,13 @@ window.onload = function () {
             floatinglabel
         },
         watch: {
+            showMenu(val){
+                if(val){
+                    this.$refs.menuButton.classList.add('opened')
+                }else{
+                    this.$refs.menuButton.classList.remove('opened')
+                }
+            },
             // Set cookies
             overlay(val) {
                 localStorage.setItem('overlay', val);

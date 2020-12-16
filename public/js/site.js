@@ -19126,6 +19126,13 @@ window.onload = function () {
       floatinglabel: vue_simple_floating_labels__WEBPACK_IMPORTED_MODULE_3___default.a
     },
     watch: {
+      showMenu: function showMenu(val) {
+        if (val) {
+          this.$refs.menuButton.classList.add('opened');
+        } else {
+          this.$refs.menuButton.classList.remove('opened');
+        }
+      },
       // Set cookies
       overlay: function overlay(val) {
         localStorage.setItem('overlay', val);
