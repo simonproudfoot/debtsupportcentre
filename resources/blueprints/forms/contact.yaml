@@ -11,6 +11,8 @@ sections:
           type: text
           icon: text
           listable: hidden
+          validate:
+            - required
       -
         handle: phone
         field:
@@ -20,6 +22,9 @@ sections:
           type: text
           icon: text
           listable: hidden
+          validate:
+            - required
+            - numeric
       -
         handle: email
         field:
@@ -29,6 +34,9 @@ sections:
           type: text
           icon: text
           listable: hidden
+          validate:
+            - required
+            - email
       -
         handle: message
         field:
@@ -37,3 +45,5 @@ sections:
           type: textarea
           icon: textarea
           listable: hidden
+          validate:
+            - required

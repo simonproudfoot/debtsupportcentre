@@ -1,19 +1,6 @@
 title: Settings
 data:
   site_name: 'Debt advice solutions'
-  social:
-    -
-      name: Twitter
-      url: 'https://twitter.com/statamic'
-      icon: site/social-icons/twitter.svg
-    -
-      name: Github
-      url: 'https://github.com/statamic/starter-kit-starters-creek'
-      icon: site/social-icons/github.svg
-    -
-      name: Email
-      url: 'mailto:jack@statamic.com'
-      icon: site/social-icons/email.svg
   footer_text:
     -
       type: paragraph
@@ -85,3 +72,13 @@ data:
         -
           type: text
           text: .
+  opening_hours: |
+    Mon-Thurs 8am-8pm <br>
+    Friday 8am-8pm <br>
+    Saturday 9am-3pm
+  contact_number: '0161 549 0737'
+  address: |
+    Bridgewater House,
+    58-60 Whitworth Street,
+    Manchester,
+    M1 6LT

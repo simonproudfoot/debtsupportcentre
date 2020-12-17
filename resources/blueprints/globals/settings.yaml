@@ -75,4 +75,31 @@ sections:
           type: bard
           icon: bard
           listable: hidden
-  
+  contact:
+    display: Contact
+    fields:
+      -
+        handle: opening_hours
+        field:
+          antlers: false
+          display: 'opening hours'
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: contact_number
+        field:
+          input_type: tel
+          antlers: false
+          display: 'contact number'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: address
+        field:
+          antlers: false
+          display: address
+          type: textarea
+          icon: textarea
+          listable: hidden
