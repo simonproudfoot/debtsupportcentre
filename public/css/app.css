@@ -655,7 +655,7 @@ footer a:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 120;
+  z-index: 150;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -718,10 +718,6 @@ footer a:hover {
 
 .formOverlay .backBtn:hover {
   color: #b53683;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
 }
 
 .btn--form {

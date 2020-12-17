@@ -10,3 +10,6 @@ preferences:
         - author
         - featured_image
         - content
+  assets:
+    assets:
+      mode: grid
