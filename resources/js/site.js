@@ -3,6 +3,8 @@ import Progress from 'vue-multiple-progress'
 import floatinglabel from 'vue-simple-floating-labels'
 Vue.component('vm-progress', Progress)
 Vue.use(Progress)
+import { VLazyImagePlugin } from "v-lazy-image";
+Vue.use(VLazyImagePlugin);
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import browserDetect from "vue-browser-detect-plugin";
@@ -82,17 +84,25 @@ window.onload = function () {
                         email: '',
                         confirmThirdparty: false,
                         confirmTerms: false,
-                        userIP: ''
-                    },
-                    question_9: {
-                        question: "submit",
+                        userIP: '',
                         commsEmail: true,
                         commsSMS: true
-                    }
+                    },
+                    // question_9: {
+                    //     question: "submit",
+                    //     commsEmail: true,
+                    //     commsSMS: true
+                    // }
                 },
             }
         },
         computed: {
+            fName(){
+                const urlParams = new URLSearchParams(window.location.search);
+                const myParam = urlParams.get('name');
+                return myParam
+                
+            },
             oldBrowser(){
                 console.log(this.$browserDetect.meta.version +'-'+ this.$browserDetect.meta.name )
                 if(this.$browserDetect.meta.name == 'Edge' && this.$browserDetect.meta.version <= 18 ){
@@ -129,7 +139,7 @@ window.onload = function () {
                 return Object.keys(this.questions).length
             },
             percentageDone() {
-                return (100 * this.step) / this.stepsTotal
+                return (100 * this.step) / Object.keys(this.questions).length
             },
             q1Image() {
                 if (this.questions.question_2.answer == 'No') {
@@ -159,7 +169,6 @@ window.onload = function () {
             }
         },
         methods: {
-            
             async submitData() {
                 var btn = this.$refs.submitButton
                 const errorMsg = "Sending failed! Please check you connection and try again."
@@ -170,15 +179,18 @@ window.onload = function () {
                     console.log(err)
                     alert(errorMsg)
                 } finally {
-                    alert('Response: '+postData.data.OurRef)
-                    // if (postData.data == 200) {
-                     btn.classList.remove("onclic");
-                    //     this.resetFields()
-                    //     alert('To success page!')
-                    // } else {
-                    //     alert(errorMsg)
-                    // }
-
+                    btn.classList.remove("onclic");
+                    var fname = this.questions.question_8.fullName.substr(0, this.questions.question_8.fullName.indexOf(" "));
+                    if(this.questions.question_3.answer == 'Benefits only' || this.questions.question_3.answer == 'Retired' || this.questions.question_3.answer == 'Unemployed'){
+                        this.resetFields()
+                        window.location.replace("/good-luck?name="+fname);
+                    }else if(this.questions.question_5.answer == 'Less than £5,000'){
+                        this.resetFields()
+                        window.location.replace("/received?name="+fname);
+                    }else{
+                        this.resetFields()
+                        window.location.replace("/thank-you?name="+fname);
+                    }
                 }
             },
             resetFields() {

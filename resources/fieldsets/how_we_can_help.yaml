@@ -1,0 +1,87 @@
+title: 'How we can help you'
+fields:
+  -
+    handle: how_we_can_help_you
+    field:
+      display: 'How we can help you'
+      type: section
+      icon: section
+      listable: hidden
+  -
+    handle: how_we_can_help_title
+    field:
+      input_type: text
+      antlers: false
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: help_box_1
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Help box 1'
+      type: bard
+      icon: bard
+      width: 33
+      listable: hidden
+  -
+    handle: help_box_2
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Help box 2'
+      type: bard
+      icon: bard
+      width: 33
+      listable: hidden
+  -
+    handle: help_box_3
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Help box 3'
+      type: bard
+      icon: bard
+      width: 33
+      listable: hidden

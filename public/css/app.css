@@ -36,13 +36,17 @@ h3 {
   list-style: none;
 }
 
+.contains-list ul li {
+  padding-bottom: 1em;
+}
+
 .contains-list ul li p {
   margin-bottom: 0;
   display: inline;
 }
 
 .contains-list ul li::before {
-  background: url("/images/check.svg") center/20px no-repeat;
+  background: url("/images/check.svg") center/35px no-repeat;
   content: "";
   display: inline-block;
   vertical-align: top;
@@ -117,10 +121,6 @@ ul {
           padding-inline-start: 20px;
 }
 
-li {
-  padding-bottom: 1rem;
-}
-
 .checklist,
 .crosslist {
   -webkit-padding-start: 0px;
@@ -139,11 +139,11 @@ li {
 }
 
 .checklist li:before {
-  background: url("/images/check.svg") center/20px no-repeat;
+  background: url("/images/check.svg") center/35px no-repeat;
 }
 
 .crosslist li:before {
-  background: url("/images/cross.svg") center/20px no-repeat;
+  background: url("/images/cross.svg") center/35px no-repeat;
 }
 
 /*HERO*/
@@ -674,38 +674,19 @@ footer a:hover {
 }
 
 .formOverlay__inner {
-  max-width: 600px;
   margin: 0 auto;
   min-height: calc(100vh - 200px);
 }
 
 .formOverlay__inner__gif {
-  height: 80px;
-  width: 80px;
-}
-
-@media (min-width: 768px) {
-  .formOverlay__inner__gif {
-    height: 200px;
-    width: 200px;
-  }
+  height: 85px;
+  width: 85px;
 }
 
 .formOverlay__inner .qTitle {
+  font-size: 1rem;
   color: #122c49;
   font-weight: bolder;
-}
-
-@media (max-width: 767px) {
-  .formOverlay__inner .qTitle {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .formOverlay__inner .qTitle {
-    font-size: 2rem;
-  }
 }
 
 .formOverlay .navBottom {
@@ -720,6 +701,10 @@ footer a:hover {
   color: #b53683;
 }
 
+.full-width {
+  width: 100% !important;
+}
+
 .btn--form {
   background-color: #EDEFF2;
   border-radius: 50px;
@@ -728,6 +713,18 @@ footer a:hover {
   -webkit-transition-duration: 400ms;
        -o-transition-duration: 400ms;
           transition-duration: 400ms;
+}
+
+@media (min-width: 768px) {
+  .btn--form {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn--form {
+    max-width: 250px;
+  }
 }
 
 .btn--form.selected {
@@ -988,5 +985,9 @@ body {
 input {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.v-lazy-image-fluid {
+  width: 100%;
 }
 

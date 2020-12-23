@@ -30,12 +30,13 @@ h3 {
         padding-inline-start: 0px;
         list-style: none;
         li {
+            padding-bottom: 1em;
             p {
                 margin-bottom: 0;
                 display: inline;
             }
             &::before {
-                background: url("/images/check.svg") center/20px no-repeat;
+                background: url("/images/check.svg") center/35px no-repeat;
                 content: '';
                 display: inline-block;
                 vertical-align: top;
@@ -101,9 +102,7 @@ h3 {
 ul {
     padding-inline-start: 20px;
 }
-li {
-    padding-bottom: 1rem;
-}
+
 .checklist,
 .crosslist {
     padding-inline-start: 0px;
@@ -119,10 +118,10 @@ li {
     height: 20px;
 }
 .checklist li:before {
-    background: url("/images/check.svg") center/20px no-repeat;
+    background: url("/images/check.svg") center/35px no-repeat;
 }
 .crosslist li:before {
-    background: url("/images/cross.svg") center/20px no-repeat;
+    background: url("/images/cross.svg") center/35px no-repeat;
 }
 
 /*HERO*/

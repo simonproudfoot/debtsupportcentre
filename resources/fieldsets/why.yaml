@@ -1,0 +1,149 @@
+title: 'why choose'
+fields:
+  -
+    handle: why_choose_us
+    field:
+      type: section
+      listable: hidden
+      display: 'Why people choose us'
+  -
+    handle: heading
+    field:
+      input_type: text
+      type: text
+      listable: hidden
+      display: Heading
+  -
+    handle: why_column_a_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'why column A title'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+  -
+    handle: why_column_a_subtitle
+    field:
+      input_type: text
+      antlers: false
+      display: 'why column A subtitle'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+  -
+    handle: why_column_a
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - removeformat
+        - quote
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Why column A'
+      type: bard
+      icon: bard
+      listable: hidden
+  -
+    handle: why_column_b_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'why column B title'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+  -
+    handle: why_column_b_subtitle
+    field:
+      input_type: text
+      antlers: false
+      display: 'why column B subtitle'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+  -
+    handle: why_column_b
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - removeformat
+        - quote
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Why column B'
+      type: bard
+      icon: bard
+      listable: hidden
+  -
+    handle: why_column_c_title
+    field:
+      input_type: text
+      antlers: false
+      display: 'why column C title'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+  -
+    handle: why_column_c_subtitle
+    field:
+      input_type: text
+      antlers: false
+      display: 'why column C subtitle'
+      type: text
+      icon: text
+      width: 50
+      listable: hidden
+  -
+    handle: why_column_c
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'Why column C'
+      type: bard
+      icon: bard
+      listable: hidden

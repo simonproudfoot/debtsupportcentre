@@ -85,7 +85,7 @@ sections:
                     options:
                       why_choose_us: 'why choose us'
                       possible_debt_solutions: 'Possible debt solutions'
-                      ' how_you_could_benefit': 'how you could benefit'
+                      'how_you_could_benefit': 'how you could benefit'
                       debts_we_can_help_with: 'Debts we can help with'
                       how_we_can_help_you: 'How we can help you'
                       carousel: carousel
@@ -152,6 +152,26 @@ sections:
               fields:
                 -
                   import: image_text_split
+            new_iva_table:
+              display: 'New IVA table'
+              fields:
+                -
+                  import: iva_table
+            new_how_we_can_help:
+              display: 'New how we can help'
+              fields:
+                -
+                  import: how_we_can_help
+            new_why_choose_us:
+              display: 'New Why choose us'
+              fields:
+                -
+                  import: why
+            new_possible_debt_solutions:
+              display: 'New possible debt solutions'
+              fields:
+                -
+                  import: possible_debt_solutions
   sidebar:
     display: Sidebar
     fields:

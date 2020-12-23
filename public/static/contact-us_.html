@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5MHM2GR');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact us — Debt advice solutions</title>
+    <meta name="description" content="">
+    <script type="application/ld+json">
+            {
+              "@context": "https://schema.org/",
+              "@type": blogPost,
+              "name": "Contact us",
+              "datePublished": "2020-12-16",
+              "description": "",
+            }
+    </script>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"> -->
+    <!-- connect to domain of font files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- optionally increase loading priority -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700">
+    <!-- async CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700">
+    <!-- no-JS fallback -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700">
+    </noscript>
+</head>
+<!-- hide unloaded vue components on page load -->
+<style>
+    [v-cloak] {
+        display: none;
+    }
+</style>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MHM2GR" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="app">
+        <transition name="fade">
+    <div v-if="overlay == 'true'" v-cloak class="formOverlay" :class="stepsDisplay < 7 ? 'background-on' : null">
+        <vm-progress :percentage="percentageDone" stroke-width="7" track-color="#d9d9d9" :show-text="false"
+            stroke-linecap="square" stroke-color="#B53683"></vm-progress>
+        <nav class="formOverlay__nav">
+            <div class="row">
+                <div class="col-4">
+                    <span class="click backBtn" v-if="step > 0" @click="step--">
+                        < Back</span>
+                </div>
+                <div class="col-4 text-center">
+                    <b>{{stepsDisplay}} of {{stepsTotal}}</b>
+                </div>
+                <div class="col-4 text-right">
+                    <span class="click" @click="overlay = 'false'">close x</span>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="formOverlay__inner pt-5">
+                <div v-for="(q, key, index) in questions" v-bind:key="key">
+                    <div class="text-center" class="formOverlay__inner">
+                        <div v-if="step == index && q.question">
+                            <span v-if="index < 7" class="qTitle d-block mb-3">{{q.question}}</span>
+                            <!-- <img v-if="step == 1" v-bind:src="'images/'+q1Image" class="formOverlay__inner__gif mb-3">
+                                    <img v-else="" src=""> -->
+                            <img v-if="index < 7" v-bind:src="'images/'+q.icon" class="formOverlay__inner__gif ">
+                            <div v-for="a in q.options">
+                                <button class="btn--form btn mb-3" @click="q.answer = a, nextStep()"
+                                    v-bind:class="[q.answer == a ? 'selected': null, waiting && q.answer !== a ? 'btnDisable' : null]"
+                                    :style="index == 0 ? 'width: 241px' : null">{{a}}</button>
+                            </div>
+                            <!-- FINAL SECTION-->
+                            <div v-if="q.question == 'userDetails'" class="text-left mb-2 pb-2">
+                                <span class="qTitle d-block mb-3">Great news, here is how we can help.</span>
+                                <p>Based on <strong>{{questions.question_5.answer}}</strong> debt from
+                                    <strong>{{questions.question_6.answer}} creditors</strong> that you owe, we
+                                    could
+                                    potentially help you acheaive the following:</p>
+                                <div class="pt-2">
+                                    <div class="textInput d-flex flex-row align-items-center ">
+                                        <img src="images/check.svg" />
+                                        <p class="mb-1 pl-2" v-if="questions.question_5.answer == 'Less than £5,000'">
+                                            Restructure
+                                            yout debt</p>
+                                        <p class="mb-1 pl-2" v-else>Write off up to £6247.50 of debt</p>
+                                    </div>
+                                    <div class="textInput d-flex flex-row align-items-center">
+                                        <img src="images/check.svg" />
+                                        <p class="mb-1 pl-2">One monthly payment</p>
+                                    </div>
+                                    <div class="textInput d-flex flex-row align-items-center">
+                                        <img src="images/check.svg" />
+                                        <p class="mb-1 pl-2" v-if="questions.question_5.answer == 'Less than £5,000'">
+                                            Start from
+                                            £104.50/month</p>
+                                        <p class="mb-1 pl-2" v-else>Start from £70/month</p>
+                                    </div>
+                                    <div class="textInput d-flex flex-row align-items-center ">
+                                        <img src="images/check.svg" />
+                                        <p class="mb-1 pl-2">We deal with all your creditors</p>
+                                    </div>
+                                    <div class="textInput d-flex flex-row align-items-center ">
+                                        <img src="images/check.svg" />
+                                        <p class="mb-1 pl-2">Get a personal finance manager</p>
+                                    </div>
+                                    <p class="pt-3"><small>*Please note that the above is an estimate and actual
+                                            figured may vary</small></p>
+                                </div>
+                                <span class="pageBreak">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 64.2 28.1" style="enable-background:new 0 0 64.2 28.1;"
+                                        xml:space="preserve">
+                                        <polygon class="st0" fill="#b53683" points="32.1,28.1 64.2,0 0,0 " />
+                                    </svg>
+                                </span>
+                                <span class="qTitle d-block mb-3">Get a debt help quote now</span>
+                                <div class="textInput d-flex flex-row align-items-center mb-4">
+                                    <svg width="20" height="30" viewBox="0 0 16 16" class="bi bi-person"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                    </svg>
+                                    <FloatingLabel v-if="!oldBrowser" class="flex-grow-1"
+                                        :class="q.fullName ? 'input__container--content' : null"
+                                        :config="{label: 'Full name', hasClearButton: false, height: false, labelOffset: 50, focusColor: '#b53683'}">
+                                        <input v-model="q.fullName" type="text">
+                                    </FloatingLabel>
+                                    <input v-else v-model="q.fullName" type="text" class="ml-2 border">
+                                </div>
+                                <div class="textInput d-flex flex-row align-items-center mb-4">
+                                    <svg width="20" height="20" viewBox="0 0 16 16" class="bi bi-telephone"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                    </svg>
+                                    <FloatingLabel v-if="!oldBrowser" class="flex-grow-1 "
+                                        :class="[phoneValidate ? 'mb-4' : 'mb-10', q.phone ? 'input__container--content' : null]"
+                                        :config="{label: 'Your phone number', hasClearButton: false, height: false, labelOffset: 50, focusColor: '#b53683'}">
+                                        <input v-model="q.phone" type="tel">
+                                        <small v-if="phoneValidate" class="text-danger">Invalid phone number</small>
+                                    </FloatingLabel>
+                                    <span v-else>
+                                        <input v-model="q.phone" type="tel" class=" ml-2 border">
+                                        <small v-if="phoneValidate" class="text-danger">Invalid phone number</small>
+                                    </span>
+                                </div>
+                                <div class="textInput d-flex flex-row align-items-center mb-4">
+                                    <svg width="20" height="21" viewBox="0 0 16 16" class="bi bi-envelope"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                                    </svg>
+                                    <FloatingLabel v-if="!oldBrowser" class="flex-grow-1"
+                                        :class="[emailInvalid ? 'mb-4' : 'mb-10', q.email ? 'input__container--content' : null]"
+                                        :config="{label: 'Your email address', hasClearButton: false, height: false, labelOffset: 50, focusColor: '#b53683'}">
+                                        <input v-model.trim="q.email" type="email" style="width: 100%;">
+                                        <small v-if="emailInvalid" class="text-danger">Invalid email
+                                            address</small>
+                                    </FloatingLabel>
+                                    <span v-else>
+                                        <input v-model.trim="q.email" type="email" style="width: 100%;"
+                                            class="ml-2 border">
+                                        <small v-if="emailInvalid" class="text-danger">Invalid email
+                                            address</small>
+                                    </span>
+                                </div>
+                                <div class="form-group pt-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1"
+                                            v-model="q.confirmThirdparty">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            I confirm my details may be passed on for consideration to companies
+                                            within the group
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <div class="form-check pb-6">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck2"
+                                            v-model="q.confirmTerms">
+                                        <label class="form-check-label" for="gridCheck2">
+                                            I have read and am happy to proceed with the terms and conditions and
+                                            privacy policy
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-if="q.question == 'submit'" class="text-left mb-2 pb-2">
+                                <div class="d-flex flex-row align-items-end">
+                                    <img src="images/lock.svg" width="37" />
+                                    <span class="qTitle d-inline-block pl-3">How we will use your personal
+                                        information</span>
+                                </div>
+                                <p class="mt-4">Debt Support Centre may share your information with and obtain
+                                    information about you
+                                    from credit reference agencies and other companies, for use in credit decisions and
+                                    for fraud prevention.</p>
+                                <p>For further details on how we use your personal information and how we keep your
+                                    details safe, please refer to our Privacy Statement.</p>
+                                <p class="mt-5"><strong>Would you like updates from us?</strong></p>
+                                <p>Whether you want to hear some money saving tips or want to learn about what's going
+                                    on in our company, we'd like to keep you informed.</p>
+                                You can opt out of these communications at any time.</p>
+                                <div class="mt-5 text-center">
+                                    <span class="d-block mb-3">
+                                        <img src="images/sms.svg" width="37" class="pr-1" />
+                                        <strong>SMS</strong>
+                                    </span>
+                                    <button class="btn--form btn mb-3 d-block mx-auto" @click="q.commsSMS = 'Yes'"
+                                        v-bind:class="[q.commsSMS == 'Yes' ? 'selected': null, waiting && q.commsSMS !== 'Yes' ? 'btnDisable' : null]">Yes</button>
+                                    <button class="btn--form btn mb-3 d-block mx-auto" @click="q.commsSMS = 'No'"
+                                        v-bind:class="[q.commsSMS == 'No' ? 'selected': null, waiting && q.commsSMS !== 'No' ? 'btnDisable' : null]">No</button>
+                                </div>
+                                <div class="mt-5 text-center">
+                                    <span class="d-block mb-3">
+                                        <img src="images/onion.svg" width="37" class="pr-1" />
+                                        <strong>Email</strong>
+                                    </span>
+                                    <button class="btn--form btn mb-3 d-block mx-auto" @click="q.commsEmail = 'Yes'"
+                                        v-bind:class="[q.commsEmail == 'Yes' ? 'selected': null, waiting && q.commsEmail !== 'Yes' ? 'btnDisable' : null]">Yes</button>
+                                    <button class="btn--form btn mb-3 d-block mx-auto" @click="q.commsEmail = 'No'"
+                                        v-bind:class="[q.commsEmail == 'No' ? 'selected': null, waiting && q.commsEmail !== 'No' ? 'btnDisable' : null]">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-for="(q, key, index) in questions" v-bind:key="key" class="bottomNav text-center" v-if="stepsDisplay < 8">
+                <button v-if="step == index && q.answer" class="btn btn--text" @click="step++">Next ></button>
+            </div>
+            <div class="bottomNav text-center mb-5" v-if="stepsDisplay == 8">
+                <button class="btn btn--text" @click="step++" :class="!validateSubmit ? 'btnDisable' : null"> Next ></button>
+            </div>
+            <div class="bottomNav text-center mb-5" v-if="stepsDisplay == 9">
+                <button ref="submitButton" class="submitButton" @click="submitData"></button>
+            </div>
+        </div>
+    </div>
+</transition>
+        <div class="navWrap">
+<nav class="container topnav">
+    <div class="row">
+        <div class="col-3">
+            <button @click="showMenu = !showMenu" ref="menuButton" class="menu" data-toggle="collapse"
+                data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <path class="line line1"
+                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path class="line line3"
+                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+        </div>
+        <div class="col-6 text-center">
+            <a href="/">
+                <img src="assets/logo-animation.gif" width="90" height="auto" alt="Debt Support Centre logo" class="img-fluid">
+            </a>
+        </div>
+                <div class="col-3 text-right" id="lines-open">
+            <a href="tel:01612001139"><img src="images/phone-solid-2.svg" class="img-fluid pb-2" style="height:52px"
+                    alt="" aria-hidden="true" /></a>
+        </div>
+            </div>
+    <transition name="slide">
+        <section v-cloak class="navbar-collapse vw-100 py-3 position-absolute" v-if="showMenu">
+            <div class="container">
+                <div class="navbar-nav ml-auto">
+                    <ul class="px-0">
+                                                  <a class="nav-item nav-link" href="/debt-solutions">Debt solutions</a>
+                                                <a class="nav-item nav-link" href="/about">About</a>
+                                                <a class="nav-item nav-link" href="/contact-us">Contact us</a>
+                                                <a class="nav-item nav-link" href="/our-fees">Our Fees</a>
+                         
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </transition>
+    <!-- Call popup -->
+    <transition name="slide">
+        <div class="vModal" v-if="phoneModal" v-cloak>
+            <div class="modal-dialog pt-5" role="document">
+                <div class="modal-content text-center">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            @click="phoneModal = false">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body pb-5">
+                        <p>Sorry, we are currently closed.</p>
+                        <p>If you wish to speak to an advisor please call us on <a href="tel:01612001139">0161 200
+                                1139</a>
+                            during our opening hours, or make an <a
+                                href="https://debtsupportcentre.co.uk/application/">application</a> and we will get in
+                            touch
+                            for a no-obligation chat about your finances.</p>
+                        <hr />
+                        <p class="font-weight-bold pt-2">Opening hours:</p>
+                        <p>Monday: 8am-8pm</p>
+                        <p>Tuesday: 8am-8pm</p>
+                        <p>Wednesday: 8am-8pm</p>
+                        <p>Thursday: 8am-8pm</p>
+                        <p>Friday: 8am-4pm</p>
+                        <p>Saturday: 9am-3pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </transition>
+</nav>
+</div>
+<div class="feefo-top d-md-none">
+    <div class="container">
+        <a href="https://www.feefo.com/reviews/nds" target="_blank">
+            <img src="images/feefo-rating.svg" height="100px" width="auto" alt="Feefo rating" class="img-fluid">
+        </a>
+    </div>
+</div>
+
+        <main class="py-12 lg:py-20">
+            <section class="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <h1 class="pt-2 pb-3 circle">Contact us</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-1 pb-4">
+            <div class="card">
+                <div class="card-body">
+                    <p style="color:#B53683; margin-left: 15px"><b>Send us an email</b></p>
+                    <form method="POST" action="http://dsc.test/!/forms/contact"><input type="hidden" name="_token" value="pTY7V7ELdxxdgwARdyc2TZjcm8lqWcwHDkaKrnKx">                                                                                                <div class="form-label-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your name" required=""  autofocus="" autocomplete="on" pattern="[A-Za-z' -]+" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAbhJREFUWAntVr1OhEAQZsECSKBQC/9aba+z9iU08SWuvPcwNrY2V+hL+AoabbRE6bSAxEAM4DfkuFuWXU5y/MSETTbMznzzs7Mzy2raOMYMIAOWZR3puj5njPmYWcfTJ1/kk5LPQBxGUfQEepsYPY5P0zQnRpqmN3B62qPjwpWdJMkess0+wDkouD1/fU1x3p5hGJe2be/TJBo4T4ZtGrBoQxaA57pupR6IJwti0wC2RAOo0FkQBF8in3jIxAw1M+dl4J3z63U09MsQMSWU8jJitSKZiN90ra/MD0NVAojj+EwVSp1MpbOOjwyyTAC9O44zEeuAijAMw0dg8xus0IH+fUH/5ZtlWblmFGfoUev10YaVI1js4hnfb0y2mEQTr/VROQIwpmiVa5kntOgUKbziZa0eARzc8sZlNGHgtLU/Jn8Tpii+XZlTnkcYBJC2GMSyC96Q3hPemYqG81fIjlXyJnz+Kn5poEjYPAAcyUUDPQ31dcfjlwFgVz/IAC9T0jwW//RG9wB0S3ZVbVgCdblAQMM+SHQE8NDlDutsk+/iUUp3/E4duANZ/ijN7Q75LO9gY6PJf5aBX7tnEYIBb5bnAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                            <label for="name">Your name</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="phone" name="phone" class="form-control" placeholder="Your phone number" required="" autofocus="" autocomplete="on" pattern="[0,7-9]{1}[0-9]{10}">
+                            <label for="phone">Your phone number</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your email address" required="" autofocus="" autocomplete="on" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            <label for="email">Your email address</label>
+                        </div>
+                        <div class="form-label-group" style="width:100%">
+                            <input type="text" name="message" class="form-control" placeholder="Your message" required="" autofocus="">
+                            <label for="message">Your message</label>
+                        </div>
+                        <div class="text-center text-md-right">
+                            <button type="submit" class="btn secondary-btn on-white mt-3">Send message</button>
+                        </div>
+                        
+                
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 pt-4 text-center text-md-left">
+            <p><span style="color:#B53683"><b>Opening hours</b></span><br>
+               Mon-Thurs 8am-8pm <br>
+Friday 8am-8pm <br>
+Saturday 9am-3pm
+
+               </p>
+            <p><span style="color:#B53683"><b>Call us</b></span><br>
+                0161 549 0737
+           </p>
+            <p><span style="color:#B53683"><b>Address</b></span><br>
+                Bridgewater House,
+58-60 Whitworth Street,
+Manchester,
+M1 6LT
+
+               </p>
+        </div>
+    </div>
+</div>
+        </main>
+        <footer class="py-6 lg:py-12 text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <div class="footer-menu text-center">
+                    
+                </div>
+                <div class="top-logos text-center py-3">
+                    <div class="col-sm-12 m-auto">
+                        <div class="row">
+                            <div class="col-6 col-md-3">
+                                <a href="https://www.moneyadviceservice.org.uk/en" target="_blank"><v-lazy-image
+                                        src="images/logo_mas.svg" class="v-lazy-image-fluid" alt="Money Advice Service Logo"></a>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <a href="https://www.gov.uk/government/organisations/insolvency-service"
+                                    target="_blank"><v-lazy-image src="images/logo_insolvencypractitioner.svg" class="v-lazy-image-fluid"
+                                        alt="The Insolvency Service logo"></a>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <a href="https://www.familybusinessplace.com/" target="_blank"><v-lazy-image
+                                        src="images/logo_fbp_white.png" class="v-lazy-image-fluid"
+                                        alt="Family Business Place logo"></a>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <a href="https://www.icaew.com/regulation/insolvency" target="_blank"><v-lazy-image
+                                        src="images/logo_icaew2.png" class="v-lazy-image-fluid" alt="ICAEW logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-left">
+                    <p><strong>Disclaimer</strong></p><p>Debt write off applies to unsecured debts and on completion of an IVA. A debt write off amount of between 20% and 80% is realistic, however the debt write off amount for each customer differs depending upon their individual financial circumstances and is subject to the approval of their creditors.</p><p>Call charges may vary depending on your telephone provider. All calls are recorded for training and compliance purposes, but deleted after 6 months for non-customers in line with GDPR guidelines.</p><p>Free money help and advice can be found at the MoneyAdviceService.org.uk.</p><p>DSC is a trading style of Financial Support Systems Limited Registered Office Bridgewater House Whitworth Street Manchester. Registered in England and Wales Registration number 10778048. Data Protection Registration Number ZA450309.</p><p>Our practitioners are authorised by the Institute of Chartered Accountants in England and Wales.</p><p>Subject to eligibility and acceptance. Fees Payable. Debt write off applies to unsecured debts only and on completion of an IVA. Your ability to obtain credit will be affected for the medium to long term. Homeowners may be required to release the equity in their property, if unable to release equity and equity is available creditors may request an additional 12 months payments in compensation.</p><p>Financial Support Systems Ltd provides insolvency solutions to individuals, specialising in IVA. Advice and information on alternative options will be provided following an initial fact find where the individual(s) concerned meets the criteria for an IVA and wishes to pursue it further. All advice given on any alternative options is therefore provided in reasonable contemplation of an insolvency appointment.</p><p>The Money Advice Service is a free service set up by the Government to help people make the most of their money. If you would like to learn more <a target="_blank" href="https://www.moneyadviceservice.org.uk/en">click here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+</body>
+</html>
+<!-- Load style and script at the end -->
+<script src="/js/site.js?id=fdef996a972f45332c4b" async></script> 
+<link rel="stylesheet" href="/css/app.css?id=5a7e47349dd42ff9eec3">
+<!-- only load carousel if needed -->

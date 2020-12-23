@@ -22,13 +22,15 @@
                     <div class="text-center" class="formOverlay__inner">
                         <div v-if="step == index && q.question">
                             <span v-if="index < 7" class="qTitle d-block mb-3">@{{q.question}}</span>
-                            <!-- <img v-if="step == 1" v-bind:src="'images/'+q1Image" class="formOverlay__inner__gif mb-3">
+                            <!-- <img v-if="step == 1" v-bind:src="'images/'+q1Image" class="formOverlay__inner__gif mb-4">
                                     <img v-else="" src=""> -->
-                            <img v-if="index < 7" v-bind:src="'images/'+q.icon" class="formOverlay__inner__gif ">
-                            <div v-for="a in q.options">
-                                <button class="btn--form btn mb-3" @click="q.answer = a, nextStep()"
-                                    v-bind:class="[q.answer == a ? 'selected': null, waiting && q.answer !== a ? 'btnDisable' : null]"
-                                    :style="index == 0 ? 'width: 241px' : null">@{{a}}</button>
+                            <img v-if="index < 7" v-bind:src="'images/'+q.icon" class="formOverlay__inner__gif mb-4">
+                            <div class="row">
+                                <div v-for="a in q.options" :class="q.options.length == 6 ? 'col-md-4' : 'col-md-6'" >
+                                    <button class="btn--form btn mb-3 full-width" @click="q.answer = a, nextStep()"
+                                        v-bind:class="[q.answer == a ? 'selected': null, waiting && q.answer !== a ? 'btnDisable' : null]"
+                                        :style="index == 0 ? 'width: 100%' : null">@{{a}}</button>
+                                </div>
                             </div>
                             <!-- FINAL SECTION-->
                             <div v-if="q.question == 'userDetails'" class="text-left mb-2 pb-2">
@@ -36,7 +38,8 @@
                                 <p>Based on <strong>@{{questions.question_5.answer}}</strong> debt from
                                     <strong>@{{questions.question_6.answer}} creditors</strong> that you owe, we
                                     could
-                                    potentially help you acheaive the following:</p>
+                                    potentially help you acheaive the following:
+                                </p>
                                 <div class="pt-2">
                                     <div class="textInput d-flex flex-row align-items-center ">
                                         <img src="images/check.svg" />
@@ -146,6 +149,36 @@
                                         </label>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mt-5 text-center">
+                                            <span class="d-block mb-3">
+                                                <img src="images/sms.svg" width="37" class="pr-1" />
+                                                <strong>SMS</strong>
+                                            </span>
+                                            <button class="btn--form btn mb-3 d-block mx-auto"
+                                                @click="q.commsSMS = 'Yes'"
+                                                v-bind:class="[q.commsSMS == 'Yes' ? 'selected': null, waiting && q.commsSMS !== 'Yes' ? 'btnDisable' : null]">Yes</button>
+                                            <button class="btn--form btn mb-3 d-block mx-auto"
+                                                @click="q.commsSMS = 'No'"
+                                                v-bind:class="[q.commsSMS == 'No' ? 'selected': null, waiting && q.commsSMS !== 'No' ? 'btnDisable' : null]">No</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mt-5 text-center">
+                                            <span class="d-block mb-3">
+                                                <img src="images/onion.svg" width="37" class="pr-1" />
+                                                <strong>Email</strong>
+                                            </span>
+                                            <button class="btn--form btn mb-3 d-block mx-auto"
+                                                @click="q.commsEmail = 'Yes'"
+                                                v-bind:class="[q.commsEmail == 'Yes' ? 'selected': null, waiting && q.commsEmail !== 'Yes' ? 'btnDisable' : null]">Yes</button>
+                                            <button class="btn--form btn mb-3 d-block mx-auto"
+                                                @click="q.commsEmail = 'No'"
+                                                v-bind:class="[q.commsEmail == 'No' ? 'selected': null, waiting && q.commsEmail !== 'No' ? 'btnDisable' : null]">No</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div v-if="q.question == 'submit'" class="text-left mb-2 pb-2">
                                 <div class="d-flex flex-row align-items-end">
@@ -188,13 +221,17 @@
                     </div>
                 </div>
             </div>
-            <div v-for="(q, key, index) in questions" v-bind:key="key" class="bottomNav text-center" v-if="stepsDisplay < 8">
+            <div v-for="(q, key, index) in questions" v-bind:key="key" class="bottomNav text-center"
+                v-if="stepsDisplay < 8">
                 <button v-if="step == index && q.answer" class="btn btn--text" @click="step++">Next ></button>
             </div>
+            {{#
             <div class="bottomNav text-center mb-5" v-if="stepsDisplay == 8">
-                <button class="btn btn--text" @click="step++" :class="!validateSubmit ? 'btnDisable' : null"> Next ></button>
+                <button class="btn btn--text" @click="step++" :class="!validateSubmit ? 'btnDisable' : null"> Next
+                    ></button>
             </div>
-            <div class="bottomNav text-center mb-5" v-if="stepsDisplay == 9">
+            #}}
+            <div class="bottomNav text-center mb-5" v-if="stepsDisplay == 8">
                 <button ref="submitButton" class="submitButton" @click="submitData"></button>
             </div>
         </div>

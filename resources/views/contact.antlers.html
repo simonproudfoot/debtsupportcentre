@@ -15,13 +15,13 @@
                     <p style="color:#B53683; margin-left: 15px"><b>Send us an email</b></p>
                     {{ form:create in="contact" }}
                         {{ if success }}
-                        <div class="bg-green-300 text-white p-2">
-                            {{ success }}
+                        <div class="bg-green-300  p-2">
+                            <h2> {{ success }}</h2>
                         </div>
                         {{ else }}
                         {{/if}}
                         {{ if errors }}
-                        <div class="bg-red-300 text-white p-2">
+                        <div class="bg-red-300 p-2">
                             {{ errors }}
                                 {{ value }}<br>
                             {{ /errors }}
@@ -40,8 +40,8 @@
                             <label for="email">Your email address</label>
                         </div>
                         <div class="form-label-group" style="width:100%">
-                            <input type="text" name="message" class="form-control" placeholder="Your message" required="" autofocus="">
-                            <label for="message">Your message</label>
+                            <textarea type="text" name="message" class="form-control" rows="5" style="border-color:#122c49; font-size: .9rem !important" placeholder="Your message" required></textarea>
+                         
                         </div>
                         <div class="text-center text-md-right">
                             <button type="submit" class="btn secondary-btn on-white mt-3">Send message</button>

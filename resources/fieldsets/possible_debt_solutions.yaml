@@ -1,0 +1,69 @@
+title: 'Possible debt solutions'
+fields:
+  -
+    handle: possible_debt_solutions
+    field:
+      display: 'Possible debt solutions'
+      type: section
+      icon: section
+      listable: hidden
+  -
+    handle: solutions_heading
+    field:
+      input_type: text
+      antlers: false
+      display: 'solutions heading'
+      type: text
+      icon: text
+      listable: hidden
+  -
+    handle: column_a
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - removeformat
+        - quote
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: column_a
+      type: bard
+      icon: bard
+      width: 50
+      listable: hidden
+  -
+    handle: column_b
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      display: 'column b'
+      type: bard
+      icon: bard
+      width: 50
+      listable: hidden

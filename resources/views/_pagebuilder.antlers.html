@@ -1,35 +1,46 @@
 {{ page_builder }}
 {{ if type == "text" }}
-{{ partial:blocks/text }}
+    {{ partial:blocks/text }}
 {{/if}}
 {{if text_card}}
 <section>
     <div class="container">
         <div class="row">
             {{ text_card }}
-            {{ partial:blocks/cards}}
+                {{ partial:blocks/cards}}
             {{ /text_card }}
         </div>
     </div>
 </section>
 {{/if}}
-{{if select_blocks == 'why_choose_us'}}
-{{ partial:blocks/why-choose-us }}
+{{if select_blocks == 'why_choose_us'}}  
+    {{ partial:blocks/why-choose-us }}
+{{/if}}
+{{if type == 'new_why_choose_us'}}
+    {{ partial:blocks/new-why-choose-us }}
 {{/if}}
 {{if select_blocks == 'possible_debt_solutions'}}
-{{ partial:blocks/possible_debt_solutions }}
+    {{ partial:blocks/possible-debt-solutions }}
+{{/if}}
+{{if type == 'new-possible-debt-solutions'}}
+    {{ partial:blocks/new-possible-debt-solutions }}
 {{/if}}
 {{if select_blocks == 'how_you_could_benefit'}}
-{{ partial:blocks/how_you_could_benefit }}
+    {{ partial:blocks/how-you-could-benefit }}
+{{/if}}
+{{if type == 'new_iva_table'}}
+    {{ partial:blocks/new-how-you-could-benefit }}
 {{/if}}
 {{if select_blocks == 'debts_we_can_help_with'}}
 {{ partial:blocks/debts_we_can_help_with }}
 {{/if}}
 {{if select_blocks == 'how_we_can_help_you'}}
-{{ partial:blocks/how_we_can_help_you }}
+{{ partial:blocks/how-we-can-help-you }}
+{{/if}}
+{{if type == 'new_how_we_can_help'}}
+{{ partial:blocks/new-how-we-can-help-you }}
 {{/if}}
 {{if select_blocks == 'text_blocks'}}
-{{ partial:blocks/text_blocks }}
 {{/if}}
 {{if type == 'image_text_split'}}
 {{ partial:blocks/image_text_split }}
@@ -48,6 +59,6 @@
 </section>
 {{ /if }}
 {{if select_blocks == 'carousel'}}
-{{ partial:blocks/carousel }}
+    {{ partial:blocks/carousel }}
 {{/if}}
 {{ /page_builder }}

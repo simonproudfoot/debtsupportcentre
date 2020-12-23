@@ -1,7 +1,73 @@
 title: blocks
 data:
+  how_we_can_help_title: 'How we can help you'
+  help_box_1:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Answer a few simple questions to see if you qualify. '
+        -
+          type: text
+          marks:
+            -
+              type: bold
+          text: 'Start now >'
+  help_box_2:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'We conduct a fact find and provide a solution suitable for you.'
+  help_box_3:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Regain control of your finances with a financial plan.'
+  table_title: 'Example of how you could benefit from an IVA:'
+  table:
+    -
+      cells:
+        - 'Total owed'
+        - '£24,114.16'
+    -
+      cells:
+        - 'Old monthly repayments'
+        - £876
+    -
+      cells:
+        - 'New monthly repayments'
+        - £160
+  written_off:
+    -
+      cells:
+        - 'Amount written off'
+        - '£18,841'
+  example_box_left_title: £876
+  example_box_left_subtitle: 'Before plan'
+  example_box_left:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Total contractual repayments'
+  example_box_right_title: £160
+  example_box_right_subtitle: 'After plan'
+  example_box_right:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Total contractual repayments'
+  details: 'Contractual repayments reduced by 78.14%. Total debt written off £18,841 over a period of five years.'
   heading: 'Why people choose us'
-  why_column_a_title: 0+
+  why_column_a_title: 15+
   why_column_a_subtitle: 'years’ experience'
   why_column_a:
     -
@@ -74,67 +140,3 @@ data:
         -
           type: text
           text: 'Although we specialise in IVAs and can’t assist you in setting up alternatives, our knowledge of debt is vast. Here are other options which could be suitable:'
-  table:
-    -
-      cells:
-        - 'Total owed'
-        - '£24,114.16'
-    -
-      cells:
-        - 'Old monthly repayments'
-        - £876
-    -
-      cells:
-        - 'New monthly repayments'
-        - £160
-  written_off:
-    -
-      cells:
-        - 'Amount written off'
-        - '£18,841'
-  example_box_left_title: £876
-  example_box_left_subtitle: 'Before plan'
-  example_box_left:
-    -
-      type: paragraph
-      content:
-        -
-          type: text
-          text: 'Total contractual repayments'
-  example_box_right_title: £160
-  example_box_right_subtitle: 'After plan'
-  example_box_right:
-    -
-      type: paragraph
-      content:
-        -
-          type: text
-          text: 'Total contractual repayments'
-  details: 'Contractual repayments reduced by 78.14%. Total debt written off £18,841 over a period of five years.'
-  help_box_1:
-    -
-      type: paragraph
-      content:
-        -
-          type: text
-          text: 'Answer a few simple questions to see if you qualify. '
-        -
-          type: text
-          marks:
-            -
-              type: bold
-          text: 'Start now >'
-  help_box_2:
-    -
-      type: paragraph
-      content:
-        -
-          type: text
-          text: 'We conduct a fact find and provide a solution suitable for you.'
-  help_box_3:
-    -
-      type: paragraph
-      content:
-        -
-          type: text
-          text: 'Regain control of your finances with a financial plan.'
