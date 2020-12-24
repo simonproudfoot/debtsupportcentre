@@ -1,14 +1,24 @@
 body {
     margin: 0;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, â€œSegoe UIâ€, Helvetica, Arial, sans-serif,
-        â€œApple Color Emojiâ€, â€œSegoe UI Emojiâ€, â€œSegoe UI Symbolâ€, sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1rem !important; 
     line-height: 1.5;
     color: #122c49;
     text-align: left;
     background-color: #fff;
 }
+
+
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
+  
+html {
+    scroll-behavior: smooth;
+  }
 a {
     color: #009991;
 }
@@ -23,6 +33,17 @@ h2 {
 h3 {
     font-size: 1.75rem;
     font-weight: 400;
+}
+
+
+.cookie{
+background-color: #122c49;
+color: #fff;
+
+}
+.Cookie__button{
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
 }
 
 .contains-list {
@@ -55,8 +76,6 @@ h3 {
     position: fixed;
     width: 100%;
     top: 0;
-    -moz-box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
-    -webkit-box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
     box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
 }
 .navbar-nav .nav-link {
@@ -161,8 +180,6 @@ ul {
     background: #009991;
     background: linear-gradient(0deg, #004d49 0%, #009991 100%);
     border: none;
-    -moz-box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
-    -webkit-box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
     box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
 }
 .primary-btn:hover,
@@ -190,8 +207,6 @@ button.btn.closed-lines {
 .card {
     border: none;
     border-radius: 5px;
-    -moz-box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
-    -webkit-box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
     box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
 }
 .card display {
@@ -205,9 +220,7 @@ button.btn.closed-lines {
 }
 
 .table-footer {
-    background-color: #122c49;
-    -moz-box-shadow: 5px 10px rgba(18, 44, 73, 0.5);
-    -webkit-box-shadow: 5px 10px rgba(18, 44, 73, 0.5);
+    background-color: #122C49;
     box-shadow: 5px 10px rgba(18, 44, 73, 0.5);
     color: #fff;
     padding-bottom: 1.5rem;
@@ -216,9 +229,7 @@ button.btn.closed-lines {
 .table-amount {
     font-weight: 700;
 }
-.debtsolutions a {
-    color: #fff;
-}
+
 .debtsolutions a:hover {
     color: #b53683;
 }
@@ -278,6 +289,11 @@ footer a:hover {
     padding-bottom: 1rem;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+
+    font-weight: 600 !important;
+  
+}
 /* RESPONSIVE */
 @media only screen and (min-width: 767px) {
     .top-border {
@@ -313,12 +329,6 @@ footer a:hover {
     }
 }
 
-/*15 years count*/
-@property --num {
-    syntax: "<integer>";
-    initial-value: 0;
-    inherits: false;
-}
 
 .years {
     animation: counter 2s 1 forwards ease-in-out;
@@ -500,3 +510,26 @@ footer a:hover {
         color: #777;
     }
 }
+
+img {
+  
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  img::before {
+    background-color: grey;
+  }
+    
+  img::after {
+
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    color: #fff;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }

@@ -101,11 +101,11 @@
                                     <FloatingLabel v-if="!oldBrowser" class="flex-grow-1 "
                                         :class="[phoneValidate ? 'mb-4' : 'mb-10', q.phone ? 'input__container--content' : null]"
                                         :config="{label: 'Your phone number', hasClearButton: false, height: false, labelOffset: 50, focusColor: '#b53683'}">
-                                        <input v-model="q.phone" type="tel">
+                                        <input v-model="q.phone" type="tel" onkeyup="this.value=this.value.replace(/\D/g,'')">
                                         <small v-if="phoneValidate" class="text-danger">Invalid phone number</small>
                                     </FloatingLabel>
                                     <span v-else>
-                                        <input v-model="q.phone" type="tel" class=" ml-2 border">
+                                        <input v-model="q.phone" type="tel" class=" ml-2 border" onkeyup="this.value=this.value.replace(/\D/g,'')">
                                         <small v-if="phoneValidate" class="text-danger">Invalid phone number</small>
                                     </span>
                                 </div>
@@ -232,7 +232,7 @@
             </div>
             #}}
             <div class="bottomNav text-center mb-5" v-if="stepsDisplay == 8">
-                <button ref="submitButton" class="submitButton" @click="submitData"></button>
+                <button ref="submitButton" class="submitButton" @click="submitData" :class="!validateSubmit ? 'btnInnactive' : null"></button>
             </div>
         </div>
     </div>

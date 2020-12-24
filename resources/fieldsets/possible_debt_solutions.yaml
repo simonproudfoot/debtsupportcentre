@@ -28,7 +28,7 @@ fields:
         - removeformat
         - quote
         - anchor
-      save_html: false
+      save_html: true
       toolbar_mode: fixed
       link_noopener: false
       link_noreferrer: false

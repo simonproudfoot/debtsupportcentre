@@ -3,10 +3,6 @@ title: About
 hero_title: 'About us'
 page_builder:
   -
-    type: heading
-    attrs:
-      level: 1
-  -
     type: paragraph
   -
     type: set
@@ -98,62 +94,8 @@ page_builder:
   -
     type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608111602
+updated_at: 1608795386
 blueprint: standard
-header_content:
-  -
-    type: heading
-    attrs:
-      level: 1
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: textAlign
-            attrs:
-              align: left
-        text: 'About us'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: textAlign
-            attrs:
-              align: left
-        text: 'We have the experience and the skills necessary to help you deal with your debts. Part of a group of companies which have been operating since 2006, we speak without jargon, are open, honest and helpful.'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: textAlign
-            attrs:
-              align: left
-        text: 'Located in Manchester, all our expert advisors are based in the UK and available to conduct a review of your circumstances without a prior appointment.'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: textAlign
-            attrs:
-              align: left
-        text: 'Over the years, they have listened to every story and heard every situation. They realise the damage and stress which debt causes to people and want to help reduce the pressure. By getting in touch with them for a no-obligation chat about your finances, you can also start experiencing what it’s like to have relief from debt'
-      -
-        type: text
-        marks:
-          -
-            type: textAlign
-            attrs:
-              align: center
-        text: .
+header_content: '<h1><span style="text-align:left;display :block">About us</span></h1><p><span style="text-align:left;display :block">We have the experience and the skills necessary to help you deal with your debts. Part of a group of companies which have been operating since 2006, we speak without jargon, are open, honest and helpful.</span></p><p><span style="text-align:left;display :block">Located in Manchester, all our expert advisors are based in the UK and available to conduct a review of your circumstances without a prior appointment.</span></p><p><span style="text-align:left;display :block">Over the years, they have listened to every story and heard every situation. They realise the damage and stress which debt causes to people and want to help reduce the pressure. By getting in touch with them for a no-obligation chat about your finances, you can also start experiencing what it&rsquo;s like to have relief from debt</span><span style="text-align:center;display :block">.</span><code>&lt;h1&gt;Hello&lt;h1&gt;</code></p>'
 id: e6efb5c4-ba6b-4e35-b220-e443c0e4ba03
 ---

@@ -37,7 +37,7 @@ sections:
           target_blank: false
           reading_time: false
           fullscreen: true
-          allow_source: true
+          allow_source: false
           display: 'header content'
           type: bard
           icon: bard
@@ -70,7 +70,7 @@ sections:
           target_blank: false
           reading_time: false
           fullscreen: true
-          allow_source: true
+          allow_source: false
           display: 'page builder'
           type: bard
           icon: bard
@@ -85,7 +85,7 @@ sections:
                     options:
                       why_choose_us: 'why choose us'
                       possible_debt_solutions: 'Possible debt solutions'
-                      'how_you_could_benefit': 'how you could benefit'
+                      how_you_could_benefit: 'how you could benefit'
                       debts_we_can_help_with: 'Debts we can help with'
                       how_we_can_help_you: 'How we can help you'
                       carousel: carousel
@@ -172,6 +172,54 @@ sections:
               fields:
                 -
                   import: possible_debt_solutions
+            scroll_to_section:
+              display: 'Scroll to section'
+              fields:
+                -
+                  handle: how_to
+                  field:
+                    display: 'How to'
+                    type: section
+                    icon: section
+                    instructions: 'Since we can''t place inline code in this text box, we must create a section and wrap it in the ID to scroll to. Then place that link into the a href="#sectionID""'
+                    listable: hidden
+                -
+                  handle: section_id
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'section ID'
+                    type: text
+                    icon: text
+                    listable: hidden
+                -
+                  handle: section_content
+                  field:
+                    always_show_set_button: false
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                    save_html: false
+                    toolbar_mode: fixed
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    reading_time: false
+                    fullscreen: true
+                    allow_source: true
+                    display: 'section content'
+                    type: bard
+                    icon: bard
+                    listable: hidden
   sidebar:
     display: Sidebar
     fields:

@@ -47,8 +47,8 @@ class form_submits extends Controller
             , 'DI' => urlencode($request['question_7']['answer']) //Optional 
             , 'opt_in' => urlencode(1)
             , 'tc_a' => urlencode(1)
-            , 'mk_text' => urlencode(($request['question_9']['commsSMS'] == true) ? 1 : 0)
-            , 'mk_email' => urlencode(($request['question_9']['commsEmail'] == true) ? 1 : 0)            
+            , 'mk_text' => urlencode(($request['question_8']['commsSMS'] == true) ? 1 : 0)
+            , 'mk_email' => urlencode(($request['question_8']['commsEmail'] == true) ? 1 : 0)            
             , 'client_ip' => urlencode($request['question_8']['userIP'])
             , 'Current_Situation' => urlencode($request['question_1']['answer'])
             , 'Causing_Stress_Anxiety' => urlencode($request['question_2']['answer'])

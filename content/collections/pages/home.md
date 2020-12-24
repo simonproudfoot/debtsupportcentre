@@ -1,25 +1,6 @@
 ---
 title: Home
-header_content:
-  -
-    type: heading
-    attrs:
-      level: 1
-    content:
-      -
-        type: text
-        text: 'Debt Keeping You Awake at Night?'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'Find a solution which is right for you. '
-      -
-        type: hard_break
-      -
-        type: text
-        text: 'Ready to get started?'
+header_content: '<h1>Debt Keeping You Awake at Night?</h1><p>Find a solution which is right for you. <br>Ready to get started?</p><p></p>'
 page_builder:
   -
     type: paragraph
@@ -82,7 +63,7 @@ page_builder:
   -
     type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608570046
+updated_at: 1608796575
 blueprint: standard
 template: home
 pre_header: about

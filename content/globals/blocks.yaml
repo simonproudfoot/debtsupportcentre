@@ -8,12 +8,6 @@ data:
         -
           type: text
           text: 'Answer a few simple questions to see if you qualify. '
-        -
-          type: text
-          marks:
-            -
-              type: bold
-          text: 'Start now >'
   help_box_2:
     -
       type: paragraph
@@ -102,7 +96,7 @@ data:
             -
               type: link
               attrs:
-                href: 'http://dsc-rebrand2.test/iva.php#iva-calculator'
+                href: '/iva.php#iva-calculator'
                 target: null
                 rel: null
           text: 'IVA calculator'
@@ -110,21 +104,7 @@ data:
           type: text
           text: ' which should provide a good estimation.'
   solutions_heading: 'Possible debt solutions'
-  column_a:
-    -
-      type: paragraph
-      content:
-        -
-          type: text
-          marks:
-            -
-              type: bold
-          text: IVA
-        -
-          type: hard_break
-        -
-          type: text
-          text: 'Allowing you to write off up to 83.3% of your debts, you can consolidate many of these while making payments starting from just £70 per month.'
+  column_a: '<p><strong>IVA</strong><br>Allowing you to write off up to 83.3% of your debts, you can consolidate many of these while making payments starting from just &pound;70 per month.</p>'
   column_b:
     -
       type: paragraph

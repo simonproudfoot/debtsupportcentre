@@ -6,6 +6,7 @@ Vue.use(Progress)
 import { VLazyImagePlugin } from "v-lazy-image";
 Vue.use(VLazyImagePlugin);
 import axios from 'axios'
+import CookieLaw from 'vue-cookie-law'
 import VueAxios from 'vue-axios'
 import browserDetect from "vue-browser-detect-plugin";
 Vue.use(browserDetect);
@@ -23,7 +24,7 @@ window.onload = function () {
                 ready: false,
                 validationRules: {
                     required: (value) => !!value || "Required.",
-                    counter: (value) => !!value.length <= 11 || "Min 11 numbers",
+                    counter: (value) => !!value.length < 11 || "Min 11 numbers",
                     email: [
                         (v) => !!v || "E-mail is required",
                         (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || "E-mail must be valid",
@@ -97,16 +98,16 @@ window.onload = function () {
             }
         },
         computed: {
-            fName(){
+            fName() {
                 const urlParams = new URLSearchParams(window.location.search);
                 const myParam = urlParams.get('name');
                 return myParam
-                
+
             },
-            oldBrowser(){
-                console.log(this.$browserDetect.meta.version +'-'+ this.$browserDetect.meta.name )
-                if(this.$browserDetect.meta.name == 'Edge' && this.$browserDetect.meta.version <= 18 ){
-                  return true
+            oldBrowser() {
+                console.log(this.$browserDetect.meta.version + '-' + this.$browserDetect.meta.name)
+                if (this.$browserDetect.meta.name == 'Edge' && this.$browserDetect.meta.version <= 18) {
+                    return true
                 }
             },
             stepsDisplay() {
@@ -121,7 +122,7 @@ window.onload = function () {
             },
             emailInvalid() {
                 var val = this.questions.question_8.email
-                var re = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+                var re = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
                 if (!re.test(val) && val.length) {
                     console.log('email invalid')
                     return true
@@ -129,7 +130,7 @@ window.onload = function () {
             },
             phoneValidate() {
                 var val = this.questions.question_8.phone
-                var re = new RegExp(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im);
+                var re = new RegExp(/^((\(?0\d{4}\)?\s?\d{3}\s?\d{3})|(\(?0\d{3}\)?\s?\d{3}\s?\d{4})|(\(?0\d{2}\)?\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/im);
                 if (!re.test(val) && val.length) {
                     console.log('phone invalid')
                     return true
@@ -152,6 +153,7 @@ window.onload = function () {
             }
         },
         mounted() {
+              
             // get user IP
             fetch('https://api.ipify.org?format=json')
                 .then(x => x.json()).then(({ ip }) => {
@@ -181,15 +183,15 @@ window.onload = function () {
                 } finally {
                     btn.classList.remove("onclic");
                     var fname = this.questions.question_8.fullName.substr(0, this.questions.question_8.fullName.indexOf(" "));
-                    if(this.questions.question_3.answer == 'Benefits only' || this.questions.question_3.answer == 'Retired' || this.questions.question_3.answer == 'Unemployed'){
+                    if (this.questions.question_3.answer == 'Benefits only' || this.questions.question_3.answer == 'Retired' || this.questions.question_3.answer == 'Unemployed') {
                         this.resetFields()
-                        window.location.replace("/good-luck?name="+fname);
-                    }else if(this.questions.question_5.answer == 'Less than £5,000'){
+                        window.location.href = "/good-luck?name=" + fname
+                    } else if (this.questions.question_5.answer == 'Less than £5,000') {
                         this.resetFields()
-                        window.location.replace("/received?name="+fname);
-                    }else{
+                        window.location.href = "/received?name=" + fname
+                    } else {
                         this.resetFields()
-                        window.location.replace("/thank-you?name="+fname);
+                        window.location.href = "/thank-you?name=" + fname
                     }
                 }
             },
@@ -206,6 +208,8 @@ window.onload = function () {
                 this.questions.question_8.phone = ''
                 this.questions.question_8.confirmThirdparty = ''
                 this.questions.question_8.confirmTerms = ''
+                this.questions.question_8.commsEmail = ''
+                this.questions.question_8.commsSMS = ''
                 this.overlay = 'false'
                 this.step = 0
             },
@@ -225,13 +229,15 @@ window.onload = function () {
             },
         },
         components: {
-            floatinglabel
+            floatinglabel,
+            cookielaw: CookieLaw
+
         },
         watch: {
-            showMenu(val){
-                if(val){
+            showMenu(val) {
+                if (val) {
                     this.$refs.menuButton.classList.add('opened')
-                }else{
+                } else {
                     this.$refs.menuButton.classList.remove('opened')
                 }
             },
@@ -250,4 +256,7 @@ window.onload = function () {
             },
         }
     })
+
+
 }
+
