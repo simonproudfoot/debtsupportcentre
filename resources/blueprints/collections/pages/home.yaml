@@ -397,3 +397,8 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+  page_meta:
+    display: 'Page meta'
+    fields:
+      -
+        import: metatags

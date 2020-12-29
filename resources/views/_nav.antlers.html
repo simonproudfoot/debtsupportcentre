@@ -20,13 +20,14 @@
         </div>
         {{ if !{site_data:lineClosed} }}
         <div class="col-3 text-right" id="lines-open">
-            <a href="tel:01612001139"><img src="images/phone-solid-2.svg" class="img-fluid pb-2" style="height:52px"
-                    alt="" aria-hidden="true" /></a>
+            <a href="tel:01612001139">
+                <img src="images/phone-solid-2.svg" class="img-fluid pb-2 d-lg-none" style="height:52px" alt="phone-icon" aria-hidden="true" />
+                <h5 class="d-none d-lg-block m-0" style="line-height: 50px; color: #122c49">0161 200 1139 <img src="images/phone-solid-2.svg" style="height:25px; margin-bottom: 4px;" alt="phone-icon"/></h5>
+            </a>
         </div>
         {{ else }}
         <div class="col-3 text-right" id="lines-closed">
-            <button type="button" class="btn closed-lines" @click="phoneModal =!phoneModal"
-                data-target="#exampleModalCenter">
+            <button type="button" class="btn closed-lines" @click="phoneModal =!phoneModal" data-target="#exampleModalCenter">
                 <img src="images/phone-solid-2.svg" class="img-fluid" style="height:46px" alt="" aria-hidden="true" />
             </button>
         </div>

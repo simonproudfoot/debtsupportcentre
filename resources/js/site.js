@@ -185,13 +185,13 @@ window.onload = function () {
                     var fname = this.questions.question_8.fullName.substr(0, this.questions.question_8.fullName.indexOf(" "));
                     if (this.questions.question_3.answer == 'Benefits only' || this.questions.question_3.answer == 'Retired' || this.questions.question_3.answer == 'Unemployed') {
                         this.resetFields()
-                        window.location.href = "/good-luck?name=" + fname
+                        //window.location.href = "/good-luck?name=" + fname
                     } else if (this.questions.question_5.answer == 'Less than £5,000') {
                         this.resetFields()
-                        window.location.href = "/received?name=" + fname
+                        //window.location.href = "/received?name=" + fname
                     } else {
                         this.resetFields()
-                        window.location.href = "/thank-you?name=" + fname
+                        //indow.location.href = "/thank-you?name=" + fname
                     }
                 }
             },

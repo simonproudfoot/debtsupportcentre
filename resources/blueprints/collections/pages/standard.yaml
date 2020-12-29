@@ -259,3 +259,8 @@ sections:
           type: template
           icon: template
           listable: hidden
+  page_meta:
+    display: 'Page meta'
+    fields:
+      -
+        import: metatags
