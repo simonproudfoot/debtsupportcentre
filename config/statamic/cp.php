@@ -75,4 +75,14 @@ return [
 
     'link_to_docs' => true,
 
+    'widgets' => [
+        'getting_started',
+       
+        [
+            'type' => 'collection',
+            'collection' => 'pages',
+            'width' => 100
+        ]
+    ],
+
 ];

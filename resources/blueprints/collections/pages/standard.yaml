@@ -243,6 +243,14 @@ sections:
           instructions: 'Only visible on homepage (for now)'
           listable: hidden
       -
+        handle: hide_menu
+        field:
+          display: 'hide menu'
+          type: toggle
+          icon: toggle
+          instructions: 'Click to hide the menu button on this page'
+          listable: hidden
+      -
         handle: parent
         field:
           type: entries

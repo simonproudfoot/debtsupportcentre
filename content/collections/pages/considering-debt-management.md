@@ -197,9 +197,19 @@ page_builder:
     type: paragraph
 template: home
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608230233
+updated_at: 1609321228
 blueprint: standard
 header_image:
   - bankruptcy_hero.png
+hide_menu: true
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
 id: 7d2c1b98-eb89-4fed-abf9-956b090cab37
 ---

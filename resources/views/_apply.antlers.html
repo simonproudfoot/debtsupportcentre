@@ -1,12 +1,10 @@
 <transition name="fade">
     <div v-if="overlay == 'true'" v-cloak class="formOverlay" :class="stepsDisplay < 7 ? 'background-on' : null">
-        <vm-progress :percentage="percentageDone" stroke-width="7" track-color="#d9d9d9" :show-text="false"
-            stroke-linecap="square" stroke-color="#B53683"></vm-progress>
+        <vm-progress :percentage="percentageDone" stroke-width="7" track-color="#d9d9d9" :show-text="false" stroke-linecap="square" stroke-color="#B53683"></vm-progress>
         <nav class="formOverlay__nav">
             <div class="row">
                 <div class="col-4">
-                    <span class="click backBtn" v-if="step > 0" @click="step--">
-                        < Back</span>
+                    <span class="click backBtn" v-if="step > 0" @click="step--"> < Back</span>
                 </div>
                 <div class="col-4 text-center">
                     <b>@{{stepsDisplay}} of @{{stepsTotal}}</b>
@@ -149,7 +147,11 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row mt-5">
+                                    <div class="col-12">
+                                        <span class="qTitle text-center d-block ">Marketing Preferences</span>
+                                       
+                                    </div>
                                     <div class="col-md-6">
                                         <div class="mt-5 text-center">
                                             <span class="d-block mb-3">

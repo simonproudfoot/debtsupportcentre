@@ -102,7 +102,6 @@ window.onload = function () {
                 const urlParams = new URLSearchParams(window.location.search);
                 const myParam = urlParams.get('name');
                 return myParam
-
             },
             oldBrowser() {
                 console.log(this.$browserDetect.meta.version + '-' + this.$browserDetect.meta.name)
@@ -153,7 +152,6 @@ window.onload = function () {
             }
         },
         mounted() {
-              
             // get user IP
             fetch('https://api.ipify.org?format=json')
                 .then(x => x.json()).then(({ ip }) => {
@@ -185,13 +183,13 @@ window.onload = function () {
                     var fname = this.questions.question_8.fullName.substr(0, this.questions.question_8.fullName.indexOf(" "));
                     if (this.questions.question_3.answer == 'Benefits only' || this.questions.question_3.answer == 'Retired' || this.questions.question_3.answer == 'Unemployed') {
                         this.resetFields()
-                        //window.location.href = "/good-luck?name=" + fname
+                        window.location.href = "/good-luck?name=" + fname
                     } else if (this.questions.question_5.answer == 'Less than £5,000') {
                         this.resetFields()
-                        //window.location.href = "/received?name=" + fname
+                        window.location.href = "/received?name=" + fname
                     } else {
                         this.resetFields()
-                        //indow.location.href = "/thank-you?name=" + fname
+                        window.location.href = "/thank-you?name=" + fname
                     }
                 }
             },
@@ -231,7 +229,6 @@ window.onload = function () {
         components: {
             floatinglabel,
             cookielaw: CookieLaw
-
         },
         watch: {
             showMenu(val) {
@@ -256,7 +253,4 @@ window.onload = function () {
             },
         }
     })
-
-
 }
-

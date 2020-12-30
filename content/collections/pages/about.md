@@ -128,7 +128,7 @@ header_content:
         text: .
       -
         type: text
-        text: '<h1>Hello<h1>'
+        text: ''
         marks:
           -
             type: code

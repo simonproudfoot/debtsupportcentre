@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Statamic\Statamic;
+use Statamic\Facades\CP\Nav;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,6 +26,15 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         // Statamic::script('app', 'cp');
-        // Statamic::style('app', 'cp');
+        Nav::extend(function ($nav) {
+            $nav->content('Applications')
+                //->route('store.index')
+                ->icon('form');
+        });
+        // Nav::extend(function ($nav) {
+        //     $nav->content('Store')
+        //         ->route('store.index')
+        //         ->icon('shopping-cart');
+        // });
     }
 }
