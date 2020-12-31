@@ -3,9 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Routing\Redirector;
 use Illuminate\Http\Request;
-use Illuminate\Foundation\Application;
 use Session;
 
 class sessions
@@ -19,10 +17,11 @@ class sessions
      */
     public function handle(Request $request, Closure $next)
     {
-        if (isset($_GET) && count($_GET) > 0 && !isset($_SESSION['get_data']) && ((!isset($_GET['cctelephone']) && !isset($_GET['customername'])) || isset($_GET['kw']))) {
-            $request->session()->put('get_data', json_encode($_GET));
-            $request->session()->put('keyword', $_GET['kw']);
+        //dd(session()->get('get_data'));
+        if (!isset($_GET['name']) && isset($_GET) && count($_GET) > 0 && !session()->has('get_data') || !isset($_GET['name']) && isset($_GET) && count($_GET) > 0 && empty(session()->get('get_data'))) {
+            session()->put('get_data', $_GET);
         }
+        // ?mt=e&device=c&kw=consolidation%20loan%20for%20bad%20credit&cn=loans&ag=[CE]-SE-ConsolidationLoansBadCredit-[EM]&sc=g
         return $next($request);
     }
 }

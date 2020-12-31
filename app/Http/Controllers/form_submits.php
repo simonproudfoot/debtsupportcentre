@@ -1,10 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
+use Session;
 class form_submits extends Controller
 {
     public function debt_help_submit(Request $request)
@@ -33,7 +31,12 @@ class form_submits extends Controller
         } elseif ($creditorsString == "8 or more") {
             $creditors = 8;
         }
-        
+
+        $urlData = 'NA';
+        if (session()->exists('get_data')) {
+           $urlData = session()->get('get_data');
+        }
+
         $package = array(
             'Lead_ref' => urlencode('DSC'), 'LeadSourceID' => urlencode('280') //required
             , 'IsLive' => urlencode('1') //required, change to 1 when ready
@@ -51,8 +54,8 @@ class form_submits extends Controller
             , 'client_ip' => urlencode($request['question_8']['userIP'])
             , 'Current_Situation' => urlencode($request['question_1']['answer'])
             , 'Causing_Stress_Anxiety' => urlencode($request['question_2']['answer'])
+            , 'a_url' =>urlencode(json_encode($urlData))
         );
-
         // Save locally
         $package['datetime_submitted'] = date('Y-m-d H:i:s');
         $applications = Storage::exists('applications.json') ? json_decode(Storage::get('applications.json')) : array();
@@ -60,11 +63,9 @@ class form_submits extends Controller
         if ($applications == null) {
             $applications =	[];
         }
-
         array_push($applications, $package);
         Storage::put('applications.json', json_encode($applications), 'private');
-     
-        // // Send to API
+        // Send to API
         $api_url = 'http://dfh-api.co.uk/api2/SubmitApplication/DSC/index.php';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $api_url);
@@ -73,8 +74,10 @@ class form_submits extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS, $package);
         $response_string = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        // return $httpcode;
-        return  $response_string;
+        return $httpcode;
 
+        session()->forget('get_data');
+        session()->forget('keyword');
+        return $response_string;
     }
 }

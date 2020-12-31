@@ -17,6 +17,7 @@ window.onload = function () {
         data() {
             return {
                 showMenu: false,
+                fName: '',
                 overlay: 'false',
                 phoneModal: false,
                 waiting: false,
