@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-//Route::get('send-debt-help', 'form_submits@submit');
+
 
 Route::post('send-debt-help', 'form_submits@debt_help_submit');
 

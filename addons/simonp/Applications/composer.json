@@ -1,0 +1,19 @@
+{
+    "name": "simonp/applications",
+    "autoload": {
+        "psr-4": {
+            "Simonp\\Applications\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Applications",
+            "description": "Applications addon"
+        },
+        "laravel": {
+            "providers": [
+                "Simonp\\Applications\\ServiceProvider"
+            ]
+        }
+    }
+}

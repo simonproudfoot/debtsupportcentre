@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Statamic\Statamic;
 use Statamic\Facades\CP\Nav;
+use Illuminate\Support\Facades\Route;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,14 +28,16 @@ class AppServiceProvider extends ServiceProvider
     {
         // Statamic::script('app', 'cp');
         Nav::extend(function ($nav) {
-            $nav->content('Applications')
-                //->route('store.index')
-                ->icon('form');
+            $nav->content('Applications')->route('applications.index')->icon('form');
         });
-        // Nav::extend(function ($nav) {
-        //     $nav->content('Store')
-        //         ->route('store.index')
-        //         ->icon('shopping-cart');
+
+
+        // Statamic::pushCpRoutes(function () {
+        //     Route::namespace('\App\Http\Controllers')->group(function () {
+        //         require base_path('routes/cp.php');
+        //     });
         // });
+
+        
     }
 }

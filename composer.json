@@ -1,7 +1,13 @@
 {
     "name": "statamic/starter-kit-starters-creek",
     "description": "Statamic",
-    "keywords": ["statamic", "cms", "starter", "flat file", "laravel"],
+    "keywords": [
+        "statamic",
+        "cms",
+        "starter",
+        "flat file",
+        "laravel"
+    ],
     "type": "project",
     "require": {
         "php": "^7.2.5",
@@ -13,9 +19,10 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "optimoapps/statamic-bard-text-align": "^1.0",
+        "simonp/applications": "dev-master",
         "statamic/cms": "3.0.*",
         "statamic/ssg": "^0.2.0",
-        "ueberdosis/prosemirror-to-html": "^2.2"
+        "ueberdosis/prosemirror-to-html": "^2.2"        
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
@@ -31,12 +38,20 @@
         "sort-packages": true
     },
     "extra": {
+        "statamic": {
+            "name": "Applications",
+            "description": "View client applications saved locally"
+        },
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [],
+            "providers": [
+                "simonp\\applications\\ServiceProvider"
+            ]
         }
     },
     "autoload": {
         "psr-4": {
+            "simonp\\applications\\": "src",
             "App\\": "app/"
         },
         "classmap": [
@@ -46,7 +61,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "simonp\\applications\\": "src"
         }
     },
     "minimum-stability": "dev",
@@ -63,5 +79,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "addons/simonp/applications"
+        }
+    ]
 }

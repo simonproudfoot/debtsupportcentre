@@ -17,7 +17,7 @@ window.onload = function () {
         data() {
             return {
                 showMenu: false,
-                fName: '',
+              
                 overlay: 'false',
                 phoneModal: false,
                 waiting: false,
@@ -184,13 +184,13 @@ window.onload = function () {
                     var fname = this.questions.question_8.fullName.substr(0, this.questions.question_8.fullName.indexOf(" "));
                     if (this.questions.question_3.answer == 'Benefits only' || this.questions.question_3.answer == 'Retired' || this.questions.question_3.answer == 'Unemployed') {
                         this.resetFields()
-                        window.location.href = "/good-luck?name=" + fname
+                        window.location.href = "/good-luck?fname=" + fname
                     } else if (this.questions.question_5.answer == 'Less than £5,000') {
                         this.resetFields()
-                        window.location.href = "/received?name=" + fname
+                        window.location.href = "/received?fname=" + fname
                     } else {
                         this.resetFields()
-                        window.location.href = "/thank-you?name=" + fname
+                        window.location.href = "/thank-you?fname=" + fname
                     }
                 }
             },
