@@ -58,7 +58,7 @@ updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
 updated_at: 1610970303
 blueprint: standard
 page_template: default
-hide_menu: false
+landing_page: false
 basic_title: 'Solutions to Your Debt'
 basic_description: 'From IVAs to debt management plans, view the pros and cons of each debt solution here. Get in touch and let&#039;s discuss how we can help you.'
 google_cse_google_rating: 0

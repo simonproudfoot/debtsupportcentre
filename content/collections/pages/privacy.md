@@ -1,5 +1,5 @@
 ---
-title: 'Privacy Policy'
+title: Privacy
 header_content:
   -
     type: heading
@@ -260,7 +260,7 @@ page_builder:
                   </div>
           </section>
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1613129827
+updated_at: 1613129541
 blueprint: standard
 template: simple
 landing_page: false
@@ -276,5 +276,5 @@ og_music_song_track: 0
 twitter_player_width: 0
 twitter_player_height: 0
 hide_footer_menu: false
-id: c14c10f2-446e-44cd-b6db-97b9746e9797
+id: 72d03814-b118-45c9-a110-926bcf7375a1
 ---

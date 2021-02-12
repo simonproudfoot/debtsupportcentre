@@ -38,7 +38,7 @@ updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
 updated_at: 1610970875
 blueprint: standard
 template: contact
-hide_menu: false
+landing_page: false
 basic_title: 'Contact Us | 0161 200 1139'
 basic_description: 'Contact the Debt Support Centre via phone (0161 200 1139) or through this contact form. It can be completed in less than one minute.'
 google_cse_google_rating: 0

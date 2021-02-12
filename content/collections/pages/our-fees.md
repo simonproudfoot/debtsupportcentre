@@ -617,7 +617,7 @@ page_builder:
       -
         type: text
         text: .
-hide_menu: false
+landing_page: false
 basic_title: 'Our Fees'
 basic_description: 'On this page, we have outlined our fees. You can read this to get an idea of how Debt Support Centre operates.'
 google_cse_google_rating: 0

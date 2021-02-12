@@ -108,7 +108,7 @@ cta_button_text: 'Apply now'
 hero_title: 'Debt Keeping You Awake at Night?'
 header_image:
   - home_hero.png
-hide_menu: false
+landing_page: false
 google_cse_google_rating: 0
 og_video_duration: 0
 og_music_duration: 0

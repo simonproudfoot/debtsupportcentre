@@ -19,10 +19,11 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "optimoapps/statamic-bard-text-align": "^1.0",
-        "simonp/Applications": "dev-master",
         "statamic/cms": "3.0.*",
         "statamic/ssg": "^0.2.0",
-        "ueberdosis/prosemirror-to-html": "^2.2"        
+        "ueberdosis/prosemirror-to-html": "^2.2",
+        "simonp/applications": "*"        
+        
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.2",
@@ -45,13 +46,13 @@
         "laravel": {
             "dont-discover": [],
             "providers": [
-                "simonp\\Applications\\ServiceProvider"
+         
             ]
         }
     },
     "autoload": {
         "psr-4": {
-            "simonp\\Applications\\": "src",
+            
             "App\\": "app/"
         },
         "classmap": [
@@ -61,8 +62,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/",
-            "simonp\\Applications\\": "src"
+            "Tests\\": "tests/"
+           
         }
     },
     "minimum-stability": "dev",
@@ -83,7 +84,8 @@
     "repositories": [
         {
             "type": "path",
-            "url": "addons/simonp/Applications"
+            "url": "addons/applications"
+       
         }
     ]
 }

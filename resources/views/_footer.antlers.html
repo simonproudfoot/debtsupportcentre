@@ -3,20 +3,15 @@
         <div class="row">
             <div class="col-md-8 m-auto">
                 <div class="footer-menu text-center">
-                    {{if !hide_menu}}
-                    {{ nav:footer }}
-                    <a href="{{ url }}">{{ title }}</a>
-                    |
-                    {{ /nav:footer }}
-
-                    {{else}}
-                    {{ nav:footer }}
-                    {{if title == 'Privacy Policy'}}
-                    <a href="{{ url }}">{{ title }}</a>
-                    {{/if}}
-                    {{ /nav:footer }}
-                    
-                    {{/if}}
+                    {{if landing_page || url == '/privacy'}}
+                    <a class="mr-2" href="/privacy">Privacy Policy</a>
+                {{else}}
+                <a href="/privacy-policy">Privacy Policy</a>
+                {{ nav:footer }}
+                |
+                <a href="{{ url }}">{{ title }}</a>
+                {{ /nav:footer }}
+                {{/if}}
                     <p class="pt-3">© {{ now format="Y" }} Debt Support Centre.</p>
                 </div>
                 <div class="top-logos text-center py-3">

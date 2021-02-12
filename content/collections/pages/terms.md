@@ -746,7 +746,7 @@ page_builder:
     type: heading
     attrs:
       level: 2
-hide_menu: false
+landing_page: false
 basic_title: 'Terms and Conditions'
 basic_description: 'The terms and conditions for using the Debt Support Centre website.'
 google_cse_google_rating: 0

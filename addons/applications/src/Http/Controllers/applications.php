@@ -1,6 +1,6 @@
 <?php
 
-namespace simonp\Applications\Http\Controllers;
+namespace Simonp\Applications\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Storage;

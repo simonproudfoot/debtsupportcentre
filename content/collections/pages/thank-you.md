@@ -4,7 +4,7 @@ template: thank-you
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
 updated_at: 1611223917
 blueprint: standard
-hide_menu: false
+landing_page: false
 basic_title: 'Thank you!'
 basic_description: 'You''ve completed your application - great job!'
 google_cse_google_rating: 0

@@ -240,7 +240,7 @@ blueprint: standard
 header_image:
   - debt-help_hero.png
 template: home
-hide_menu: true
+landing_page: true
 google_cse_google_rating: 0
 og_video_duration: 0
 og_music_duration: 0

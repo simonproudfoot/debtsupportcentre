@@ -136,6 +136,6 @@ og_music_song_disc: 0
 og_music_song_track: 0
 twitter_player_width: 0
 twitter_player_height: 0
-hide_menu: false
+landing_page: false
 id: e6efb5c4-ba6b-4e35-b220-e443c0e4ba03
 ---

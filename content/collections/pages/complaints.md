@@ -243,7 +243,7 @@ updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
 updated_at: 1610971426
 blueprint: standard
 template: simple
-hide_menu: false
+landing_page: false
 basic_title: 'Our Complaints Procedure'
 basic_description: 'Our complaints procedure can be found here. We treat grievances extremely seriously and will strive to resolve them to the best possible outcome.'
 google_cse_google_rating: 0

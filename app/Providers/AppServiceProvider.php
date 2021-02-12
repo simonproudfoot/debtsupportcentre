@@ -26,17 +26,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Statamic::script('app', 'cp');
+     
         Nav::extend(function ($nav) {
-            $nav->content('Applications')->route('applications.index')->icon('form');
+            $nav->content('Applications')->route('applications')->icon('form');
         });
 
-
-        // Statamic::pushCpRoutes(function () {
-        //     Route::namespace('\App\Http\Controllers')->group(function () {
-        //         require base_path('routes/cp.php');
-        //     });
-        // });
 
         
     }

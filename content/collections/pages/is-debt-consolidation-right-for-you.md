@@ -208,7 +208,7 @@ template: home
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
 updated_at: 1611677287
 blueprint: standard
-hide_menu: true
+landing_page: true
 google_cse_google_rating: 0
 og_video_duration: 0
 og_music_duration: 0

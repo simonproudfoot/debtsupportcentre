@@ -1,7 +1,7 @@
 <div class="navWrap">
     <nav class="container topnav">
         <div class="row justify-content-between">
-            {{if !hide_menu}}
+            {{if !landing_page}}
             <div class="col-3">
                 <button @click="showMenu = !showMenu" ref="menuButton" class="menu" data-toggle="collapse"
                     data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
@@ -15,7 +15,7 @@
                 </button>
             </div>
             {{ /if }}
-            <div class="col-6 {{if !hide_menu}} text-center {{/if}}">
+            <div class="col-6 {{if !landing_page}} text-center {{/if}}">
                 <a href="/">
                     <img src="assets/logo-animation.gif" width="90" height="auto" alt="Debt Support Centre logo"
                         class="img-fluid">

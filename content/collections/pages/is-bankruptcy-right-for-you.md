@@ -293,7 +293,7 @@ updated_at: 1612270464
 blueprint: standard
 header_image:
   - bankruptcy_hero.png
-hide_menu: true
+landing_page: true
 google_cse_google_rating: 0
 og_video_duration: 0
 og_music_duration: 0

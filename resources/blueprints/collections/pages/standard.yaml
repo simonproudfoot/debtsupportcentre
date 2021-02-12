@@ -66,7 +66,7 @@ sections:
             - table
             - code
             - codeblock
-          save_html: true
+          save_html: false
           toolbar_mode: fixed
           link_noopener: false
           link_noreferrer: false
@@ -91,7 +91,7 @@ sections:
                       how_you_could_benefit: 'how you could benefit'
                       debts_we_can_help_with: 'Debts we can help with'
                       how_we_can_help_you: 'How we can help you'
-                      carousel: carousel
+                      carousel: image carousel
                       cta: cta
                       text_blocks: 'text blocks'
                     multiple: false
@@ -234,6 +234,9 @@ sections:
                     type: textarea
                     icon: textarea
                     listable: hidden
+            logo_carousel:
+              display: 'logo carousel'
+              fields: {  }
   sidebar:
     display: Sidebar
     fields:
@@ -257,12 +260,19 @@ sections:
           instructions: 'Only visible on homepage (for now)'
           listable: hidden
       -
-        handle: hide_menu
+        handle: landing_page
         field:
           display: 'landing page'
           type: toggle
           icon: toggle
           instructions: 'Click to hide the menu button and footer links on this page'
+          listable: hidden
+      -
+        handle: hide_footer_menu
+        field:
+          display: 'hide footer menu'
+          type: toggle
+          icon: toggle
           listable: hidden
       -
         handle: parent

@@ -271,10 +271,10 @@ page_builder:
 header_image:
   - iva_hero.png
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1612270429
+updated_at: 1613137346
 blueprint: standard
 template: home
-hide_menu: true
+landing_page: true
 google_cse_google_rating: 0
 og_video_duration: 0
 og_music_duration: 0
@@ -289,5 +289,6 @@ basic_description: 'More than 500 customers seek debt help from us every day and
 basic_robots:
   - noindex
   - nofollow
+hide_footer_menu: false
 id: 6c7d986e-9ba4-41dc-8cf4-9d22ec5c0abf
 ---

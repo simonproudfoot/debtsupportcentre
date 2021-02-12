@@ -1,14 +1,23 @@
 {
-    "name": "simonp/Applications",
+    "name": "simonp/applications",
+    "description": "Addon to store applications",
     "autoload": {
         "psr-4": {
             "Simonp\\Applications\\": "src"
         }
     },
+    "authors": [
+        {
+            "name": "Simon G.Proudfoot"
+        }
+    ],
+    "support": {
+        "email": "hello@simonproudfoot.com"
+    },
     "extra": {
         "statamic": {
             "name": "Applications",
-            "description": "Applications addon"
+            "description": "Addon to store applications"
         },
         "laravel": {
             "providers": [

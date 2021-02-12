@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Tags;
+
 use DateTime;
 use Statamic\Tags\Tags;
 use Illuminate\Http\Request;
@@ -12,18 +13,20 @@ class SiteData extends Tags
      *
      * @return string|array
      */
-    public function index()
+    public function previousPage()
     {
-        //
+        if (isset($_SERVER['HTTP_REFERER'])) {
+            return $_SERVER['HTTP_REFERER'];
+        }
     }
-
     /**
      * The {{ site_data:openingHours }} tag.
      *
      * @return string|array
      */
-    public function query(){
-        $url= $_SERVER['REQUEST_URI'];
+    public function query()
+    {
+        $url = $_SERVER['REQUEST_URI'];
         return parse_url($url, PHP_URL_QUERY);
     }
 
