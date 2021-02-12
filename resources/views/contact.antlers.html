@@ -1,7 +1,7 @@
-<section class="top">
+<section class="top pb-0 mb-0">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 m-auto">
+            <div class="col-md-5 offset-md-1 pb-4">
                 <h1 class="pt-2 pb-3 circle">Contact us</h1>
             </div>
         </div>
@@ -14,54 +14,67 @@
                 <div class="card-body">
                     <p style="color:#B53683; margin-left: 15px"><b>Send us an email</b></p>
                     {{ form:create in="contact" }}
-                        {{ if success }}
-                        <div class="bg-green-300  p-2">
-                            <h2> {{ success }}</h2>
-                        </div>
-                        {{ else }}
-                        {{/if}}
-                        {{ if errors }}
-                        <div class="bg-red-300 p-2">
-                            {{ errors }}
-                                {{ value }}<br>
-                            {{ /errors }}
-                        </div>
-                        {{ /if }}
-                        <div class="form-label-group">
-                            <input type="text" name="name" class="form-control" placeholder="Your name" required=""  autofocus="" autocomplete="on" pattern="[A-Za-z' -]+" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAbhJREFUWAntVr1OhEAQZsECSKBQC/9aba+z9iU08SWuvPcwNrY2V+hL+AoabbRE6bSAxEAM4DfkuFuWXU5y/MSETTbMznzzs7Mzy2raOMYMIAOWZR3puj5njPmYWcfTJ1/kk5LPQBxGUfQEepsYPY5P0zQnRpqmN3B62qPjwpWdJMkess0+wDkouD1/fU1x3p5hGJe2be/TJBo4T4ZtGrBoQxaA57pupR6IJwti0wC2RAOo0FkQBF8in3jIxAw1M+dl4J3z63U09MsQMSWU8jJitSKZiN90ra/MD0NVAojj+EwVSp1MpbOOjwyyTAC9O44zEeuAijAMw0dg8xus0IH+fUH/5ZtlWblmFGfoUev10YaVI1js4hnfb0y2mEQTr/VROQIwpmiVa5kntOgUKbziZa0eARzc8sZlNGHgtLU/Jn8Tpii+XZlTnkcYBJC2GMSyC96Q3hPemYqG81fIjlXyJnz+Kn5poEjYPAAcyUUDPQ31dcfjlwFgVz/IAC9T0jwW//RG9wB0S3ZVbVgCdblAQMM+SHQE8NDlDutsk+/iUUp3/E4duANZ/ijN7Q75LO9gY6PJf5aBX7tnEYIBb5bnAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                            <label for="name">Your name</label>
-                        </div>
-                        <div class="form-label-group">
-                            <input type="phone" name="phone" class="form-control" placeholder="Your phone number" required="" autofocus="" autocomplete="on" pattern="[0,7-9]{1}[0-9]{10}">
-                            <label for="phone">Your phone number</label>
-                        </div>
-                        <div class="form-label-group">
-                            <input type="email" name="email" class="form-control" placeholder="Your email address" required="" autofocus="" autocomplete="on" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                            <label for="email">Your email address</label>
-                        </div>
-                        <div class="form-label-group" style="width:100%">
-                            <textarea type="text" name="message" class="form-control" rows="5" style="border-color:#122c49; font-size: .9rem !important" placeholder="Your message" required></textarea>
-                         
-                        </div>
-                        <div class="text-center text-md-right">
-                            <button type="submit" class="btn secondary-btn on-white mt-3">Send message</button>
-                        </div>
-                        
-                
-                        {{ /form:create }}
+                    {{ if success }}
+                    <div class="bg-green-300 p-2">
+                        <h2>{{ success }}</h2>
+                    </div>
+                    {{ else }}
+                    {{/if}}
+                    {{ if errors }}
+                    <div class="bg-red-300 p-2">
+                        {{ errors }}
+                        {{ value }}<br>
+                        {{ /errors }}
+                    </div>
+                    {{ /if }}
+                    <div class="form-label-group">
+                        <input type="text" name="name" class="form-control" placeholder="Your name" required=""
+                            autofocus="true" pattern="[A-Za-z' -]+" style="background-image: 'none' !important">
+                        <label for="name">Your name</label>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="number" name="phone" onkeyup="this.value=this.value.replace(/\D/g,'')"
+                            class="form-control" placeholder="Your phone number" required="" autocomplete="on"
+                            pattern="[0,7-9]{1}[0-9]{10}">
+                        <label for="phone">Your phone number</label>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your email address"
+                            required="" autocomplete="on" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <label for="email">Your email address</label>
+                    </div>
+                    <div class="form-label-group" style="width:100%">
+                        <textarea type="text" name="message" class="form-control" rows="5" required v-model="contactMessage"></textarea>
+                        <label for="message" class="textareaLabel" ref="messageLabel">Your message</label>
+                    </div>
+                    <div class="text-center text-md-right">
+                        <button type="submit" class="btn secondary-btn on-white mt-3">Send message</button>
+                    </div>
+                    {{ /form:create }}
                 </div>
             </div>
         </div>
         <div class="col-md-3 pt-4 text-center text-md-left">
             <p><span style="color:#B53683"><b>Opening hours</b></span><br>
-               {{settings:opening_hours}}
-               </p>
+                {{settings:opening_hours}}
+            </p>
             <p><span style="color:#B53683"><b>Call us</b></span><br>
                 {{settings:contact_number}}
-           </p>
+            </p>
             <p><span style="color:#B53683"><b>Address</b></span><br>
                 {{settings:address}}
-               </p>
+            </p>
         </div>
     </div>
 </div>
+
+<section class="vision mt-5 mb-0">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-10 col-md-6 m-auto">
+                <p class="lead font-weight-bold">Do you qualify for debt help?</p>
+                <button @click="overlay= 'true'" class="primary-btn mt-3">Apply now</button> 
+            </div>
+        </div>
+    </div>
+</section>

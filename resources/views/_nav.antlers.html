@@ -22,13 +22,12 @@
                 </a>
             </div>
             {{ if !{site_data:lineClosed} }}
-            <div class="col-3 text-right" id="lines-open">
-                <a href="tel:{{settings:contact_number}}">
-                    <img src="images/phone-solid-2.svg" class="img-fluid pb-2 d-lg-none" style="height:52px"
-                        alt="phone-icon" aria-hidden="true" />
-                    <h5 class="d-none d-lg-block m-0" style="line-height: 50px; color: #122c49">
+            <div class="col-3 text-right " id="lines-open">
+                <a href="tel:{{settings:contact_number}}" class="phoneNumber">
+                    <img src="images/phone-solid-2.svg" class="img-fluid pb-2 d-lg-none" style="height:52px" alt="phone-icon" aria-hidden="true" />
+                    <p class="d-none d-lg-block m-0 font-weight-bold ">
                         {{settings:contact_number}} <img src="images/phone-solid-2.svg"
-                            style="height:25px; margin-bottom: 4px;" alt="phone-icon" /></h5>
+                     style="height:25px; margin-bottom: 4px;" alt="phone-icon" /></p>
                 </a>
             </div>
             {{ else }}
@@ -46,6 +45,7 @@
                 <div class="container">
                     <div class="navbar-nav ml-auto">
                         <ul class="px-0">
+                            <p class="nav-item nav-link mb-0" @click="overlay = 'true', showMenu = false">Apply</p>
                             {{ nav:main }}
                             <a class="nav-item nav-link" href="{{ url }}">{{ title }}</a>
                             {{ /nav:main }}

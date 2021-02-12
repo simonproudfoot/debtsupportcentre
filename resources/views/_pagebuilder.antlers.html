@@ -24,6 +24,17 @@
     </div>
 </section>
 {{/if}}
+
+{{ if type == "html" }}
+<div class="container">
+    {{textarea}}
+    </div>
+    
+{{/if}}
+
+{{ if type == "image" }}=
+    {{image}}
+{{/if}}
 {{if select_blocks == 'why_choose_us'}}
 {{ partial:blocks/why-choose-us }}
 {{/if}}

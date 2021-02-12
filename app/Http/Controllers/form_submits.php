@@ -10,6 +10,9 @@ class form_submits extends Controller
 {
     public function saveLocal($package){
         $package['datetime_submitted'] = date('Y-m-d H:i:s');
+
+       
+
         $applications = Storage::exists('applications/' . date('Y-m-d') . '.json') ? json_decode(Storage::get('applications/' . date('Y-m-d') . '.json')) : array();
         $applications = json_decode(json_encode($applications), true);
         if ($applications == null) {
@@ -77,15 +80,37 @@ class form_submits extends Controller
             , 'ResidentialStatus' => urlencode($request['question_4']['answer']) //Optional            
             , 'DI' => urlencode($request['question_7']['answer']) //Optional 
             , 'opt_in' => urlencode(1), 'tc_a' => urlencode(1), 
-            'mk_text' => urlencode(($request['question_8']['commsSMS'] == true) ? 1 : 0), 
-            'mk_email' => urlencode(($request['question_8']['commsEmail'] == true) ? 1 : 0), 
+            'mk_text' => urlencode(($request['question_8']['commsSMS'] == 'Yes') ? 1 : 0), 
+            'mk_email' => urlencode(($request['question_8']['commsEmail'] == 'Yes') ? 1 : 0), 
             'client_ip' => urlencode($request['question_8']['userIP']), 
             'Current_Situation' => urlencode($request['question_1']['answer']), 
             'Causing_Stress_Anxiety' => urlencode($request['question_2']['answer']), 
-            'a_url' => urlencode($urlData)
+            'a_url' => urlencode($urlData),
+            'source_name' => 'dsc.debtsupportcentre.co.uk'
+        );
+        
+        $save = array(
+            'Lead_ref' => 'DSC', 'LeadSourceID' => '280' 
+            , 'IsLive' => '1' 
+            , 'Name' => stripslashes($request['question_8']['fullName']) 
+            , 'Mob' => $request['question_8']['phone']       
+            , 'Email' => $request['question_8']['email']
+            , 'DebtValue' => $totalDebt 
+            , 'Creditors' => $creditors 
+            , 'Employment' => $request['question_3']['answer'] 
+            , 'ResidentialStatus' => $request['question_4']['answer']           
+            , 'DI' => $request['question_7']['answer'] 
+            , 'opt_in' => 1,
+            'tc_a' => 1,
+            'mk_text' => ($request['question_8']['commsSMS'] == 'Yes') ? 1 : 0,
+            'mk_email' => ($request['question_8']['commsEmail'] == 'Yes') ? 1 : 0,
+            'client_ip' => $request['question_8']['userIP'], 
+            'Current_Situation' => $request['question_1']['answer'], 
+            'Causing_Stress_Anxiety' => $request['question_2']['answer'], 
+            'a_url' => $urlData
         );
 
-        $this->saveLocal($package);
+        $this->saveLocal($save);
         $this->deleteOld();
 
         if(env('APP_ENV') == 'dev'){

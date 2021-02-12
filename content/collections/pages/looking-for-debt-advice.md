@@ -74,23 +74,17 @@ header_content:
                 text: 'Consolidate your debts into one affordable monthly payment'
 page_builder:
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_block
         select_blocks: carousel
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_block
         select_blocks: how_you_could_benefit
-  -
-    type: paragraph
   -
     type: set
     attrs:
@@ -150,8 +144,6 @@ page_builder:
                         type: text
                         text: 'On average, we write off £13,500 per customer.'
   -
-    type: paragraph
-  -
     type: heading
     attrs:
       level: 2
@@ -178,21 +170,16 @@ page_builder:
               align: center
         text: 'Our advisors could help you regain control of:'
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_block
         select_blocks: debts_we_can_help_with
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_how_we_can_help
-        how_we_can_help_you: null
         how_we_can_help_title: 'Find the right debt solution for you'
         help_box_1:
           -
@@ -206,7 +193,7 @@ page_builder:
                 marks:
                   -
                     type: bold
-                text: 'Start now >'
+                text: ''
         help_box_2:
           -
             type: paragraph
@@ -221,15 +208,26 @@ page_builder:
               -
                 type: text
                 text: 'Regain control of your finances with a financial plan.'
-  -
-    type: paragraph
-  -
-    type: paragraph
 header_image:
   - bankruptcy_hero.png
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608722563
+updated_at: 1612270558
 blueprint: standard
 template: home
+hide_menu: true
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
+basic_title: 'Looking for Debt Advice?'
+basic_description: 'More than 500 customers seek debt help from us every day and, on average, our experts get more than £13,500 written off. Let’s discuss how we can help you.'
+basic_robots:
+  - noindex
+  - nofollow
 id: 76ff266a-0785-4d36-ad30-efeecc215383
 ---

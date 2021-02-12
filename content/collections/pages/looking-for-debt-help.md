@@ -74,21 +74,16 @@ header_content:
                 text: 'Consolidate your debts into one affordable monthly payment'
 page_builder:
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_block
         select_blocks: carousel
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_iva_table
-        example_of_how_you_could_benefit_from_an_iva: null
         table_title: ' The most popular UK debt solution'
         table:
           -
@@ -134,12 +129,22 @@ page_builder:
     content:
       -
         type: text
+        marks:
+          -
+            type: textAlign
+            attrs:
+              align: center
         text: 'Debts we can help with'
   -
     type: paragraph
     content:
       -
         type: text
+        marks:
+          -
+            type: textAlign
+            attrs:
+              align: center
         text: 'Our advisors could help you regain control of:'
   -
     type: set
@@ -148,13 +153,10 @@ page_builder:
         type: new_block
         select_blocks: debts_we_can_help_with
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_how_we_can_help
-        how_we_can_help_you: null
         how_we_can_help_title: 'Find the right debt solution for you'
         help_box_1:
           -
@@ -168,7 +170,7 @@ page_builder:
                 marks:
                   -
                     type: bold
-                text: 'Start now >'
+                text: ''
         help_box_2:
           -
             type: paragraph
@@ -183,8 +185,6 @@ page_builder:
               -
                 type: text
                 text: 'Regain control of your finances with a financial plan.'
-  -
-    type: paragraph
   -
     type: set
     attrs:
@@ -234,15 +234,26 @@ page_builder:
                       -
                         type: text
                         text: '120+ debt advisors are here to help you.'
-  -
-    type: paragraph
-  -
-    type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608231694
+updated_at: 1612270528
 blueprint: standard
 header_image:
   - debt-help_hero.png
 template: home
+hide_menu: true
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
+basic_title: 'Looking for Debt Help?'
+basic_description: 'More than 500 customers seek debt help from us every day and, on average, our experts get more than £13,500 written off. Let’s discuss how we can help you.'
+basic_robots:
+  - noindex
+  - nofollow
 id: 8a2f1e81-2c33-44f0-8d13-74107b543acb
 ---

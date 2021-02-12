@@ -1,20 +1,22 @@
-<section class="debtsolutions pt-md-5">
-    <div class="container text-center pt-5">
+<section>
+    <div class="container text-center countUp">
         <h2 class="py-3">{{blocks:heading}}</h2>
         <div class="row justify-content-center">
             <div class="col-md-4 pb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <display v-pre>{{blocks:why_column_a_title}}</display>
+                
+                        <display v-pre><span id="whyA">0</span>+</display>
                         <p class="head">{{blocks:why_column_a_subtitle}}</p>
                         <p>{{blocks:why_column_a}}</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 pb-4">
-                <div class="card h-100">
+                <div class="card h-100 js-build-in">
                     <div class="card-body">
-                        <display v-pre>{{blocks:why_column_b_title}}</display>
+                        
+                        <display v-pre><span id="whyB">0</span>+</display>
                         <p class="head">{{blocks:why_column_b_subtitle}}</p>
                         <p>{{blocks:why_column_b}}</p>
                     </div>
@@ -23,7 +25,8 @@
             <div class="col-md-4 pb-4">
                 <div class="card h-100">
                     <div class="card-body">
-                        <display v-pre>{{blocks:why_column_c_title}}</display>
+                       
+                        <display v-pre>£<span id="whyC">0</span></display>
                         <p class="head">{{blocks:why_column_c_subtitle}}</p>
                         <p>{{blocks:why_column_c}}</p>
                     </div>
@@ -31,4 +34,5 @@
             </div>
         </div>
     </div>
+    {{partial:blocks/logo_slideshow}}
 </section>

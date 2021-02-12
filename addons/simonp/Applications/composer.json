@@ -1,5 +1,5 @@
 {
-    "name": "simonp/applications",
+    "name": "simonp/Applications",
     "autoload": {
         "psr-4": {
             "Simonp\\Applications\\": "src"

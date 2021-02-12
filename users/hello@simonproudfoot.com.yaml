@@ -1,7 +1,7 @@
 name: 'Simon G.Proudfoot'
 super: true
 id: 62f8e9b1-511e-4812-9b39-1147135a8182
-password_hash: $2y$10$b2OYVGe0kNFbxVaHuyI9xeGgk1LhjAF7I4N5YP/EYXaArwoJ1CPjm
+password_hash: $2y$10$7hO.tIFlgN/fmHsTyqCI5uvUEJS6CMNbQFmhAnOOuAgNGKTgEAAKO
 preferences:
   collections:
     pages:

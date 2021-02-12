@@ -3,13 +3,10 @@ title: About
 hero_title: 'About us'
 page_builder:
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_cta
-        page_cta: null
         cta_pre_header: 'OUR VISION'
         cta_button_text: 'Get debt help'
         cta_text: '"We are here to help the nation’s consumers achieve a better life tackling the stress of debts"'
@@ -81,20 +78,15 @@ page_builder:
         type: new_block
         select_blocks: carousel
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_cta
-        page_cta: null
         cta_pre_header: 'READY?'
         cta_button_text: 'Get debt help'
         cta_text: 'Find a solution which is right for you. Ready to get started?'
-  -
-    type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1609239376
+updated_at: 1612275774
 blueprint: standard
 header_content:
   -
@@ -132,8 +124,8 @@ header_content:
         marks:
           -
             type: code
-basic_title: 'About us'
-basic_description: 'This is the about us section'
+basic_title: 'Our Story'
+basic_description: 'Debt Support Centre aims to help people from all walks of life. All our expert debt advisers are UK-based and available to help you.'
 advanced_image: logo.svg
 google_cse_google_rating: 0
 og_video_duration: 0
@@ -144,5 +136,6 @@ og_music_song_disc: 0
 og_music_song_track: 0
 twitter_player_width: 0
 twitter_player_height: 0
+hide_menu: false
 id: e6efb5c4-ba6b-4e35-b220-e443c0e4ba03
 ---

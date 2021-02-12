@@ -1,24 +1,18 @@
 body {
     margin: 0;
-    font-size: 1rem !important; 
+    font-size: 1rem !important;
     line-height: 1.5;
     color: #122c49;
     text-align: left;
     background-color: #fff;
 }
-
-
-
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  
-
-  
+}
 html {
     scroll-behavior: smooth;
-  }
+}
 a {
     color: #009991;
 }
@@ -34,18 +28,25 @@ h3 {
     font-size: 1.75rem;
     font-weight: 400;
 }
-
-
-.cookie{
-background-color: #122c49;
-color: #fff;
-
+.cookie {
+    background-color: #122c49;
+    color: #fff;
+    @media only screen and (max-width: 575px) {
+        font-size: 14px;
+    }
 }
-.Cookie__button{
+.Cookie--base {
+    @media only screen and (max-width: 575px) {
+        padding: 0.5em 1em;
+    }
+}
+.Cookie__buttons {
+    margin: 0;
+}
+.Cookie__button {
     background-color: transparent !important;
     border: 1px solid #fff !important;
 }
-
 .contains-list {
     ul {
         padding-inline-start: 0px;
@@ -58,7 +59,7 @@ color: #fff;
             }
             &::before {
                 background: url("/images/check.svg") center/35px no-repeat;
-                content: '';
+                content: "";
                 display: inline-block;
                 vertical-align: top;
                 margin-right: 8px;
@@ -68,7 +69,6 @@ color: #fff;
         }
     }
 }
-
 /*Nav*/
 .navigation {
     background: #fff;
@@ -94,10 +94,9 @@ color: #fff;
 }
 .topnav {
     padding: 10px;
-
 }
-.navWrap{
-    box-shadow: 0 2px 5px -1px rgba(18, 44, 73, .3);
+.navWrap {
+    box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
     position: fixed;
     top: 0;
     width: 100%;
@@ -121,7 +120,6 @@ color: #fff;
 ul {
     padding-inline-start: 20px;
 }
-
 .checklist,
 .crosslist {
     padding-inline-start: 0px;
@@ -142,29 +140,12 @@ ul {
 .crosslist li:before {
     background: url("/images/cross.svg") center/35px no-repeat;
 }
-
-/*HERO*/
-.herobanner h1 {
-    animation: clear 0.8s 0.4s forwards;
-    transform: translateY(10rem);
-    opacity: 0;
-}
-.herobanner p,
-.herobanner .primary-btn,
-.herobanner ul.checklist,
-.herobanner .feefo-banner {
-    animation: clear 0.9s 0.5s forwards;
-    transform: translateY(10rem);
-    opacity: 0;
-}
-
 .heading {
     background: #e4e7eb;
     padding: 6rem 0 2rem 0;
     margin-bottom: 2rem;
     text-align: center;
 }
-
 /*CTAs*/
 .primary-btn,
 .secondary-btn {
@@ -202,7 +183,6 @@ ul {
 button.btn.closed-lines {
     padding: 0 !important;
 }
-
 /*PAGE CONTENT*/
 .card {
     border: none;
@@ -218,9 +198,8 @@ button.btn.closed-lines {
     font-weight: 700;
     text-transform: uppercase;
 }
-
 .table-footer {
-    background-color: #122C49;
+    background-color: #122c49;
     box-shadow: 5px 10px rgba(18, 44, 73, 0.5);
     color: #fff;
     padding-bottom: 1.5rem;
@@ -229,11 +208,9 @@ button.btn.closed-lines {
 .table-amount {
     font-weight: 700;
 }
-
 .debtsolutions a:hover {
     color: #b53683;
 }
-
 .pink {
     color: #b53683;
     font-weight: 700;
@@ -243,32 +220,32 @@ button.btn.closed-lines {
     margin-top: -10px;
 }
 .small-icon img {
-    width: 50% !important;
+    width: 40% !important;
 }
-
 feefowidget-container-carousel .feefowidget-background-white {
     box-shadow: 0 2px 5px -1px rgba(18, 44, 73, 0.3);
 }
-
+.carousel img {
+    max-width: 145px;
+    margin: auto;
+}
 .top {
     padding-top: 7rem;
 }
 .vision {
     background: #e4e7eb;
-    margin: 3rem 0 4rem 0;
     padding: 3rem 0 4rem 0;
 }
 .lead {
     font-weight: 400;
 }
-
 /*FOOTER*/
 footer {
     background: #122c49;
     padding-top: 2rem;
     padding-bottom: 5rem;
     font-size: 0.8rem;
-    margin-top: 5rem;
+    //margin-top: 5rem;
 }
 .footer-menu {
     font-size: 0.9rem;
@@ -276,23 +253,37 @@ footer {
 footer p {
     color: #fff;
 }
-footer a {
+footer hr {
+    border-top: #fff 1px solid !important;
+    width: 10% !important;
+    margin: 2rem 0;
+}
+.footer-menu a {
     color: #fff;
     text-decoration: underline;
-}
-footer a:hover {
-    color: #22e9df;
+    &:hover,
+    &:focus {
+        color: #009991;
+    }
 }
 .top-logos img {
     max-height: 90px;
     width: auto;
     padding-bottom: 1rem;
 }
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600 !important;
-  
 }
 /* RESPONSIVE */
 @media only screen and (min-width: 767px) {
@@ -318,9 +309,7 @@ footer a:hover {
         padding-top: 2rem;
     }
 }
-
 /*ANIMATIONS*/
-
 /*Hero animation*/
 @keyframes clear {
     to {
@@ -328,8 +317,6 @@ footer a:hover {
         transform: none;
     }
 }
-
-
 .years {
     animation: counter 2s 1 forwards ease-in-out;
     counter-reset: num var(--num);
@@ -337,7 +324,6 @@ footer a:hover {
 .years::before {
     content: counter(num);
 }
-
 @keyframes counter {
     0% {
         --num: 0;
@@ -346,7 +332,6 @@ footer a:hover {
         --num: 15;
     }
 }
-
 /*IVA example*/
 .before-plan {
     transform: scale(0);
@@ -356,7 +341,6 @@ footer a:hover {
     transform: scale(0);
     animation: scaleUp 0.3s forwards 3.7s cubic-bezier(0.05, 0.53, 0.96, 0.65);
 }
-
 @keyframes scaleUp {
     from {
         transform: scale(0);
@@ -365,7 +349,6 @@ footer a:hover {
         transform: scale(1);
     }
 }
-
 /*Hamburger animation*/
 .menu {
     background-color: transparent;
@@ -408,7 +391,6 @@ footer a:hover {
     stroke-dasharray: 1 60;
     stroke-dashoffset: -30;
 }
-
 /*Application*/
 .form-signin {
     width: 100%;
@@ -422,11 +404,22 @@ footer a:hover {
     border: none;
     border-bottom: 1px solid #707070;
     border-radius: 0;
+    background-size: 0 !important;
 }
 .form-label-group input,
 .form-label-group label {
     height: 3.125rem;
     padding: 0.75rem;
+}
+#__lpform_name_icon {
+    display: none !important;
+}
+.active-label {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    font-size: 12px !important;
+    color: #777 !important;
+    top: -20px !important;
 }
 .form-label-group label {
     position: absolute;
@@ -488,12 +481,25 @@ footer a:hover {
     font-size: 12px;
     color: #777;
 }
+.form-label-group textarea {
+    border-bottom: 1px solid #707070 !important;
+    border-top: none;
+    color: #495057;
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-radius: 0;
+    margin-top: 2rem;
+}
+.textareaLabel {
+    margin-top: -6px;
+}
 @media only screen and (max-width: 767px) {
     .form-signin {
         width: 100%;
     }
 }
-
 /* Fallback for Edge
 -------------------------------------------------- */
 @supports (-ms-ime-align: auto) {
@@ -510,26 +516,33 @@ footer a:hover {
         color: #777;
     }
 }
-
 img {
-  
     box-sizing: border-box;
     position: relative;
-  }
-  
-  img::before {
+}
+img::before {
     background-color: grey;
-  }
-    
-  img::after {
-
+}
+img::after {
     width: 100%;
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
-
     color: #fff;
     transform: translate(-50%, -50%);
     text-align: center;
-  }
+}
+.phoneNumber {
+    p {
+        line-height: 50px;
+        color: #122c49;
+    }
+    &:hover {
+        text-decoration: none;
+        p {
+            color: #009991;
+        }
+    }
+}
+

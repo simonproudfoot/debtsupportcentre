@@ -32,8 +32,10 @@
 </style>
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MHM2GR" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MHM2GR" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="app">
         {{ partial:apply }}
@@ -41,23 +43,72 @@
         <main class="py-12 lg:py-20">
             {{ template_content }}
         </main>
+        <div class="js-build-in"></div>
         <h1 class="d-none">{{session:get_data}}</h1>
         {{ partial:footer }}
-        <cookielaw class="cookie" buttonText="Accept">
-            <div slot="message">
-                We use cookies on our website to give you the most relevant experience by remembering your preferences
-                and repeat visits. By clicking Accept, you consent to the use of ALL the cookies.
+        <cookielaw class="cookie" v-cloak>
+            <div slot-scope="props">
+                <div class="Cookie cookie Cookie--bottom Cookie--base" @click="props.accept" buttontext="Accept">
+                    <div class="Cookie__content">
+                        <div>
+                            We use cookies on our website to give you the most relevant experience by remembering your
+                            preferences
+                            and repeat visits. By clicking Accept, you consent to the use of ALL the cookies.
+                        </div>
+                    </div>
+                    <div class="Cookie__buttons">
+                        <button class="Cookie__button" @click="props.accept">Accept!</button>
+                    </div>
+                </div>
             </div>
         </cookielaw>
     </div>
 </body>
 </html>
 <!-- Load style and script at the end -->
+{{# <script type="text/javascript" src="https://api.feefo.com/api/javascript/nds"></script> #}}
 <script src="/js/site.js" async></script>
 <link rel="stylesheet" href="/css/app.css">
-<!-- only load carousel if needed -->
-{{ page_builder }}
-{{if select_blocks == 'carousel'}}
-<script type="text/javascript" src="https://api.feefo.com/api/javascript/nds" async></script>
-{{/if}}
-{{ /page_builder }}
+<script>
+    // set inital 
+    if(document.getElementById('herobanner')){
+    var hide = `
+    opacity: 0;
+    transform:translateY(100px)`
+    document.getElementById('herobanner').querySelectorAll("h1")[0].style = hide
+    document.getElementById('herobanner').querySelectorAll("p").forEach(element => element.style = hide);
+    if(document.getElementById('herobanner').getElementsByTagName("button")[0]){
+        document.getElementById('herobanner').getElementsByTagName("button")[0].style = hide
+    }
+    if( document.getElementById('herobanner').getElementsByClassName("feefo-banner")[0]){
+    document.getElementById('herobanner').getElementsByClassName("feefo-banner")[0].style = hide
+    }
+    if(document.getElementById('herobanner').querySelectorAll("ul")[0]){
+        document.getElementById('herobanner').querySelectorAll("ul")[0].style = hide
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function(){
+        var visible = `
+        opacity: 1;
+        transform:translateY(0);
+        transition-duration: 1s;`
+        document.getElementById('herobanner').querySelectorAll("h1")[0].style = visible
+      }, 800)
+      setTimeout(function(){
+        var visible = `
+        opacity: 1;
+        transform:translateY(0);
+        transition-duration: 1s;`
+        document.getElementById('herobanner').querySelectorAll("p")[0].style = visible
+        if(document.getElementById('herobanner').getElementsByTagName("button")[0]){
+            document.getElementById('herobanner').getElementsByTagName("button")[0].style = visible
+        }
+        document.getElementById('herobanner').querySelectorAll("p").forEach(element => element.style = visible);
+        document.getElementById('herobanner').getElementsByClassName("feefo-banner")[0].style = visible
+        if(document.getElementById('herobanner').querySelectorAll("ul")[0]){
+            document.getElementById('herobanner').querySelectorAll("ul")[0].style = visible
+        }
+      }, 1000)
+    })
+}
+</script>

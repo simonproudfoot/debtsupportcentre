@@ -63,7 +63,10 @@ sections:
             - anchor
             - image
             - table
+            - code
+            - horizontalrule
           save_html: false
+          _content_type: html
           toolbar_mode: fixed
           link_noopener: false
           link_noreferrer: false
@@ -71,10 +74,23 @@ sections:
           reading_time: false
           fullscreen: true
           allow_source: true
+          markdown: false
           display: 'footer text'
           type: bard
           icon: bard
           listable: hidden
+          sets:
+            html_elements:
+              display: 'HTML elements'
+              fields:
+                -
+                  handle: page_break
+                  field:
+                    html: '<br/>'
+                    display: 'page break'
+                    type: html
+                    icon: code
+                    listable: hidden
   contact:
     display: Contact
     fields:

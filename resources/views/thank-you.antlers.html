@@ -1,30 +1,37 @@
 
 <!-- Hero -->
-<section class="hero pt-5"> 
-    <div class="container pt-md-4 pb-3 herobanner">
+<header class="hero pt-5 pb-3"> 
+    <div id="herobanner" class="container pt-md-4 pb- herobanner">
     	<div class="row pt-md-5 text-center text-md-left">
             <div class="col-md-6 d-none d-md-block">
                 <img src="images/thank-you.png" class="img-fluid" alt=""/>
             </div>
             <div class="col-md-6">
-                <p>Thank you, <b style="text-transform: capitalize" class="d-inline">@{{fName}}</b></p>
+                <p>Thank you, <b style="text-transform: capitalize" class="d-inline">{{get:name}}{{get:fName}}{{get:fname}}</b></p>
                 <h1 class="pb-3">Good news, help is coming your way</h1>
                 <p>One of our specialist debt advisors will give you a call shortly.</p>
                 <p>If you want to talk to them now, you can phone them on <b>0161 956 2688</b>.</p>
+                {{ if !{site_data:lineClosed} }}
                 <a href="tel:01619562688" class="primary-btn mt-3 mb-2">Call now</a>
+                {{/if}}
             </div>
         </div>
     </div>
     <img src="images/hero_borders.svg" class="img-fluid d-md-none" alt="Graphic lines" style="margin-top:-2rem"/>
-    <div class="col text-center" style="margin-top: -2rem">
-	    <div class="review-box">
-            <div id="feefo-service-review-carousel-widgetId" class="feefo-review-carousel-widget-service"></div>
+</header>
+<section class="m5">
+    <div class="container mt-">
+        <div class="row">
+            <div class="col text-center">
+                <div class="review-box pt-3">
+                    <div id="feefo-service-review-carousel-widgetId" class="feefo-review-carousel-widget-service"></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
 <!-- Debt solutions -->
-<div class="top container text-center">
+<section class=" container text-center">
     <div class="row justify-content-center">
         <div class="col-md-8 m-auto">
                 <h1 class="pb-3">Some of the solutions available to you</h2>
@@ -62,4 +69,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

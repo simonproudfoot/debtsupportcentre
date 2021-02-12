@@ -1,0 +1,48 @@
+title: pages
+template: default
+layout: layout
+revisions: false
+route: '/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+structure:
+  root: true
+  tree:
+    -
+      entry: 15bc524c-dbb8-4d50-aafd-9f5b317c3599
+    -
+      entry: 8aa5b3d1-80a8-42f9-adc3-7e836bf613f0
+    -
+      entry: 1d27ff2f-8c95-4484-b70d-0335e46979b8
+    -
+      entry: e6efb5c4-ba6b-4e35-b220-e443c0e4ba03
+    -
+      entry: 767cf380-9fa5-47c6-8986-131c7b086da5
+    -
+      entry: 1e3f985b-f628-4b03-80e4-d9a1abef1e60
+    -
+      entry: c14c10f2-446e-44cd-b6db-97b9746e9797
+    -
+      entry: 6c7d986e-9ba4-41dc-8cf4-9d22ec5c0abf
+    -
+      entry: 7d2c1b98-eb89-4fed-abf9-956b090cab37
+    -
+      entry: bbe56c74-28f5-4798-a344-df170ac8f91a
+    -
+      entry: 8a2f1e81-2c33-44f0-8d13-74107b543acb
+    -
+      entry: f98a2f8e-d72d-47fe-9618-100391a65156
+    -
+      entry: 21449722-3c04-4b3b-ba90-3ab010f90c80
+    -
+      entry: c2365a5a-9677-4964-b40c-ad9a3d6e9ea4
+    -
+      entry: 76ff266a-0785-4d36-ad30-efeecc215383
+    -
+      entry: e8c139e7-e6f0-4da0-81be-4f8e78b18003
+    -
+      entry: 646f3fc3-ba43-4009-824f-d05fc2b6dc38
+    -
+      entry: e4c373ad-6748-4d99-99a1-76e62bf514ba

@@ -7,7 +7,7 @@ data:
       content:
         -
           type: text
-          text: 'Answer a few simple questions to see if you qualify. '
+          text: 'Answer a few simple questions to see if you qualify.'
   help_box_2:
     -
       type: paragraph
@@ -96,7 +96,7 @@ data:
             -
               type: link
               attrs:
-                href: '/iva.php#iva-calculator'
+                href: 'http://dsc-rebrand2.test/iva.php#iva-calculator'
                 target: null
                 rel: null
           text: 'IVA calculator'

@@ -1,0 +1,86 @@
+title: Settings
+data:
+  site_name: 'test me'
+  footer_text:
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          marks:
+            -
+              type: bold
+          text: Disclaimer
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Debt write off applies to unsecured debts and on completion of an IVA. A debt write off amount of between 20% and 80% is realistic, however the debt write off amount for each customer differs depending upon their individual financial circumstances and is subject to the approval of their creditors.'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Call charges may vary depending on your telephone provider. All calls are recorded for training and compliance purposes, but deleted after 6 months for non-customers in line with GDPR guidelines.'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Free money help and advice can be found at the MoneyAdviceService.org.uk.'
+    -
+      type: paragraph
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'DSC is a trading style of Financial Support Systems Limited Registered Office Bridgewater House Whitworth Street Manchester. Registered in England and Wales Registration number 10778048. Data Protection Registration Number ZA450309.'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Our practitioners are authorised by the Institute of Chartered Accountants in England and Wales.'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Subject to eligibility and acceptance. Fees Payable. Debt write off applies to unsecured debts only and on completion of an IVA. Your ability to obtain credit will be affected for the medium to long term. Homeowners may be required to release the equity in their property, if unable to release equity and equity is available creditors may request an additional 12 months payments in compensation.'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Financial Support Systems Ltd provides insolvency solutions to individuals, specialising in IVA. Advice and information on alternative options will be provided following an initial fact find where the individual(s) concerned meets the criteria for an IVA and wishes to pursue it further. All advice given on any alternative options is therefore provided in reasonable contemplation of an insolvency appointment.'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'The Money Advice Service is a free service set up by the Government to help people make the most of their money. If you would like to learn more '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://www.moneyadviceservice.org.uk/en'
+                target: _blank
+                rel: null
+          text: 'click here'
+        -
+          type: text
+          text: .
+  opening_hours: |
+    Mon-Thurs 8am-8pm <br>
+    Friday 8am-8pm <br>
+    Saturday 9am-3pm
+  contact_number: '0161 549 0734'
+  address: |
+    Bridgewater House,
+    58-60 Whitworth Street,
+    Manchester,
+    M1 6LT

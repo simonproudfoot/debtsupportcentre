@@ -1,8 +1,22 @@
 ---
 title: Terms
-header_content: '<h1>Terms &amp; Conditions</h1><p>DebtSupportCentre.co.uk known as &quot;the Website&quot;, &quot;Network&quot;, or &quot;site&quot;, is an online service provider.</p>'
+header_content:
+  -
+    type: heading
+    attrs:
+      level: '1'
+    content:
+      -
+        type: text
+        text: 'Terms & Conditions'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'DebtSupportCentre.co.uk known as "the Website", "Network", or "site", is an online service provider.'
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608796857
+updated_at: 1610971024
 blueprint: standard
 template: simple
 page_builder:
@@ -732,5 +746,17 @@ page_builder:
     type: heading
     attrs:
       level: 2
+hide_menu: false
+basic_title: 'Terms and Conditions'
+basic_description: 'The terms and conditions for using the Debt Support Centre website.'
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
 id: 1e3f985b-f628-4b03-80e4-d9a1abef1e60
 ---

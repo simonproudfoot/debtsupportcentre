@@ -8,7 +8,7 @@ header_content:
     content:
       -
         type: text
-        text: 'Debt Consolidation Right for You?'
+        text: 'Is Debt Consolidation Right for You?'
   -
     type: paragraph
     content:
@@ -174,7 +174,7 @@ page_builder:
       values:
         type: new_how_we_can_help
         how_we_can_help_you: null
-        how_we_can_help_title: null
+        how_we_can_help_title: 'Find the right debt solution for you'
         help_box_1:
           -
             type: paragraph
@@ -187,7 +187,7 @@ page_builder:
                 marks:
                   -
                     type: bold
-                text: 'Start now >'
+                text: ''
         help_box_2:
           -
             type: paragraph
@@ -206,7 +206,24 @@ page_builder:
     type: paragraph
 template: home
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608725042
-id: e8c139e7-e6f0-4da0-81be-4f8e78b18003
+updated_at: 1611677287
 blueprint: standard
+hide_menu: true
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
+header_image:
+  - financial-future-1608216205.png
+basic_title: 'Is Debt Consolidation Right For You?'
+basic_description: 'More than 500 customers seek debt help from us every day and, on average, our experts get more than £13,500 written off. Let’s discuss how we can help you.'
+basic_robots:
+  - noindex
+  - nofollow
+id: e8c139e7-e6f0-4da0-81be-4f8e78b18003
 ---

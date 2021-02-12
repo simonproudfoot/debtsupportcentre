@@ -25,6 +25,7 @@
     "dependencies": {
         "axios": "^0.21.0",
         "bootstrap": "^4.5.3",
+        "countup.js": "^2.0.7",
         "sass": "^1.29.0",
         "v-lazy-image": "^1.4.0",
         "vue": "^2.6.12",
@@ -33,6 +34,7 @@
         "vue-cookie-law": "^1.13.3",
         "vue-cookies": "^1.7.4",
         "vue-multiple-progress": "^1.6.0",
+        "vue-owl-carousel": "^2.0.3",
         "vue-simple-floating-labels": "^1.0.4"
     },
     "browserslist": [

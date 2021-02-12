@@ -19,7 +19,7 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "optimoapps/statamic-bard-text-align": "^1.0",
-        "simonp/applications": "dev-master",
+        "simonp/Applications": "dev-master",
         "statamic/cms": "3.0.*",
         "statamic/ssg": "^0.2.0",
         "ueberdosis/prosemirror-to-html": "^2.2"        
@@ -40,18 +40,18 @@
     "extra": {
         "statamic": {
             "name": "Applications",
-            "description": "View client applications saved locally"
+            "description": "View client Applications saved locally"
         },
         "laravel": {
             "dont-discover": [],
             "providers": [
-                "simonp\\applications\\ServiceProvider"
+                "simonp\\Applications\\ServiceProvider"
             ]
         }
     },
     "autoload": {
         "psr-4": {
-            "simonp\\applications\\": "src",
+            "simonp\\Applications\\": "src",
             "App\\": "app/"
         },
         "classmap": [
@@ -62,7 +62,7 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "simonp\\applications\\": "src"
+            "simonp\\Applications\\": "src"
         }
     },
     "minimum-stability": "dev",
@@ -83,7 +83,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "addons/simonp/applications"
+            "url": "addons/simonp/Applications"
         }
     ]
 }

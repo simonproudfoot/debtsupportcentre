@@ -31,6 +31,12 @@ data:
           text: 'Free money help and advice can be found at the MoneyAdviceService.org.uk.'
     -
       type: paragraph
+    -
+      type: horizontal_rule
+    -
+      type: paragraph
+    -
+      type: paragraph
       content:
         -
           type: text
@@ -72,12 +78,12 @@ data:
         -
           type: text
           text: .
-  opening_hours: |
+  opening_hours: |-
     Mon-Thurs 8am-8pm <br>
-    Friday 8am-8pm <br>
+    Friday 8am-4pm <br>
     Saturday 9am-3pm
-  contact_number: '0161 549 0734'
-  address: |
+  contact_number: '0161 543 3758'
+  address: |-
     Bridgewater House,
     58-60 Whitworth Street,
     Manchester,

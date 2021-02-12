@@ -151,18 +151,13 @@ page_builder:
     attrs:
       values:
         type: new_cta
-        page_cta: null
-        cta_pre_header: null
         cta_button_text: 'Get debt advice'
         cta_text: 'Bankruptcy is a high price to pay for financial freedom. Fortunately, there are alternatives available.'
-  -
-    type: paragraph
   -
     type: set
     attrs:
       values:
         type: new_iva_table
-        example_of_how_you_could_benefit_from_an_iva: null
         table_title: ' An alternative to bankruptcy'
         table:
           -
@@ -206,7 +201,6 @@ page_builder:
     attrs:
       values:
         type: new_how_we_can_help
-        how_we_can_help_you: null
         how_we_can_help_title: 'Find the right debt solution for you'
         help_box_1:
           -
@@ -220,7 +214,7 @@ page_builder:
                 marks:
                   -
                     type: bold
-                text: 'Start now >'
+                text: ''
         help_box_2:
           -
             type: paragraph
@@ -235,8 +229,6 @@ page_builder:
               -
                 type: text
                 text: 'Regain control of your finances with a financial plan.'
-  -
-    type: paragraph
   -
     type: set
     attrs:
@@ -295,15 +287,26 @@ page_builder:
                       -
                         type: text
                         text: 'Non-judgemental, down-to-earth approach.'
-  -
-    type: paragraph
-  -
-    type: paragraph
 template: home
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608230316
+updated_at: 1612270464
 blueprint: standard
 header_image:
   - bankruptcy_hero.png
+hide_menu: true
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
+basic_title: 'Is Bankruptcy Right for You?'
+basic_description: 'More than 500 customers seek debt help from us every day and, on average, our experts get more than £13,500 written off. Let’s discuss how we can help you.'
+basic_robots:
+  - noindex
+  - nofollow
 id: bbe56c74-28f5-4798-a344-df170ac8f91a
 ---

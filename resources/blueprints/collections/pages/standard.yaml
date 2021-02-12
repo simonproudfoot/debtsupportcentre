@@ -62,15 +62,18 @@ sections:
             - h5
             - h6
             - underline
+            - horizontalrule
             - table
-          save_html: false
+            - code
+            - codeblock
+          save_html: true
           toolbar_mode: fixed
           link_noopener: false
           link_noreferrer: false
           target_blank: false
           reading_time: false
           fullscreen: true
-          allow_source: false
+          allow_source: true
           display: 'page builder'
           type: bard
           icon: bard
@@ -220,6 +223,17 @@ sections:
                     type: bard
                     icon: bard
                     listable: hidden
+            html:
+              display: HTML
+              fields:
+                -
+                  handle: textarea
+                  field:
+                    antlers: false
+                    display: Textarea
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
   sidebar:
     display: Sidebar
     fields:
@@ -245,10 +259,10 @@ sections:
       -
         handle: hide_menu
         field:
-          display: 'hide menu'
+          display: 'landing page'
           type: toggle
           icon: toggle
-          instructions: 'Click to hide the menu button on this page'
+          instructions: 'Click to hide the menu button and footer links on this page'
           listable: hidden
       -
         handle: parent

@@ -14,9 +14,6 @@
 
 <body>
     <?php
-
-
-
     $todayExists = Storage::exists('applications/' . date('Y-m-d') . '.json');
     $day = '';
     if (isset($_GET['d'])) {
@@ -42,19 +39,18 @@
     ?>
     <div class="global-header">
         <div class="lg:w-56 pl-1 md:pl-3 h-full flex items-center">
-            <a href="" class="href">
+            <a href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/cp" class="href">
                 < Control panel</a>
         </div>
         <div class="sm:px-4 w-full flex-1 mx-auto max-w-xl">
 
         </div>
         <div class="lg:absolute top-0 right-0 head-link h-full md:pr-3 flex items-center">
-
         </div>
     </div>
     <div id="statamic" class="pt-6">
      
-        <div class="container mx-auto pt-6 px-4">
+        <div class="container mx-auto py-6 px-4">
             <div class="flex items-center justify-between mb-3">
                 <h1>Submissions <small><?php echo $day; ?></small></h1>
                 <a class="btn-primary" href="http://dsc.test/cp/export?d=<?php echo $day; ?>">Export</a>
@@ -72,6 +68,8 @@
                                 <th>Employment</th>
                                 <th>ResidentialStatus</th>
                                 <th>Tracking</th>
+                                <th>SMS</th>
+                                <th>email</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -85,6 +83,8 @@
                                     <td><?php echo urldecode($app['Employment']) ?></td>
                                     <td><?php echo urldecode($app['ResidentialStatus']) ?></td>
                                     <td class="w-1/4"><small title="<?php urldecode($app['a_url']) ?>"><?php echo substr(urldecode($app['a_url']), 0, 100) ?>....</small></td>
+                                    <td><?php echo urldecode($app['mk_text']) ?></td>
+                                    <td><?php echo urldecode($app['mk_email']) ?></td>
                                 </tr>
                         <?php } ?>
                         </tbody>
@@ -94,12 +94,12 @@
                 <?php } ?>
             </div>
             <?php if (Storage::exists('applications/' . $previous_date . '.json')) { ?>
-                <a class="btn-primary" href="http://<?php echo $_SERVER['HTTP_HOST'] . explode('?', $_SERVER['REQUEST_URI'], 2)[0] . '?d=' . $previous_date; ?>">
+                <a class="btn-primary" href="https://<?php echo $_SERVER['HTTP_HOST'] . explode('?', $_SERVER['REQUEST_URI'], 2)[0] . '?d=' . $previous_date; ?>">
                     < Previous day</a>
                     <?php } ?>
                     <?php if (Storage::exists('applications/' . $next_date . '.json')) { ?>
-                        <a class="btn-primary float-right" href="http://<?php echo $_SERVER['HTTP_HOST'] . explode('?', $_SERVER['REQUEST_URI'], 2)[0] . '?d=' . $next_date; ?>">Next day ></a>
-                    <?php } ?>
+                    <a class="btn-primary float-right" href="https://<?php echo $_SERVER['HTTP_HOST'] . explode('?', $_SERVER['REQUEST_URI'], 2)[0] . '?d=' . $next_date; ?>">Next day ></a>
+            <?php } ?>
         </div>
     </div>
 </body>

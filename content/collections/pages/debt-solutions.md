@@ -55,8 +55,20 @@ page_builder:
   -
     type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608230638
+updated_at: 1610970303
 blueprint: standard
 page_template: default
+hide_menu: false
+basic_title: 'Solutions to Your Debt'
+basic_description: 'From IVAs to debt management plans, view the pros and cons of each debt solution here. Get in touch and let&#039;s discuss how we can help you.'
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
 id: 8aa5b3d1-80a8-42f9-adc3-7e836bf613f0
 ---

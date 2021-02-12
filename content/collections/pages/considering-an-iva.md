@@ -68,8 +68,6 @@ header_content:
                 text: 'Stop lenders from contacting you'
 page_builder:
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
@@ -80,18 +78,7 @@ page_builder:
     attrs:
       values:
         type: new_iva_table
-        why_choose_us: null
         heading: ' How you could benefit from an IVA:'
-        why_column_a_title: null
-        why_column_a_subtitle: null
-        why_column_a: null
-        why_column_b_title: null
-        why_column_b_subtitle: null
-        why_column_b: null
-        why_column_c_title: null
-        why_column_c_subtitle: null
-        why_column_c: null
-        example_of_how_you_could_benefit_from_an_iva: null
         table_title: ' How you could benefit from an IVA:'
         table:
           -
@@ -131,13 +118,10 @@ page_builder:
                 text: 'Total contractual repayments'
         details: '  Contractual repayments reduced by 78.14%. Total debt written off £18,841 over a period of five years.'
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_how_we_can_help
-        how_we_can_help_you: null
         help_box_1:
           -
             type: paragraph
@@ -145,12 +129,6 @@ page_builder:
               -
                 type: text
                 text: 'Answer a few simple questions to see if you qualify. '
-              -
-                type: text
-                marks:
-                  -
-                    type: bold
-                text: 'Start now >'
         help_box_2:
           -
             type: paragraph
@@ -165,9 +143,7 @@ page_builder:
               -
                 type: text
                 text: 'Regain control of your finances with a financial plan.'
-        how_we_can_help_title: null
-  -
-    type: paragraph
+        how_we_can_help_title: 'How does the IVA process work?'
   -
     type: set
     attrs:
@@ -292,19 +268,26 @@ page_builder:
                       -
                         type: text
                         text: 'No more pretending everything is fine.'
-  -
-    type: paragraph
-  -
-    type: paragraph
-  -
-    type: paragraph
-  -
-    type: paragraph
 header_image:
   - iva_hero.png
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608220632
+updated_at: 1612270429
 blueprint: standard
 template: home
+hide_menu: true
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
+basic_title: 'Considering an IVA?'
+basic_description: 'More than 500 customers seek debt help from us every day and, on average, our experts get more than £13,500 written off. Let us discuss how we can help you.'
+basic_robots:
+  - noindex
+  - nofollow
 id: 6c7d986e-9ba4-41dc-8cf4-9d22ec5c0abf
 ---

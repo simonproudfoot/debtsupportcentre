@@ -18,6 +18,7 @@ sections:
             - bold
             - italic
             - removeformat
+            - horizontalrule
             - anchor
           save_html: true
           toolbar_mode: fixed
@@ -60,6 +61,7 @@ sections:
             - strikethrough
             - code
             - codeblock
+            - horizontalrule
           container: assets
           save_html: false
           toolbar_mode: fixed

@@ -17,6 +17,9 @@ header_content:
           58-60 Whitworth Street,
           Manchester,
           M1 6LT
+          
+  -
+    type: paragraph
 page_builder:
   -
     type: paragraph
@@ -32,8 +35,20 @@ page_builder:
   -
     type: paragraph
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608138200
+updated_at: 1610970875
 blueprint: standard
 template: contact
+hide_menu: false
+basic_title: 'Contact Us | 0161 200 1139'
+basic_description: 'Contact the Debt Support Centre via phone (0161 200 1139) or through this contact form. It can be completed in less than one minute.'
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
 id: 1d27ff2f-8c95-4484-b70d-0335e46979b8
 ---

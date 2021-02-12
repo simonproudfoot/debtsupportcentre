@@ -1,11 +1,11 @@
-<section class="pt-5">
+<section>
     <div class="container pt-2 text-center">
         <h2 class="text-center py-3">{{text_split_title}}</h2>
         <div class="row contains-list">
             <div class="col-md-4 pt-md-5 text-md-left {{ if image_on_left }} order-2 {{ else }} order-1 offset-md-2{{/if}}">
              {{block_text_content}}
 
-             <button class="primary-btn mt-3 mb-2">Get debt help <i aria-hidden="true" class="fa fa-chevron-right arrow"></i></button>
+             <button class="primary-btn mt-3 mb-2" @click="overlay = 'true'">Get debt help <i aria-hidden="true" class="fa fa-chevron-right arrow"></i></button>
             </div>
             <div class="col-md-6 d-none d-md-block {{ if image_on_left }} order-1 {{ else }} order-2 {{/if}}">
                 {{image}}

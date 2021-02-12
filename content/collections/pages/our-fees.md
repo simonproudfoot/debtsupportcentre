@@ -26,7 +26,7 @@ header_content:
               align: center
         text: 'Debt Support Centre is a trading style of Financial Support Systems Limited.'
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608139454
+updated_at: 1610976609
 blueprint: standard
 template: simple
 page_builder:
@@ -44,6 +44,8 @@ page_builder:
       -
         type: text
         text: 'All major creditors are aware an IVA can only be proposed and supervised by a Licensed Insolvency Practitioner. Financial Support Systems fees are transparent and fully disclosed in writing before our customer’s decide to proceed with an IVA. All major creditors are aware of Financial Support Systems fees and agree that these are fair and acceptable to them.'
+  -
+    type: paragraph
   -
     type: heading
     attrs:
@@ -615,5 +617,17 @@ page_builder:
       -
         type: text
         text: .
+hide_menu: false
+basic_title: 'Our Fees'
+basic_description: 'On this page, we have outlined our fees. You can read this to get an idea of how Debt Support Centre operates.'
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
 id: 1e3f985b-f628-4b03-80e4-d9a1abef1e61
 ---

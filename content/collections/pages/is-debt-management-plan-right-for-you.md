@@ -75,20 +75,16 @@ header_content:
 header_image:
   - dmp_hero.png
 updated_by: 62f8e9b1-511e-4812-9b39-1147135a8182
-updated_at: 1608234163
+updated_at: 1612270405
 blueprint: standard
 template: home
 page_builder:
-  -
-    type: paragraph
   -
     type: set
     attrs:
       values:
         type: new_block
         select_blocks: why_choose_us
-  -
-    type: paragraph
   -
     type: set
     attrs:
@@ -102,15 +98,11 @@ page_builder:
         type: new_block
         select_blocks: how_you_could_benefit
   -
-    type: paragraph
-  -
     type: set
     attrs:
       values:
         type: new_block
         select_blocks: how_we_can_help_you
-  -
-    type: paragraph
   -
     type: heading
     attrs:
@@ -125,9 +117,20 @@ page_builder:
       values:
         type: new_block
         select_blocks: debts_we_can_help_with
-  -
-    type: paragraph
-  -
-    type: paragraph
+hide_menu: true
+google_cse_google_rating: 0
+og_video_duration: 0
+og_music_duration: 0
+og_music_album_disc: 0
+og_music_album_track: 0
+og_music_song_disc: 0
+og_music_song_track: 0
+twitter_player_width: 0
+twitter_player_height: 0
+basic_title: 'Is a Debt Management Plan Right for You'
+basic_description: 'More than 500 customers seek debt help from us every day and, on average, our experts get more than £13,500 written off. Let’s discuss how we can help you.'
+basic_robots:
+  - noindex
+  - nofollow
 id: 767cf380-9fa5-47c6-8986-131c7b086da5
 ---
